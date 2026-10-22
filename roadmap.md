@@ -7,7 +7,7 @@ _Last checked: 2026-10-22._
 
 ## Now
 
-- **The rebuild (v1)** is under way in both repos, uncommitted: Phase 0 (free items), Phase 1
+- **The rebuild (v1)** is on `main` in both repos (pushed 2026-10-22): Phase 0 (free items), Phase 1
   (code side) and most of Phase 2 of the plan. A solo game plays end to end on a phone and a
   laptop, light and dark, scored by the server, on demo and Yandex panoramas.
 - Next in the plan: finish Phase 2 (Mapillary, once there is a token), then Phase 3
@@ -15,8 +15,6 @@ _Last checked: 2026-10-22._
 
 ## The owner's to-dos
 
-- Look at the rebuild and say "push" (or what to change). Nothing is committed yet; the `v0`
-  tags are local until pushed.
 - A free Mapillary token (mapillary.com/dashboard/developers), for the coverage count and the
   second provider.
 - Glance at the guest emoji list (`api-geo-shafaq/internal/players/players.go`).

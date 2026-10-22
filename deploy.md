@@ -1,5 +1,10 @@
 # Deploy to the VPS — plan
 
+**This page deploys v0** (the git tag `v0` in both repos), for friends, while v1 is built.
+v1 is a different stack (Docker Compose with Postgres, see `api-geo-shafaq/README.md` and
+[decision 0007](decisions/0007-hosting.md)); its deploy page gets written when its server is
+ready.
+
 **Status: plan only, nothing done yet** (2026-10-21). Nothing on the VPS changes without
 the owner's order. IP and access come from the owner.
 
@@ -35,6 +40,7 @@ ufw allow OpenSSH && ufw allow 'Nginx Full' && ufw enable    # 22, 80, 443 only
 ```bash
 git clone https://github.com/hakim-134/api-geo-shafaq.git /srv/api-geo-shafaq
 cd /srv/api-geo-shafaq
+git checkout v0            # main now holds v1, which needs Postgres; the tag must be pushed first
 docker build -t api-geo-shafaq .
 docker run -d --name api-geo-shafaq --restart unless-stopped -p 127.0.0.1:8131:8131 api-geo-shafaq
 curl -s 127.0.0.1:8131/api/health     # {"ok":true,"rooms":true}
@@ -46,6 +52,7 @@ The allowed page origin `https://geo.shafaq.uz` is built in (`main.go`); no flag
 
 ```bash
 git clone https://github.com/hakim-134/geo-shafaq.git /srv/geo-shafaq
+cd /srv/geo-shafaq && git checkout v0
 # config.js is gitignored: copy it from the owner's machine (scp), never through chat or git
 ```
 

@@ -1,7 +1,7 @@
 # 0006 — Panoramas come from several providers behind one interface
 
 - **Date:** 2026-10-22
-- **Status:** accepted
+- **Status:** superseded by [0008](0008-yandex-and-google.md) (the provider order; the one-interface design stays)
 - **Deciders:** the owner (TODO 14: "one of our key things")
 
 ## Context

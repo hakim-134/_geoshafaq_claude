@@ -14,5 +14,6 @@ it with a new file and mark the old one `superseded by NNNN`.
 - [0003](0003-kb-on-github.md) — the knowledge base lives on GitHub as `hakim-134/_geoshafaq_claude` (accepted)
 - [0004](0004-rebuild-from-scratch.md) — rebuild from scratch in the same two repos, v0 kept as a tag (accepted)
 - [0005](0005-stack.md) — Go + Postgres/PostGIS + Valkey, SvelteKit + MapLibre (accepted)
-- [0006](0006-panorama-providers.md) — several panorama providers behind one interface (accepted)
+- [0006](0006-panorama-providers.md) — several panorama providers behind one interface (superseded by 0008)
 - [0007](0007-hosting.md) — Docker Compose on servers in Uzbekistan, a CDN in front (accepted)
+- [0008](0008-yandex-and-google.md) — panoramas from Yandex and Google only; no open street imagery (accepted)

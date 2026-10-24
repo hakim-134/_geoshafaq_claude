@@ -3,8 +3,57 @@
 Shafaq Geo is the owner's own game: you land on a street in Uzbekistan, look around, and
 guess on the map where you are. Alone, or live with friends. Mostly played on phones.
 
-> The owner's general rules (git, tools, languages) are in
-> `~/131/git.sriss.uz/abdullayevsh/_claude/`. This file is only about this game.
+> The owner's general rules are in `~/131/git.sriss.uz/abdullayevsh/_claude/`. Where they
+> differ from this brief (git, keys, Docker), **this brief wins in this project**.
+
+## The owner here: a CEO who tests the product
+
+- **A pet project with real hopes.** Today fewer than 10 people play, all friends. The hope
+  is a product thousands use (`PLAN.md` aims at 10 000 online).
+- **The owner does not read code here.** They are the CEO and the designer: they open the
+  game in the browser, on the laptop and on the phone, play it, and decide "is this what I
+  wanted?". That is the test that counts.
+- **So work is done when it runs:** up in the local Docker and played by you in the browser
+  (phone size, light and dark). Then report in product words: what changed, the link, what
+  to try. No code tours.
+- **Don't get stuck.** Nothing under "Full access" needs a question. Ask about the product,
+  not about permission.
+
+More: [owner.md](owner.md).
+
+## Full access
+
+The owner, 2026-10-24: *"You have all access to Git, like databases, Docker, containers,
+code, secrets, API keys, everything."* *"Privacy is no matters here … What matters is making
+the product."* *"When I say git push, you need to push to main branch, simple."* There are no
+real secrets here: no players' data yet, only development keys.
+
+| Area | Without asking, Claude may | Details |
+|---|---|---|
+| Code | read and change everything under `~/131/github.com/hakim-134/` | [access.md §1](access.md#1-code) |
+| Git | read-only git any time; on **"push"**, commit and push `main` | [access.md §2](access.md#2-git) |
+| Keys | read and use every key and password of this project, and show them in chat. They only stay out of git | [access.md §3](access.md#3-secrets-and-keys) |
+| Docker | build, run, recreate and remove Shafaq's own containers and images | [local.md](local.md) |
+| Databases | in the shared `postgres`: create, migrate, fill, reset and drop the `shafaq_*` databases; in the shared `redis`: database 1 | [local.md §2](local.md#2-the-shared-postgres-and-redis) |
+| The rest | install packages and tools, search the web, test the game in Chrome | [access.md §5](access.md#5-everything-else) |
+
+Still the owner's call, asked in one line: spending money; the live server once it exists;
+the owner's other projects on this laptop ([access.md §6](access.md#6-still-the-owners-call)).
+
+## The owner's words
+
+| The owner says | Claude does |
+|---|---|
+| **"push"** (also `p2r`, "git push") | commit the uncommitted work in the repos here and push `main` ([access.md §2](access.md#2-git)) |
+| **"docker up"** (also "update docker") | rebuild and restart the two local containers from the current code, play it once, give the links ([local.md §3](local.md#3-docker-up)) |
+| **"do 3.2"** | that task from `PLAN.md`; tick it there and update [roadmap.md](roadmap.md) |
+
+## Who plays
+
+People of Uzbekistan, most of them Muslims: honest, simple, sincere people who want to grow
+and keep away from what is wrong. The game is **not religious** and never mentions religion,
+but it stays **decent and clean**: no gambling, nothing vulgar, no tricks.
+More: [players.md](players.md).
 
 ## Why it exists
 
@@ -25,9 +74,9 @@ New ideas should serve this first.
 
 Look and feel: [design.md](design.md).
 
-## How to work with the owner here
+## How to work here
 
-- Here the owner builds **both** the game pages and the server. Frontend work is real work.
+- The owner builds **both** the game pages and the server here. Frontend work is real work.
 - Short, plain answers. One recommendation, not a list of options.
 - **If an idea is hard, say so and offer the closest thing you can do.** Don't drop it,
   don't force it.
@@ -47,12 +96,14 @@ change would make a later rename harder.
 
 ## A few firm rules
 
-- The Yandex map key is private (`geo-shafaq/.env.local`; v0: `config.js`). Never show it,
-  never commit it.
+- **Keys never go into git.** The repos are public; bots that scrape GitHub would burn the
+  free Yandex quota and the game would stop. Keys live in gitignored files
+  ([access.md §3](access.md#3-secrets-and-keys)).
 - The free Yandex key allows ~100 panorama views a day. Develop and test on the `demo`
   provider; open real Yandex rounds only when checking Yandex itself.
-- One branch, `main`. Commit or push only when the owner says so ("push" / `p2r` =
-  commit and push `main`).
+- One branch, `main` ([decision 0002](decisions/0002-deploy-branches.md)).
+- No database or cache containers of our own: the shared `postgres` and `redis` only
+  ([decision 0010](decisions/0010-local-docker.md)).
 - How the code works is in each code repo's `README.md`, not here.
 
 ## Where things are
@@ -60,9 +111,14 @@ change would make a later rename harder.
 | What | Where |
 |---|---|
 | Code | `~/131/github.com/hakim-134/geo-shafaq` (the game), `api-geo-shafaq` (the server) |
+| How the owner works; what a report looks like | [owner.md](owner.md) |
+| What Claude may do; keys; git | [access.md](access.md) |
+| The game on this laptop (Docker) | [local.md](local.md) |
+| Who plays | [players.md](players.md) |
 | Look and feel | [design.md](design.md) |
 | What's next | [roadmap.md](roadmap.md) |
 | The full plan (from prototype to product) | `~/131/github.com/hakim-134/PLAN.md` |
+| What the owner buys before launch | [before-launch.md](before-launch.md) |
 | Putting it on the server | [deploy.md](deploy.md) |
 | Why things are the way they are | [decisions/](decisions/README.md) |
 

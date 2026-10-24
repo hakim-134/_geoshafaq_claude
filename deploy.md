@@ -53,7 +53,7 @@ The allowed page origin `https://geo.shafaq.uz` is built in (`main.go`); no flag
 ```bash
 git clone https://github.com/hakim-134/geo-shafaq.git /srv/geo-shafaq
 cd /srv/geo-shafaq && git checkout v0
-# config.js is gitignored: copy it from the owner's machine (scp), never through chat or git
+# config.js is gitignored: copy it from the owner's machine (scp), never through git
 ```
 
 ## 5. nginx
@@ -106,6 +106,10 @@ open `wss://`.
 
 developer.tech.yandex.ru → the key → HTTP Referer: add `geo.shafaq.uz`. Without it the
 panoramas do not load on the site. **Owner's to-do.**
+
+v0 does not count its Yandex views; Yandex does. Watch the cabinet's statistics for the
+key, or run v1's worker anywhere with `YANDEX_CABINET_KEY` set: it reads Yandex's count and
+warns at 80% of the free limit ([before-launch.md](before-launch.md)).
 
 ## 8. Check
 

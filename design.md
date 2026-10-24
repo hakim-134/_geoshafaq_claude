@@ -21,6 +21,7 @@ The game should feel **Uzbek, warm and playful**, not like a generic map app.
   nearest metro, so every round teaches something.
 - **Tension near the end:** warnings and a red glow when time runs low.
 - Text is short and friendly, in Uzbek first (Latin script, with `o‘` and `g‘`).
+- **Decent:** nothing a family in Tashkent would mind seeing ([players.md](players.md)).
 
 ## Before calling a design done
 

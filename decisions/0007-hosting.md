@@ -1,7 +1,8 @@
 # 0007 — Docker Compose on servers in Uzbekistan, a CDN in front
 
 - **Date:** 2026-10-22
-- **Status:** accepted (the hosting provider is not chosen yet)
+- **Status:** accepted (the hosting provider is not chosen yet); its local half superseded by
+  [0010](0010-local-docker.md): locally the game runs on the shared Postgres and Redis
 - **Deciders:** the owner (asked Claude to carry out `PLAN.md`)
 
 ## Context

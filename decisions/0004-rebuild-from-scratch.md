@@ -33,5 +33,5 @@ quirks (two copies of the score formula, the host's browser picking the panorama
 - v0 is read with `git show v0:<file>`: room logic (`room.go`), scoring, the Tashkent street
   tool, the strings in `js/i18n.js`, the look in `css/style.css`.
 - To put v0 online meanwhile, deploy the `v0` tag, not `main`. The tags are local until
-  the owner pushes them (`git push origin v0`).
+  the owner pushes them (`git push origin v0`). _Pushed in both repos on 2026-10-22._
 - Rooms with friends come back in Phase 5 of the plan. Until then the new app is solo only.

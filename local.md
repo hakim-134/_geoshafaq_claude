@@ -73,6 +73,10 @@ so a reload shows the new version.
 ## 4. When something is off
 
 - `docker logs shafaq-api --tail 50`, `docker logs shafaq-web --tail 50`.
+- After changing `geo-shafaq/nginx.lcl.conf`: `docker restart shafaq-web`. The file is mounted
+  on its own, and an edit that replaces the file isn't seen until a restart.
+- nginx doesn't know `.mjs`; the conf serves it as JavaScript, or the map's worker won't load.
+  The real site's nginx needs the same.
 - `shafaq-api` doesn't start: `PGPASSWORD` is missing (compose says so), or the `postgres`
   container was recreated without PostGIS (`_claude/me/tools.md` has the install line).
 - Yandex panoramas fail on the phone but work on the laptop: the key's allowed sites need

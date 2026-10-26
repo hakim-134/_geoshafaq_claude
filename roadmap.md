@@ -3,7 +3,7 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-10-26 (Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-10-26 (Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -25,8 +25,13 @@ _Last checked: 2026-10-26 (Phase 3 built: accounts, profiles, the new home; Phas
   redesigned with it: the home is a lobby with the maps as Uzbek road signs
   ([design.md](design.md)), plus the profile, a player's page and "All games".
   [Decision 0013](decisions/0013-accounts.md).
+- **Phase 4 is built** (2026-10-26): pick any region, city or district (`/places`) and play
+  just there, with progress per place; rounds and time as sliders (endless, no limit); hints as
+  a rule (how many, per round or game, region → district → circle, cost); Move / Stay / Still;
+  three compasses. Most of the country has no panoramas yet (only v0's pools): the location
+  pipeline (PLAN §4) is what fills it.
 - Next: the queue in `PLAN.md` §5.0 ("Next up"); the owner hands tasks to sessions by number
-  ("do 4.3"). First: 4.3, 4.4 (sliders, hints as a rule).
+  ("do 5.1"). First: 5.1, 5.2 (live rooms on the new engine).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt
   by every `docker up` ([local.md](local.md)).
 
@@ -42,6 +47,10 @@ _Last checked: 2026-10-26 (Phase 3 built: accounts, profiles, the new home; Phas
   appears by itself.
 - **Look at the guest emojis** (70, `api-geo-shafaq/internal/players/players.go`) and the
   new road-sign home; say what to change.
+- **Try Phase 4**: the place picker, the settings, the three compasses (tap the compass in a
+  game). The words to check: "Joyida" (no move), "Surat" (NMPZ), "Rasmli" (the picture
+  compass), and the compass letters Sh / Shq / J / G‘. West on the picture compass: 🌵 now or
+  🤠 (one line: `MNEMONIC` in `geo-shafaq/src/lib/compass.svelte.ts`).
 
 - Yandex's own count of our requests: developer.tech.yandex.ru → Connect API → Developer's
   Account API, and put its key in `YANDEX_CABINET_KEY` (and a bot in `TELEGRAM_ALERT_TOKEN` /

@@ -23,6 +23,9 @@ Players find their way by reading signs, so the game speaks that language
   ko‘chalari" is a blue street plate, "Toshkent" a white town sign, "Tarixiy shaharlar" a
   brown sign for sights, "Butun O‘zbekiston" a green highway sign (`src/lib/maps/sign.ts`).
   Small plates mark the map in lists. A new kind of map gets a sign of its own, not a card.
+  A place picked in the place picker is a white entry sign with its outline, the larger place
+  on the small line ("Toshkent" over "Chilonzor tumani"); the way to the picker is a blank
+  dashed plate.
 - **The home is a lobby, not a landing page:** a greeting by the time of day and the player's
   name, one question ("Bugun qayerga boramiz?"), the signs, the settings folded into one line
   ("Oson · 5 raund · vaqtsiz"), and Play, which on a phone stays at the bottom under the thumb.

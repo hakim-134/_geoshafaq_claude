@@ -5,7 +5,7 @@ both repos, and research (sources at the end).
 
 _Written: 2026-10-22, updated 2026-10-26. Status: being built. ☑ = done, ◐ = partly done (the note
 says what is left). Progress: Phase 0 (done; the paid items wait for their time), Phase 1 (built and
-rehearsed; it goes live with the server), Phase 2 (done 2026-10-26), Phase 3 (built 2026-10-26; Google sign-in waits for its client id, the owner's). Pushed to `main` on 2026-10-22; `v0` tags pushed._
+rehearsed; it goes live with the server), Phase 2 (done 2026-10-26), Phase 3 (built 2026-10-26; Google sign-in waits for its client id, the owner's), Phase 4 (built 2026-10-26). Pushed to `main` on 2026-10-22; `v0` tags pushed._
 
 **Panoramas now: Yandex only** (the owner, 2026-10-24). Google comes later, when the game shows
 real potential (a month or more). The backend is built so adding Google is a small job
@@ -151,12 +151,9 @@ One line = about one session. Take them top-down; skip a line only if the owner 
 
 | # | Tasks | What the session delivers |
 |---|---|---|
-| 1 | **4.3, 4.4** | Rounds and time as sliders; hints as a rule (0…N, type, cost). |
-| 2 | **4.5, 4.6** | The three compasses; Move / No move / NMPZ finished. |
-| 3 | **4.1, 4.2** | Place picker (region → district, outline SVG) and progress per place. |
-| 4 | **5.1, 5.2** | Live rooms on the new engine, surviving a redeploy (Valkey snapshots). |
-| 5 | **5.3–5.5** | Room joining (code, link, QR, Telegram), host tools, limits. |
-| 6 | **8.3, 3.5** | Challenge links, and "challenge a friend" from a finished game. |
+| 1 | **5.1, 5.2** | Live rooms on the new engine, surviving a redeploy (Valkey snapshots). |
+| 2 | **5.3–5.5** | Room joining (code, link, QR, Telegram), host tools, limits. |
+| 3 | **8.3, 3.5** | Challenge links, and "challenge a friend" from a finished game. |
 
 **Not in the queue on purpose:** 1.6 (CI) is not wanted now; 1.7–1.8 are built and go live with the server, and Phase 6 waits for it (the owner's); 0.3 waits until
 Yandex views near the free limit; Phase 9 waits for a legal entity; Google day and Phase 7 wait for
@@ -303,21 +300,51 @@ how to register the database, which company), so it is a short job when its time
 
 ### Phase 4 — Places, settings and game feel (TODO 9–11, 13)
 
-- ☐ **4.1** **Place picker** (TODO 11): country → region → district/city, each card with name, outline SVG,
+- ☑ **4.1** **Place picker** (TODO 11): country → region → district/city, each card with name, outline SVG,
   banner (if any), panorama count, the player's progress. "Start narrow, go wide": suggest the
   next wider place after a good score.
-- ☐ **4.2** **Progress per place**: streets/districts seen and mastered (v0's "0 / 185 ko‘cha", generalised).
-- ☐ **4.3** **Analog settings** (TODO 13): rounds as a slider 1–20 + "endless"; time as a slider
+  _Done: `/places` (the country, then `/places/<place>`), every place a white entry sign with its
+  outline; "Boshqa joy" on the home leads there, and the chosen place shows first among the home's
+  signs. Every place is playable: its map (`place-<slug>`) is made the first time someone picks
+  it; Tashkent and its districts play by street, regions by district, the country by region.
+  Places without panoramas are folded away ("Panoramasi hali yo‘q: 7"): Yandex panoramas exist
+  only where v0's pools put them (Tashkent, 6 regions, a few towns) until the location pipeline
+  runs. After a game of 70% or more on a place, the final screen offers the place around it.
+  No banners yet (none in the data)._
+- ☑ **4.2** **Progress per place**: streets/districts seen and mastered (v0's "0 / 185 ko‘cha", generalised).
+  _Done: seen = played a round there; learned = a street or spot guessed within 500 m, a district
+  or region with the pin inside it. Counted in streets (Tashkent and its districts), districts
+  (a region), regions (the country) or spots (a small town); on the home's signs and every place
+  card._
+- ☑ **4.3** **Analog settings** (TODO 13): rounds as a slider 1–20 + "endless"; time as a slider
   10 s – 10 min with soft snaps + "no limit".
-- ☐ **4.4** **Hints as a rule** (TODO 9): 0, 1, 2 … N per game, or per round; the type (region / district /
+  _Done: endless games end with "O‘yinni tugatish" after any round; they stay out of the best
+  score (the profile's per-round bests include them). The time slider is logarithmic, snapping to
+  0:15, 0:30, 1:00, 1:30, 2:00, 3:00, 5:00, 10:00._
+- ☑ **4.4** **Hints as a rule** (TODO 9): 0, 1, 2 … N per game, or per round; the type (region / district /
   circle); the cost. Rooms and challenges carry the host's hint rule.
-- ☐ **4.5** **Compass** (TODO 10): three styles as a player preference, fed by the viewer's heading —
+  _Done: 0–10 hints (the server allows 20), per round or per game; the type is where hints start,
+  and each next one narrows down: region → district → circles that halve. A named hint shades
+  that place on the map. A name that tells nothing on this map (the region on a Tashkent map,
+  the district on its own map) is skipped. Cost: free, −10%, −20%, −50%. The difficulty suggests
+  hints and movement; the player can change them._
+- ☑ **4.5** **Compass** (TODO 10): three styles as a player preference, fed by the viewer's heading —
   classic (red north), modern (GeoGuessr-like strip), mnemonic (N 🐻‍❄️, S 🐧, E ☀️, W 🤠).
   "No compass" is a rule, for hard games.
-- ◐ **4.6** Movement rule: Move / No move / NMPZ, offered only where the provider can do it.
+  _Done: chosen in the settings ("Oddiy / Lenta / Rasmli / Yo‘q") or by tapping the compass in a
+  game. The style is kept on the player's account (`prefs`), so every device gets it. West is
+  🌵 for now, 🤠 the other candidate (the owner, 2026-10-26): one constant, `MNEMONIC` in
+  `geo-shafaq/src/lib/compass.svelte.ts`._
+- ☑ **4.6** Movement rule: Move / No move / NMPZ, offered only where the provider can do it.
+  _Done: "Yurish / Joyida / Surat" in the settings; Move is greyed out on maps whose panoramas
+  cannot walk, and the server plays it as No move there. "Surat" (NMPZ) also turns off the
+  viewers' zoom buttons, wheel and keys._
 - ☑ **4.7** Game feel from `design.md`: low-time red glow, sounds, score-bar fill.
 - **Done when:** a player picks Chilonzor, sets 7 rounds, 1:30, 1 hint, mnemonic compass, no move,
   and the game follows all of it.
+  _Done 2026-10-26 (demo panoramas, phone, light): the game got exactly those rules and played
+  them; also an endless country game with region → district hints and the strip compass (laptop,
+  dark), and the settings and places in Russian on a phone._
 
 ### Phase 5 — Live rooms v2
 

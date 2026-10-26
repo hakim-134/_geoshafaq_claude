@@ -123,7 +123,7 @@ change would make a later rename harder.
 | Who plays | [players.md](players.md) |
 | Look and feel | [design.md](design.md) |
 | What's next | [roadmap.md](roadmap.md) |
-| The full plan (from prototype to product) | `~/131/github.com/hakim-134/PLAN.md` |
+| The full plan (from prototype to product) | [PLAN.md](PLAN.md) |
 | What the owner buys before launch | [before-launch.md](before-launch.md) |
 | Putting it on the server | [deploy.md](deploy.md) |
 | Why things are the way they are | [decisions/](decisions/README.md) |

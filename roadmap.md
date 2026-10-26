@@ -1,7 +1,7 @@
 # What's next
 
 Only what the owner has said. Remove a line when it's done. The full plan is
-`~/131/github.com/hakim-134/PLAN.md` (its checkboxes show what is built).
+[PLAN.md](PLAN.md) (its checkboxes show what is built).
 
 _Last checked: 2026-10-26 (Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 

@@ -29,7 +29,10 @@ request count. Basic starts at **$10 000 a year for 2.5M requests** (about 6 800
 price list had **$2 000 a year for up to 500 panorama requests a day**. So the license, not the
 servers, is the big cost, and `PLAN.md` §6's "2–6M views a day at 10K players" would be far
 beyond the Basic tier. The quote decides how many Yandex rounds a day the game can afford; the
-per-provider daily cap (task 2.7) then keeps the game inside what was bought.
+per-provider daily cap (`DAILY_CAPS`, task 2.7, built) then keeps the game inside what was bought.
+Until the license, `DAILY_CAPS=yandex=…` can also stop play before the free key's 100 a day
+(it counts rounds, fewer than Yandex counts, so set it well below 100); the owner's call, off
+for now.
 
 **Ask Yandex** (through "Apply for a license" / "Contact support" on the tariffs page):
 

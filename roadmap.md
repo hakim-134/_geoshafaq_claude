@@ -3,12 +3,13 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-10-26 (Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-10-26 (Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
 - **The rebuild (v1)** is on `main` in both repos (pushed 2026-10-22): Phase 0 (free items), Phase 1
-  (code side) and most of Phase 2 of the plan. A solo game plays end to end on a phone and a
+  (code side) and Phase 2 of the plan (done 2026-10-26, with 2.7: the server is ready for Google
+  and keeps every provider inside a daily budget). A solo game plays end to end on a phone and a
   laptop, light and dark, scored by the server.
 - **Yandex only** for now: panoramas *and* the map ([decision 0012](decisions/0012-yandex-map.md));
   players see nothing of any other provider (2026-10-26).
@@ -19,7 +20,7 @@ _Last checked: 2026-10-26 (Phase 1 built: the server stack waits only for a serv
   phones) and backups with a weekly checked restore, rehearsed on the laptop. Deploys by hand,
   no CI ([decision 0011](decisions/0011-server-stack.md)). It goes live when the server exists.
 - Next: the queue in `PLAN.md` §5.0 ("Next up"); the owner hands tasks to sessions by number
-  ("do 3.2"). First: 2.7 (Google-ready backend), then 3.2 (sign-in with Telegram and Google).
+  ("do 3.2"). First: 3.2 (sign-in with Telegram and Google).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt
   by every `docker up` ([local.md](local.md)).
 

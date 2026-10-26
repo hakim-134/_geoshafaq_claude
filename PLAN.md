@@ -5,7 +5,7 @@ both repos, and research (sources at the end).
 
 _Written: 2026-10-22, updated 2026-10-26. Status: being built. ☑ = done, ◐ = partly done (the note
 says what is left). Progress: Phase 0 (done; the paid items wait for their time), Phase 1 (built and
-rehearsed; it goes live with the server), most of Phase 2. Pushed to `main` on 2026-10-22; `v0` tags pushed._
+rehearsed; it goes live with the server), Phase 2 (done 2026-10-26). Pushed to `main` on 2026-10-22; `v0` tags pushed._
 
 **Panoramas now: Yandex only** (the owner, 2026-10-24). Google comes later, when the game shows
 real potential (a month or more). The backend is built so adding Google is a small job
@@ -32,10 +32,10 @@ These findings decide the order of the plan. Check them before anything else.
 
 | # | Finding | What it means |
 |---|---|---|
-| R1 | **Yandex free terms cap Panorama Display at 100 requests a day** (§6.1.2) and the free API **"may not be used in projects requiring payment"** (§4.1.1). Data may be cached **≤ 30 days** (§5.1.5). Breaking the limits again and again leads to a **permanent block**. | The product cannot run on the free key: not at 10K players, not with a shop, and not with a stored location library. A **commercial Yandex license is a phase-0 task.** Even v0 for friends will hit 100/day quickly. |
+| R1 | **Yandex free terms cap Panorama Display at 100 requests a day** (§6.1.2) and the free API **"may not be used in projects requiring payment"** (§4.1.1). Data may be cached **≤ 30 days** (§5.1.5). Only Yandex's own statistics count (§4.3); Yandex may suspend or block the key **without notice** (§6.7, re-checked 2026-10-26). Breaking the limits again and again leads to a **permanent block**. | The product cannot run on the free key: not at 10K players, not with a shop, and not with a stored location library. A **commercial Yandex license is a phase-0 task.** Even v0 for friends will hit 100/day quickly. |
 | R2 | Yandex terms also say panoramas may not be shown "on third-party cartographic materials" (§6.1.1). | Settled (2026-10-26): Yandex rounds use **Yandex's own map** for guessing and results (decision 0012). |
 | R3 | **Yandex is the only big panorama source for Uzbekistan.** Google has some (R4). 2GIS has no panoramas. Yandex re-shot Tashkent in 2026 (~130K new photos). | Multi-provider is a **business-survival** feature, not only a nice one: one vendor can block or reprice us. |
-| R4 | **Google Street View**: Google announced no coverage of Uzbekistan, but GeoGuessr has Tashkent maps on Google (the owner has played them), so there is some; how much is Google's own and how much is uploaded by people is unknown until the scan counts it. Its terms (last modified 2026-08-26) say: **"Customer will not … display Street View imagery and non-Google Maps on the same screen"** (§3.2.3(e)). Pano IDs **may** be stored (Service Specific Terms). Price: Dynamic Street View 5 000 free a month, then $14 per 1 000; Dynamic Maps 10 000 free, then $7 per 1 000. Metadata look-ups are free. | Google is **provider #2, later** (the owner, 2026-10-24: Google billing wants $50 up front; too much while the game is new). The backend stays ready for it (§4). When it comes: a **Google round uses a Google guess map**, coverage is counted first with the free metadata look-up, and a Google round costs ~2¢ after the free tier. |
+| R4 | **Google Street View**: Google announced no coverage of Uzbekistan, but GeoGuessr has Tashkent maps on Google (the owner has played them), so there is some; how much is Google's own and how much is uploaded by people is unknown until the scan counts it. Its terms (last modified 2026-08-26) say: **"Customer will not … display Street View imagery and non-Google Maps on the same screen"** (§3.2.3(e)). Pano IDs **may** be stored (Service Specific Terms). Price: Dynamic Street View 5 000 free a month (~160 a day), then $14 per 1 000; Dynamic Maps 10 000 free, then $7 per 1 000 (re-checked 2026-10-26). Metadata look-ups are free. | Google is **provider #2, later** (the owner, 2026-10-24: Google billing wants $50 up front; too much while the game is new). The backend stays ready for it (§4). When it comes: a **Google round uses a Google guess map**, coverage is counted first with the free metadata look-up, and a Google round costs ~2¢ after the free tier. |
 | R5 | **Uzbek personal-data law (art. 27-1)**: data of Uzbek citizens must be stored on servers **physically in Uzbekistan** and the database registered in the state register. | Accounts (emails, Telegram IDs) mean the **database must be hosted in Uzbekistan**. Check where the current HostKey VPS is. Static files and imagery can sit on a CDN. |
 | R6 | **Telegram Login is now OpenID Connect** (Authorization Code + PKCE, `oauth.telegram.org`, client ID/secret from @BotFather). Mini Apps sell digital goods in **Telegram Stars**. | Google and Telegram both fit one OIDC code path. A Telegram Mini App is a strong channel in Uzbekistan; its shop pays in Stars. |
 | R7 | **GeoGuessr**: custom maps (Pro only), challenge links, Duels (6 000 HP), Battle Royale, Move / No move / NMPZ. **WorldGuessr**: free map making, tens of thousands of community maps, 1v1 ranked with ELO; source is public but **PolyForm Noncommercial** (read, don't copy). | User maps and challenge links are the growth engine of both. Free map making is what beat GeoGuessr's paywall. |
@@ -132,8 +132,8 @@ app does nothing for Google until "Google day".
 | ☑ | The coverage scan, ready to run: `shafaq-tools google` (free metadata look-ups) | `internal/library/google.go` |
 | ☑ | The round picker only takes enabled providers; games record each round's panorama, so its provider | `internal/maps`, `rounds` |
 | ☑ | Two tiers: `PROVIDERS` (what players get, counted on the menu) and `TEST_PROVIDERS` (only in games that name them: `demo` for tests, or Google tried quietly before players see it) | `provider.Registry`, config |
-| ☐ | A capability "needs its own guess map", sent with the round, so the web can switch maps later (task 2.7) | `provider.Capabilities`, OpenAPI |
-| ☐ | Views counted, warned and **capped per provider per day**, not only Yandex: a paid provider stops at its budget and the picker falls back to the others (task 2.7) | `provider_usage`, worker |
+| ☑ | A capability "needs its own guess map", sent with the round as `guessMap` (`yandex`, `google`; absent = any map), so the web can switch maps later (task 2.7) | `provider.Capabilities`, OpenAPI |
+| ☑ | Views counted, warned and **capped per provider per day**, not only Yandex: `DAILY_CAPS` (default `google=160`); a provider at its cap gives way to the game's others, a started game always finishes, a new game with nothing left gets "today's panoramas are used up" (task 2.7) | `provider_usage`, worker |
 
 **Location pipeline** (`cmd/tools`, River jobs, admin review):
 OSM roads inside a place (main roads weighted up: trunk/primary/secondary/tertiary) → probe each
@@ -151,16 +151,15 @@ One line = about one session. Take them top-down; skip a line only if the owner 
 
 | # | Tasks | What the session delivers |
 |---|---|---|
-| 1 | **2.7** | Google-ready backend: "own guess map" capability, per-provider daily caps with fall-back. Server only. |
-| 2 | **3.2** | Sign-in with Telegram (OIDC + bot deep link), then Google sign-in (OIDC; free, no Maps billing). |
-| 3 | **3.3, 3.4** | Many identities per user, merging, and guest → account keeping everything. |
-| 4 | **3.6, 3.7** | Profile page; name filter, report button, ban. |
-| 5 | **4.3, 4.4** | Rounds and time as sliders; hints as a rule (0…N, type, cost). |
-| 6 | **4.5, 4.6** | The three compasses; Move / No move / NMPZ finished. |
-| 7 | **4.1, 4.2** | Place picker (region → district, outline SVG) and progress per place. |
-| 8 | **5.1, 5.2** | Live rooms on the new engine, surviving a redeploy (Valkey snapshots). |
-| 9 | **5.3–5.5** | Room joining (code, link, QR, Telegram), host tools, limits. |
-| 10 | **8.3, 3.5** | Challenge links, and "challenge a friend" from a finished game. |
+| 1 | **3.2** | Sign-in with Telegram (OIDC + bot deep link), then Google sign-in (OIDC; free, no Maps billing). |
+| 2 | **3.3, 3.4** | Many identities per user, merging, and guest → account keeping everything. |
+| 3 | **3.6, 3.7** | Profile page; name filter, report button, ban. |
+| 4 | **4.3, 4.4** | Rounds and time as sliders; hints as a rule (0…N, type, cost). |
+| 5 | **4.5, 4.6** | The three compasses; Move / No move / NMPZ finished. |
+| 6 | **4.1, 4.2** | Place picker (region → district, outline SVG) and progress per place. |
+| 7 | **5.1, 5.2** | Live rooms on the new engine, surviving a redeploy (Valkey snapshots). |
+| 8 | **5.3–5.5** | Room joining (code, link, QR, Telegram), host tools, limits. |
+| 9 | **8.3, 3.5** | Challenge links, and "challenge a friend" from a finished game. |
 
 **Not in the queue on purpose:** 1.6 (CI) is not wanted now; 1.7–1.8 are built and go live with the server, and Phase 6 waits for it (the owner's); 0.3 waits until
 Yandex views near the free limit; Phase 9 waits for a legal entity; Google day and Phase 7 wait for
@@ -246,11 +245,20 @@ how to register the database, which company), so it is a short job when its time
 - ☑ **2.6** Web: menu, game screen, guess map (Yandex's map since 2026-10-26; MapLibre + PMTiles
   before), round result (street, district, metro,
   like v0), final summary, share card.
-- ☐ **2.7** **Google-ready backend** (server only, small): the two open seams in §4: the "own guess map"
+- ☑ **2.7** **Google-ready backend** (server only, small): the two open seams in §4: the "own guess map"
   capability in the round payload, and per-provider daily caps with fall-back in the picker. No
   web work.
+  _2026-10-26: both seams built (§4). The cap counts rounds handed out, which is less than
+  Yandex's own count, so a Yandex cap meant to keep the free key safe must sit well below 100.
+  The web got only the player's message for a game that cannot start ("Bugungi panoramalar
+  tugadi. Ertaga yana keling!"). Found on the way and fixed: Russian street names put the type
+  first, as the map does ("улица Фурката", not "Фурката улица"; adjectives stay:
+  "Чиланзарская улица"), and English place names have one form ("Yunusabad District",
+  "Samarkand")._
 - **Done when:** a solo game plays end-to-end on a phone, light and dark, three languages, scored
   by the server, on Yandex and `demo`.
+  _Done 2026-10-26: demo games in uz (phone, light), en (phone, dark), ru (laptop); one Yandex
+  round on a phone in dark; all scored by the server, no console errors._
 
 ### Phase 3 — Players: guests, accounts, history (TODO 2–6)
 

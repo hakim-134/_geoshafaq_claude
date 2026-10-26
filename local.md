@@ -27,6 +27,10 @@ games here spend real Yandex views. `demo` (drawn test panoramas, free) is a tes
 (`TEST_PROVIDERS=demo`): it plays only in games that name it. That is the smoke test, and
 Claude's browser checks with the hidden switch: in the page's console,
 `localStorage.sg_test_providers = 'demo'` (remove it to go back). The game shows no sign of it.
+**Never set it in the owner's own Chrome** (Claude in Chrome): it stays there, and the owner's
+games show drawn rectangles instead of streets (it happened on 2026-10-26). Set it only in a
+headless Chrome with its own throwaway profile (§3); if it ever was set in the owner's Chrome,
+remove it before finishing.
 
 The game finds the API on port 8131 of the same host by itself (`geo-shafaq/src/lib/config.ts`),
 and the API links demo images relative to itself, so both addresses work. Both ports listen on
@@ -66,7 +70,10 @@ The owner's **"docker up"** (also "update docker"), and the end of every task:
    `ORIGIN=http://localhost:8130 scripts/smoke.sh` in `api-geo-shafaq` (plays a demo game).
    Then play one round in Chrome at <http://localhost:8130> with the demo switch on (§1):
    phone size and laptop width, light and dark. If Claude in Chrome is not connected, headless
-   `google-chrome` driven over its DevTools port does the same.
+   `google-chrome` driven over its DevTools port does the same. Run it with `--disable-gpu`,
+   not SwiftShader: with SwiftShader, Yandex's map draws only part of its tiles on a laptop-size
+   map (grey "Для этого участка местности нет данных" squares or an empty map) though every tile
+   downloads. That is the headless browser, not the game (checked 2026-10-26).
 4. **Tidy.** `docker image prune -f` (dangling images only; the disk is over 80% full).
 5. **Report** the two links and what to try ([owner.md](owner.md#the-report)).
 

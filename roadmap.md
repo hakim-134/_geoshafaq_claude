@@ -3,7 +3,7 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-10-26 (Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-10-26 (Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -19,12 +19,29 @@ _Last checked: 2026-10-26 (Phase 2 done; Phase 1 built: the server stack waits o
   HTTPS, Grafana (metrics and logs), GlitchTip (errors from the server and from players'
   phones) and backups with a weekly checked restore, rehearsed on the laptop. Deploys by hand,
   no CI ([decision 0011](decisions/0011-server-stack.md)). It goes live when the server exists.
+- **Phase 3 is built** (2026-10-26): sign in with Telegram (the bot's link or its QR code,
+  and by itself inside Telegram), many ways in per player, merging, guests keep everything,
+  profiles with the streets learned, reports and bans (`shafaq-tools`). The game's pages were
+  redesigned with it: the home is a lobby with the maps as Uzbek road signs
+  ([design.md](design.md)), plus the profile, a player's page and "All games".
+  [Decision 0013](decisions/0013-accounts.md).
 - Next: the queue in `PLAN.md` §5.0 ("Next up"); the owner hands tasks to sessions by number
-  ("do 3.2"). First: 3.2 (sign-in with Telegram and Google).
+  ("do 4.3"). First: 4.3, 4.4 (sliders, hints as a rule).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt
   by every `docker up` ([local.md](local.md)).
 
 ## The owner's to-dos
+
+- **The game's own Telegram bot** (BotFather, free; e.g. @ShafaqGeoBot, with the game's
+  picture and a short description). Sign-in uses `tmp67bot` ("tmp") until then. Put its token
+  in `TELEGRAM_BOT_TOKEN` (`~/131/github.com/hakim-134/.envrc` for the laptop). The laptop and
+  the server need **different** bots: only one program can read a bot's messages.
+- **Google sign-in:** Google Cloud console → APIs & Services → Credentials → OAuth client ID
+  (type Web; authorised JavaScript origins `http://localhost:8130` and later
+  `https://geo.shafaq.uz`), free. Its client id goes in `GOOGLE_CLIENT_ID`; the Google button
+  appears by itself.
+- **Look at the guest emojis** (70, `api-geo-shafaq/internal/players/players.go`) and the
+  new road-sign home; say what to change.
 
 - Yandex's own count of our requests: developer.tech.yandex.ru → Connect API → Developer's
   Account API, and put its key in `YANDEX_CABINET_KEY` (and a bot in `TELEGRAM_ALERT_TOKEN` /

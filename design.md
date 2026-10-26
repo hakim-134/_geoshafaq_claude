@@ -13,6 +13,26 @@ The game should feel **Uzbek, warm and playful**, not like a generic map app.
 - **Fonts:** Unbounded for titles (bold, round, game-like), Onest for everything else.
 - Rounded corners, soft shadows, clear big buttons.
 
+## Signs, not cards
+
+Players find their way by reading signs, so the game speaks that language
+([decision 0013](decisions/0013-accounts.md) came with it, 2026-10-26):
+
+- **Every map is a road sign of Uzbekistan:** a plate with a white inner border and two
+  bolts, a small line on top (as the district on a street plate) and the name big. "Toshkent
+  ko‘chalari" is a blue street plate, "Toshkent" a white town sign, "Tarixiy shaharlar" a
+  brown sign for sights, "Butun O‘zbekiston" a green highway sign (`src/lib/maps/sign.ts`).
+  Small plates mark the map in lists. A new kind of map gets a sign of its own, not a card.
+- **The home is a lobby, not a landing page:** a greeting by the time of day and the player's
+  name, one question ("Bugun qayerga boramiz?"), the signs, the settings folded into one line
+  ("Oson · 5 raund · vaqtsiz"), and Play, which on a phone stays at the bottom under the thumb.
+  What a player has not earned yet stays out of sight: "how to play" only until the first game,
+  "keep your games" only after one.
+- **The profile is about the streets:** the big number is the Tashkent streets learned; the
+  other numbers sit on a dark scoreboard.
+- Avoid what makes a page look machine-made: a gradient banner with a giant slogan, rows of
+  identical cards, stat pills, numbered circles.
+
 ## Feel
 
 - **Phone first.** Big tap targets, one hand, nothing hidden behind hover.

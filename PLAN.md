@@ -5,7 +5,7 @@ both repos, and research (sources at the end).
 
 _Written: 2026-10-22, updated 2026-10-26. Status: being built. ☑ = done, ◐ = partly done (the note
 says what is left). Progress: Phase 0 (done; the paid items wait for their time), Phase 1 (built and
-rehearsed; it goes live with the server), Phase 2 (done 2026-10-26). Pushed to `main` on 2026-10-22; `v0` tags pushed._
+rehearsed; it goes live with the server), Phase 2 (done 2026-10-26), Phase 3 (built 2026-10-26; Google sign-in waits for its client id, the owner's). Pushed to `main` on 2026-10-22; `v0` tags pushed._
 
 **Panoramas now: Yandex only** (the owner, 2026-10-24). Google comes later, when the game shows
 real potential (a month or more). The backend is built so adding Google is a small job
@@ -151,15 +151,12 @@ One line = about one session. Take them top-down; skip a line only if the owner 
 
 | # | Tasks | What the session delivers |
 |---|---|---|
-| 1 | **3.2** | Sign-in with Telegram (OIDC + bot deep link), then Google sign-in (OIDC; free, no Maps billing). |
-| 2 | **3.3, 3.4** | Many identities per user, merging, and guest → account keeping everything. |
-| 3 | **3.6, 3.7** | Profile page; name filter, report button, ban. |
-| 4 | **4.3, 4.4** | Rounds and time as sliders; hints as a rule (0…N, type, cost). |
-| 5 | **4.5, 4.6** | The three compasses; Move / No move / NMPZ finished. |
-| 6 | **4.1, 4.2** | Place picker (region → district, outline SVG) and progress per place. |
-| 7 | **5.1, 5.2** | Live rooms on the new engine, surviving a redeploy (Valkey snapshots). |
-| 8 | **5.3–5.5** | Room joining (code, link, QR, Telegram), host tools, limits. |
-| 9 | **8.3, 3.5** | Challenge links, and "challenge a friend" from a finished game. |
+| 1 | **4.3, 4.4** | Rounds and time as sliders; hints as a rule (0…N, type, cost). |
+| 2 | **4.5, 4.6** | The three compasses; Move / No move / NMPZ finished. |
+| 3 | **4.1, 4.2** | Place picker (region → district, outline SVG) and progress per place. |
+| 4 | **5.1, 5.2** | Live rooms on the new engine, surviving a redeploy (Valkey snapshots). |
+| 5 | **5.3–5.5** | Room joining (code, link, QR, Telegram), host tools, limits. |
+| 6 | **8.3, 3.5** | Challenge links, and "challenge a friend" from a finished game. |
 
 **Not in the queue on purpose:** 1.6 (CI) is not wanted now; 1.7–1.8 are built and go live with the server, and Phase 6 waits for it (the owner's); 0.3 waits until
 Yandex views near the free limit; Phase 9 waits for a legal entity; Google day and Phase 7 wait for
@@ -266,19 +263,43 @@ how to register the database, which company), so it is a short job when its time
   from a curated list (50–100, reviewed for taste); the name is the same emoji + 2 digits, `🐼_42`.
   Names are not unique (100 emojis × 100 numbers = 10 000 names), so the user ID tells players
   apart. No sign-in wall anywhere. _Done; the emoji list (70) wants the owner's review._
-- ☐ **3.2** Sign-in with **Google** and **Telegram** (OIDC), **Telegram bot** deep-link, Telegram Mini App
+- ◐ **3.2** Sign-in with **Google** and **Telegram** (OIDC), **Telegram bot** deep-link, Telegram Mini App
   `initData` (TODO 3).
-- ☐ **3.3** **Many identities per user** (TODO 4): link any number of Google and Telegram accounts; unlink
+  _2026-10-26: Telegram through the bot's deep link (a link on the phone, a QR code on the
+  laptop; works on any address, localhost included) and the Mini App's `initData`, both built
+  and tested. Google sign-in (Google's button, ID token checked on the server) is built and
+  stays hidden until `GOOGLE_CLIENT_ID` is set: the owner makes the OAuth client (free). The
+  Telegram login widget is not needed: the bot's link does the same without a fixed domain.
+  Left: the owner's own bot instead of `tmp67bot` (`TELEGRAM_BOT_TOKEN`), and the Mini App
+  button in BotFather once the game is on https._
+- ☑ **3.3** **Many identities per user** (TODO 4): link any number of Google and Telegram accounts; unlink
   while ≥ 1 remains; identity already owned by another user → offer to merge (confirm on both).
-- ☐ **3.4** Guest → account upgrade keeps everything (history, progress, coins).
+  _Done: "confirm on both" = the player proves the other account (signs in with it) and then
+  says yes on a card that shows both; the other account's devices stay signed in, to the
+  merged one._
+- ☑ **3.4** Guest → account upgrade keeps everything (history, progress, coins).
+  _Done: a guest that signs in becomes the account; a guest that signs in to an existing
+  account moves into it with its games. No coins yet (Phase 9); the merge moves whatever the
+  user owns._
 - ◐ **3.5** **Game history** (TODO 5): every game and round stored; "My games" list; one game page with
   the round map replay; "play this again" / "challenge a friend" from it.
-  _Stored, listed on the menu, a finished game opens by its link with the map; "challenge a
-  friend" waits for Phase 8._
-- ☐ **3.6** Profile page: name, avatar, stats, streets learned.
-- ☐ **3.7** Moderation basics: name filter (uz/ru/en), report button, admin ban.
+  _Stored; the last games on the home and the profile, all of them on "All games"; a finished
+  game opens by its link with the map, also for others ("⚽_90's game", their page one tap
+  away, "Play this map"); "challenge a friend" waits for Phase 8._
+- ☑ **3.6** Profile page: name, avatar, stats, streets learned.
+  _Done: `/me` (change name and avatar, ways to sign in, sign out here or everywhere) and every
+  player's page `/u/<id>`. "Learned" = a guess within 500 m of the street at least once; the
+  profile shows learned and seen out of the 185 streets, games, rounds, best, average,
+  spot-on rounds, the best game on each map, the last games._
+- ☑ **3.7** Moderation basics: name filter (uz/ru/en), report button, admin ban.
+  _Done: the filter reads both scripts and digits for letters, and keeps out staff-like names;
+  Report on a player's page (rude name, cheating, other); the admin is the command line for
+  now: `shafaq-tools reports | ban | unban` (a banned player can look but not start games)._
 - **Done when:** a guest plays, signs in with Telegram on the phone, links Google on the laptop,
   and sees the same history on both.
+  _2026-10-26: played through with Telegram on both devices (the bot's Start simulated in the
+  database; the bot's side has its own test) and with Google in the integration test; Google in
+  the browser waits for the client id._
 
 ### Phase 4 — Places, settings and game feel (TODO 9–11, 13)
 

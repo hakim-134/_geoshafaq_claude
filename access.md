@@ -44,6 +44,8 @@ auto mode refuses such a commit anyway.)
 | `PUBLIC_YANDEX_KEY` | `geo-shafaq/.env.local` | panoramas in the browser. It ships inside the game's JavaScript by design; Yandex protects it with its list of allowed sites, not by secrecy |
 | `GOOGLE_MAPS_KEY` | `geo-shafaq/.env.local` | `shafaq-tools google` (coverage look-ups). Google rounds are off ([decision 0008](decisions/0008-yandex-and-google.md)) |
 | `TELEGRAM_ALERT_TOKEN`, `TELEGRAM_ALERT_CHAT` | `~/131/github.com/hakim-134/.envrc` | the worker's warning at 80% of the Yandex limit |
+| `TELEGRAM_BOT_TOKEN` | not set yet: the owner's to-do ([roadmap.md](roadmap.md)); until then the alert bot's token (`tmp67bot`) | "sign in with Telegram" (the bot's link, the Mini App) |
+| `GOOGLE_CLIENT_ID` | not set yet: the owner's to-do ([roadmap.md](roadmap.md)) | Google's sign-in button; public by design, like the Yandex key |
 | `YANDEX_CABINET_KEY` | not set yet: the owner's to-do ([roadmap.md](roadmap.md)) | the worker reads Yandex's own count |
 | Shared Postgres password | `PGPASSWORD` in `~/131/github.com/hakim-134/.envrc` (a copy of the work projects' `POSTGRES_PASSWORD`) | the local database ([local.md §2](local.md#2-the-shared-postgres-and-redis)); `docker exec postgres psql -U postgres` needs none |
 | The VPS address and access | from the owner, when the server is set up | [deploy.md](deploy.md) |

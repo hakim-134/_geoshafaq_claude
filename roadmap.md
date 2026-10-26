@@ -3,7 +3,7 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-10-26 (Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-10-26 (Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -30,8 +30,12 @@ _Last checked: 2026-10-26 (Phase 4 built: places, settings, compasses; Phase 3 b
   a rule (how many, per round or game, region → district → circle, cost); Move / Stay / Still;
   three compasses. Most of the country has no panoramas yet (only v0's pools): the location
   pipeline (PLAN §4) is what fills it.
-- Next: the queue in `PLAN.md` §5.0 ("Next up"); the owner hands tasks to sessions by number
-  ("do 5.1"). First: 5.1, 5.2 (live rooms on the new engine).
+- **Phase 5 is built** (2026-10-26): live rooms with friends on the new engine. "Do‘stlar
+  bilan o‘ynash" on the home opens a room; the code (shown as a number plate), a link, Telegram
+  or a QR code brings friends in; the host starts, goes on, changes the rules, hands the room on
+  or removes a player. Every player keeps the game in their history. A deploy in the middle of a
+  round goes unnoticed (checked with 12 simulated phones).
+- Next: the queue in `PLAN.md` §5.0 ("Next up"): 8.3, 3.5 (challenge links).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt
   by every `docker up` ([local.md](local.md)).
 
@@ -47,6 +51,9 @@ _Last checked: 2026-10-26 (Phase 4 built: places, settings, compasses; Phase 3 b
   appears by itself.
 - **Look at the guest emojis** (70, `api-geo-shafaq/internal/players/players.go`) and the
   new road-sign home; say what to change.
+- **Try a room** (Phase 5): open one on the laptop, join from the phone with the QR code.
+  The words to check: "Do‘stlar bilan o‘ynash", "xona egasi", "Xonadan chiqarish", and the
+  code as a number plate.
 - **Try Phase 4**: the place picker, the settings, the three compasses (tap the compass in a
   game). The words to check: "Joyida" (no move), "Surat" (NMPZ), "Rasmli" (the picture
   compass), and the compass letters Sh / Shq / J / G‘. West on the picture compass: 🌵 now or

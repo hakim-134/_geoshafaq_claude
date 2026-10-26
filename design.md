@@ -26,6 +26,9 @@ Players find their way by reading signs, so the game speaks that language
   A place picked in the place picker is a white entry sign with its outline, the larger place
   on the small line ("Toshkent" over "Chilonzor tumani"); the way to the picker is a blank
   dashed plate.
+- **A room's code is an Uzbek number plate** (white, a black rim, the flag and UZ at the
+  right end): friends read it out like a car's number. Each player keeps one colour in the
+  room (their avatar's ring, their pin on the result map); green stays the real place's.
 - **The home is a lobby, not a landing page:** a greeting by the time of day and the player's
   name, one question ("Bugun qayerga boramiz?"), the signs, the settings folded into one line
   ("Oson · 5 raund · vaqtsiz"), and Play, which on a phone stays at the bottom under the thumb.

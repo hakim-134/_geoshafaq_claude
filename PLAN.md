@@ -151,9 +151,7 @@ One line = about one session. Take them top-down; skip a line only if the owner 
 
 | # | Tasks | What the session delivers |
 |---|---|---|
-| 1 | **5.1, 5.2** | Live rooms on the new engine, surviving a redeploy (Valkey snapshots). |
-| 2 | **5.3–5.5** | Room joining (code, link, QR, Telegram), host tools, limits. |
-| 3 | **8.3, 3.5** | Challenge links, and "challenge a friend" from a finished game. |
+| 1 | **8.3, 3.5** | Challenge links, and "challenge a friend" from a finished game. |
 
 **Not in the queue on purpose:** 1.6 (CI) is not wanted now; 1.7–1.8 are built and go live with the server, and Phase 6 waits for it (the owner's); 0.3 waits until
 Yandex views near the free limit; Phase 9 waits for a legal entity; Google day and Phase 7 wait for
@@ -340,6 +338,9 @@ how to register the database, which company), so it is a short job when its time
   cannot walk, and the server plays it as No move there. "Surat" (NMPZ) also turns off the
   viewers' zoom buttons, wheel and keys._
 - ☑ **4.7** Game feel from `design.md`: low-time red glow, sounds, score-bar fill.
+  _Done: from 15 s left, red creeps in from the screen edges and grows; under 10 s it pulses
+  faster and the timer turns red. A warning and a beep at 15 s and 10 s (the phone buzzes at
+  10 s), then a tick each second from 5 s. The score bar fills after every round._
 - **Done when:** a player picks Chilonzor, sets 7 rounds, 1:30, 1 hint, mnemonic compass, no move,
   and the game follows all of it.
   _Done 2026-10-26 (demo panoramas, phone, light): the game got exactly those rules and played
@@ -348,14 +349,36 @@ how to register the database, which company), so it is a short job when its time
 
 ### Phase 5 — Live rooms v2
 
-- ☐ **5.1** Rooms on the new engine: same Rules, server-picked panoramas, server scoring, history saved
+- ☑ **5.1** Rooms on the new engine: same Rules, server-picked panoramas, server scoring, history saved
   for every player (guests too).
-- ☐ **5.2** Room state snapshotted to Valkey on every phase change → a deploy or crash does not end games
+  _Done: `internal/room` in the API, `/room/<CODE>` in the game. The room runs on the solo
+  engine's own pieces (rules check, round picker, hints, score). Each finished round goes into
+  every player's own game (`mode 'room'`, tied by `room_game`), so history, profiles, progress
+  and merging count it; a room game from history shows the room's table. A round ends when
+  everyone present answered or at its deadline; after the first answer the others get 45 s; a
+  pin not yet sent as a guess counts._
+- ☑ **5.2** Room state snapshotted to Valkey on every phase change → a deploy or crash does not end games
   (v0's biggest operational pain).
-- ☐ **5.3** Join by code, link, QR, Telegram share; reconnect with the session, not a per-room token.
-- ☐ **5.4** Host tools: kick, transfer host, change rules between games, rematch.
-- ☐ **5.5** Limits: room size (v0: 12, keep), rate limits per connection.
+  _Done: saved on every change, not only phase changes (pins and guesses too). The next process
+  loads a room on its first request; the clock goes on from its deadline; a page gone for up to
+  20 s is waited for. On SIGTERM the sockets close with 1012 and the pages reconnect at once._
+- ☑ **5.3** Join by code, link, QR, Telegram share; reconnect with the session, not a per-room token.
+  _Done: "Do‘stlar bilan o‘ynash" and a code box on the home; the lobby shows the code as an
+  Uzbek number plate, with "send the link" (the phone's share sheet), Telegram and a QR code.
+  The socket joins with the session cookie. Guests can rename themselves in the lobby._
+- ☑ **5.4** Host tools: kick, transfer host, change rules between games, rematch.
+  _Done: a player's ⋯ menu (make host, remove: they cannot come back); the home's settings form
+  and the maps in a sheet, between games; "Yana o‘ynash" on the final table. A host gone for
+  20 s hands the room to a player who is there._
+- ☑ **5.5** Limits: room size (v0: 12, keep), rate limits per connection.
+  _Done: 12 players, 2 000 rooms per process, 4 pages per player per room, a socket that sends
+  more than 20 messages in 10 s is closed, actions and pins rate-limited per player, rooms
+  nobody has open close after 15 minutes._
 - **Done when:** 12 phones play a room while the API is redeployed, and nobody notices.
+  _Done 2026-10-26: `go run ./cmd/roomsim` (12 players over real sockets) with `docker restart`
+  and with a rebuild-and-recreate in the middle of a round: one quiet reconnect each, the room
+  finished, every player's game saved. In Chrome (phone light, laptop dark, demo panoramas) a
+  restart mid-round went unseen: the clocks kept time, no "reconnecting" note._
 
 ### Phase 6 — Launch v1 (replace v0)
 

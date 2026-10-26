@@ -126,6 +126,7 @@ change would make a later rename harder.
 | The full plan (from prototype to product) | [PLAN.md](PLAN.md) |
 | What the owner buys before launch | [before-launch.md](before-launch.md) |
 | Putting it on the server | [deploy.md](deploy.md) |
+| In-game UI: HUD over the panorama, map, overlays | [skills/game-ui-frontend](skills/game-ui-frontend/SKILL.md) |
 | Why things are the way they are | [decisions/](decisions/README.md) |
 
 If something here is no longer true, fix it in the same change.

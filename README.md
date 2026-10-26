@@ -14,4 +14,5 @@ Claude reads [CLAUDE.md](CLAUDE.md) first.
 | [roadmap.md](roadmap.md) | what's next |
 | [deploy.md](deploy.md) | putting it on the server |
 | [before-launch.md](before-launch.md) | what the owner buys: Yandex license, hosting in Uzbekistan, a company |
+| [skills/](skills/) | skills Claude loads here (via `../.claude/skills`): `game-ui-frontend` |
 | [decisions/](decisions/README.md) | why things are the way they are |

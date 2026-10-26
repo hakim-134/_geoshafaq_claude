@@ -47,6 +47,8 @@ auto mode refuses such a commit anyway.)
 | `YANDEX_CABINET_KEY` | not set yet: the owner's to-do ([roadmap.md](roadmap.md)) | the worker reads Yandex's own count |
 | Shared Postgres password | `PGPASSWORD` in `~/131/github.com/hakim-134/.envrc` (a copy of the work projects' `POSTGRES_PASSWORD`) | the local database ([local.md §2](local.md#2-the-shared-postgres-and-redis)); `docker exec postgres psql -U postgres` needs none |
 | The VPS address and access | from the owner, when the server is set up | [deploy.md](deploy.md) |
+| The server's passwords (database, Grafana, GlitchTip, backups) and `GLITCHTIP_DSN` | the server's `/srv/shafaq/api-geo-shafaq/.env`, made from `deploy/env.example` | [deploy.md §A](deploy.md#a-v1-the-server-stack) |
+| `PUBLIC_GLITCHTIP_DSN` | `geo-shafaq/.env.local` | browser errors to GlitchTip; public by design, like the Yandex key |
 
 A key that isn't in this table: ask the owner in one line (they hand keys over gladly), then
 add it here.

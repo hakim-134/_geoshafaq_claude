@@ -99,8 +99,14 @@ change would make a later rename harder.
 - **Keys never go into git.** The repos are public; bots that scrape GitHub would burn the
   free Yandex quota and the game would stop. Keys live in gitignored files
   ([access.md §3](access.md#3-secrets-and-keys)).
-- The free Yandex key allows ~100 panorama views a day. Develop and test on the `demo`
-  provider; open real Yandex rounds only when checking Yandex itself.
+- **Players see Yandex only** (the owner, 2026-10-26): Yandex panoramas *and Yandex's map*
+  ([decision 0012](decisions/0012-yandex-map.md)); no provider choice, no test panoramas, no
+  other map or provider anywhere in the game. The server stays multi-provider: `PROVIDERS`
+  is what players get, `TEST_PROVIDERS` (`demo`) plays only in games that ask for it
+  ([local.md §1](local.md#1-what-runs)).
+- The free Yandex key allows ~100 panorama views a day. Claude tests on `demo` through the
+  hidden switch ([local.md §1](local.md#1-what-runs)); real Yandex rounds only when checking
+  Yandex itself.
 - One branch, `main` ([decision 0002](decisions/0002-deploy-branches.md)).
 - No database or cache containers of our own: the shared `postgres` and `redis` only
   ([decision 0010](decisions/0010-local-docker.md)).

@@ -26,7 +26,8 @@
 2. Build it, in both repos if needed. Run the usual checks (`make test`, `npm run check`,
    `npm test`).
 3. **Bring it up** with `docker up` ([local.md §3](local.md#3-docker-up)) and play it yourself
-   in Chrome: phone size and laptop width, light and dark, on `demo` panoramas.
+   in Chrome: phone size and laptop width, light and dark, on `demo` panoramas (the hidden
+   switch in [local.md §1](local.md#1-what-runs); players never see them).
 4. **Report** (below). Nothing is committed yet.
 5. The owner plays it and answers with changes, or with **"push"** ([access.md §2](access.md#2-git)).
 

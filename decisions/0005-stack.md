@@ -1,5 +1,8 @@
 # 0005 — The stack: Go + Postgres/PostGIS + Valkey, SvelteKit + MapLibre
 
+> The map part (MapLibre, Protomaps) is superseded by [0012](0012-yandex-map.md): the game
+> uses Yandex's map since 2026-10-26.
+
 - **Date:** 2026-10-22
 - **Status:** accepted
 - **Deciders:** the owner (asked Claude to carry out `PLAN.md`)

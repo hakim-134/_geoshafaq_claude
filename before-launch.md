@@ -42,8 +42,8 @@ per-provider daily cap (task 2.7) then keeps the game inside what was bought.
 >    step to the next panorama.
 > 2. May we store panorama positions (latitude, longitude, heading) for longer than 30 days,
 >    as a list of points we pick rounds from?
-> 3. May the Yandex panorama be on the same screen as our own map (MapLibre with
->    OpenStreetMap data), where the player puts the guess?
+> 3. (Settled 2026-10-26: the guess map is Yandex's own map now, decision 0012.) How do map
+>    loads and map tiles count against the license?
 > 4. The game will sell cosmetic items (profile frames). Is that allowed under the license?
 > 5. Can the contract be with a company in Uzbekistan, paid in USD or UZS?
 
@@ -72,6 +72,11 @@ rent big servers for a day and give them back. Seen as well: AIRNET (Tier III, o
 2. Apply to register the database: what is kept (Telegram ID and name, Google email, game
    history), why (accounts for the game), where (the Uzbek server).
 3. Free. The agency answers within 15 days with a certificate.
+
+**Backups stay in Uzbekistan too.** The server's backups (pgBackRest, encrypted) need
+S3-compatible storage off the server, and they hold the same personal data: pick it at the
+same Uzbek host (or a second Uzbek server), not a foreign cloud. Until then they live on the
+server's own disk ([decision 0011](decisions/0011-server-stack.md)).
 
 Register in the legal entity's name if it exists by then (0.5). The sources found are from
 2021–2025; check pd.gov.uz for the current form.

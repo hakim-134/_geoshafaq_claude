@@ -19,3 +19,5 @@ it with a new file and mark the old one `superseded by NNNN`.
 - [0008](0008-yandex-and-google.md) — panoramas from Yandex and Google only; no open street imagery (accepted)
 - [0009](0009-full-access.md) — full access for Claude; the owner tests the product, not the code (accepted)
 - [0010](0010-local-docker.md) — the local game: two containers on the shared Postgres and Redis (accepted)
+- [0011](0011-server-stack.md) — the server stack: one compose file deployed by hand, no CI; Caddy, Prometheus/Grafana, Loki, GlitchTip, pgBackRest (accepted)
+- [0012](0012-yandex-map.md) — Yandex's map for guessing and results, instead of MapLibre on OpenStreetMap (accepted; supersedes the map part of 0005)

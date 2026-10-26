@@ -22,6 +22,12 @@ already runs one Postgres and one Redis for all projects
 | The owner, on the laptop | <http://localhost:8130> |
 | The owner's phone, on the laptop's Wi-Fi hotspot | <http://10.42.0.1:8130> |
 
+**Panoramas.** Players get Yandex only (`PROVIDERS=yandex`), as on the server; the owner's
+games here spend real Yandex views. `demo` (drawn test panoramas, free) is a test provider
+(`TEST_PROVIDERS=demo`): it plays only in games that name it. That is the smoke test, and
+Claude's browser checks with the hidden switch: in the page's console,
+`localStorage.sg_test_providers = 'demo'` (remove it to go back). The game shows no sign of it.
+
 The game finds the API on port 8131 of the same host by itself (`geo-shafaq/src/lib/config.ts`),
 and the API links demo images relative to itself, so both addresses work. Both ports listen on
 the LAN.
@@ -58,8 +64,9 @@ The owner's **"docker up"** (also "update docker"), and the end of every task:
    It builds, starts `shafaq-web` if it isn't running, and nginx serves the new `build/` at once.
 3. **Check.** `curl -s localhost:8131/v1/ready` (db and valkey ok), then
    `ORIGIN=http://localhost:8130 scripts/smoke.sh` in `api-geo-shafaq` (plays a demo game).
-   Then play one round in Chrome at <http://localhost:8130>: phone size and laptop width, light
-   and dark.
+   Then play one round in Chrome at <http://localhost:8130> with the demo switch on (§1):
+   phone size and laptop width, light and dark. If Claude in Chrome is not connected, headless
+   `google-chrome` driven over its DevTools port does the same.
 4. **Tidy.** `docker image prune -f` (dangling images only; the disk is over 80% full).
 5. **Report** the two links and what to try ([owner.md](owner.md#the-report)).
 
@@ -75,8 +82,6 @@ so a reload shows the new version.
 - `docker logs shafaq-api --tail 50`, `docker logs shafaq-web --tail 50`.
 - After changing `geo-shafaq/nginx.lcl.conf`: `docker restart shafaq-web`. The file is mounted
   on its own, and an edit that replaces the file isn't seen until a restart.
-- nginx doesn't know `.mjs`; the conf serves it as JavaScript, or the map's worker won't load.
-  The real site's nginx needs the same.
 - `shafaq-api` doesn't start: `PGPASSWORD` is missing (compose says so), or the `postgres`
   container was recreated without PostGIS (`_claude/me/tools.md` has the install line).
 - Yandex panoramas fail on the phone but work on the laptop: the key's allowed sites need
@@ -88,5 +93,8 @@ so a reload shows the new version.
   2026-10-24; its full dump waits in `~/131/github.com/hakim-134/tmp/` until the owner deletes
   it.
 
-`api-geo-shafaq/docker-compose.yml` is the server's stack, with its own Postgres + PostGIS and
-Valkey ([decision 0007](decisions/0007-hosting.md)); the laptop doesn't use it.
+`api-geo-shafaq/docker-compose.yml` is the server's stack, with its own Postgres + PostGIS,
+Valkey, Caddy and the watch tools ([deploy.md §A](deploy.md#a-v1-the-server-stack)); the
+laptop doesn't run it. To rehearse it here, run it with an override file and an env file on
+spare ports (HTTP_PORT, HTTPS_PORT, `*.localhost` names), check, then `down -v` and remove its
+images: nothing of it stays on the laptop ([decision 0011](decisions/0011-server-stack.md)).

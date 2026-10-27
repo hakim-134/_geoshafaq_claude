@@ -35,6 +35,13 @@ _Last checked: 2026-10-26 (Phase 5 built: live rooms that survive a deploy; Phas
   or a QR code brings friends in; the host starts, goes on, changes the rules, hands the room on
   or removes a player. Every player keeps the game in their history. A deploy in the middle of a
   round goes unnoticed (checked with 12 simulated phones).
+- **The redesign** (2026-10-27, branch `redesign` in both code repos, on the owner's word;
+  not on `main` yet): the game's screens rebuilt for players, the game UI skills applied. One
+  tap from a sign to a game, a calmer round screen, the first game's tips, the reveal with
+  stars and the street's own plate, the streets collected at the end, sounds
+  ([design.md → Game feel](design.md#game-feel-the-redesign-2026-10-27)); then the short
+  profile with its own pages, "my streets" (the server's one addition: `GET /v1/me/streets`),
+  friends mode's three steps, and sharing as a link. Waits for the owner to play it; it goes into `main` on their word.
 - Next: the queue in `PLAN.md` §5.0 ("Next up"): 8.3, 3.5 (challenge links).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt
   by every `docker up` ([local.md](local.md)).

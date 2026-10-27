@@ -127,6 +127,7 @@ change would make a later rename harder.
 | What the owner buys before launch | [before-launch.md](before-launch.md) |
 | Putting it on the server | [deploy.md](deploy.md) |
 | In-game UI: HUD over the panorama, map, overlays | [skills/game-ui-frontend](skills/game-ui-frontend/SKILL.md) |
+| HUD clarity; game feel (guess, line, score); aesthetic direction | [game-ui-design](skills/game-ui-design/SKILL.md); [game-designer](skills/game-designer/SKILL.md), [playfulness-fun](skills/playfulness-fun/SKILL.md); [frontend-design](skills/frontend-design/SKILL.md) |
 | Why things are the way they are | [decisions/](decisions/README.md) |
 
 If something here is no longer true, fix it in the same change.

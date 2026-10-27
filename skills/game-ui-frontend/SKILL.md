@@ -107,6 +107,18 @@ As a default implementation constraint:
 - Canvas-only UI when DOM would be clearer and cheaper
 - Letting panorama dragging stay active under modals or the open map
 
+## References
+
+From the same `game-studio` plugin, unchanged:
+
+- Prompt recipes for HUD and menus: [references/frontend-prompts.md](references/frontend-prompts.md)
+- Low-chrome HUD layout patterns: [references/three-hud-layout-patterns.md](references/three-hud-layout-patterns.md)
+- Playtest review: [references/playtest-checklist.md](references/playtest-checklist.md)
+
+Related skills here: [game-ui-design](../game-ui-design/SKILL.md) (HUD clarity),
+[game-designer](../game-designer/SKILL.md) and [playfulness-fun](../playfulness-fun/SKILL.md)
+(game feel), [frontend-design](../frontend-design/SKILL.md) (aesthetic direction).
+
 ## Before calling it done
 
 Play it in the browser the way [owner.md](../../owner.md) and [local.md](../../local.md)

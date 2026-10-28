@@ -58,6 +58,18 @@ Players find their way by reading signs, so the game speaks that language
   under the streets. One next step: the host's "Yana o‘ynash" (friends are taken in), the
   friends' "Xona egasi yangi o‘yin boshlaydi" beside the host's face; "Natijani ulashish"
   quiet; the rest under ⋯.
+- **A room goes on by itself** (P1028 2.2 c): after a round's reveal a green ring counts ten
+  seconds on every phone, beside "Keyingi raund" ("Keyingi" on the host's, or "Natijalar"); it turns gold with a soft
+  tick on the last three. The host has a pause button and a green "Hozir" beside it; a held
+  result gives the host the big button back. Nobody waits on one person's tap.
+- **A hint's cost is shown, never explained** (P1028 2.3): at the end of the big score's line,
+  small and grey, the score before the hint struck through and a gold "−20% 💡" chip (one per
+  hint). The number
+  counts up to the struck score, the chip drops in with a soft falling note, and the number
+  ticks down. On a phone the result has no score bar (the stars say it), so a room's three rows
+  fit above the buttons. A room's row carries the same gold pill, "💡 ~~4 412~~", before "+3 530"; the
+  podium puts what the hints cost under the total, "💡 −639"; the game page's room table and
+  history say "💡 2". Free hints show nothing.
 - **On a laptop the home's right half is "Sizning Toshkentingiz":** Tashkent's 13 tumanlar
   drawn from their borders, each with its name, paper where the player hasn't been and gold as
   streets are seen and learned, as strong as the share of its streets (solid only when all are

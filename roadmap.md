@@ -3,7 +3,7 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-10-28 (the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-10-28 (rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -59,7 +59,12 @@ _Last checked: 2026-10-28 (the home with one Play button; the taste review and t
   laptop copies the link and shows the QR), the plate and a QR icon, friends popping in as
   faces with a sound, one card for place and rules, "Boshlash · 3" at the bottom. The end is a
   podium on every phone, "Siz 2-o‘rindasiz", one "Yana o‘ynash" that takes everyone in, a quiet
-  "Natijani ulashish" and ⋯. Next: the next round by itself (2.2 c) and the hint's cost (2.3).
+  "Natijani ulashish" and ⋯.
+- **Rooms go on by themselves; a hint's cost shows** (2026-10-28, P1028 2.2 c and 2.3): after a
+  result a ten-second ring runs on every phone and the next round starts by itself; the host
+  has "Hozir" and a pause. It survives a restart in the middle of the ring. On "O‘rta" every
+  result shows "~~4 412~~ −20% 💡" and the number ticks down; a room's rows, the podium, the game
+  page and history show the hint too. Next: 2.4, the small fixes, then the friend test (1.3).
 - Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: rooms, the
   hint's cost, the small fixes, the result map, the map of Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt

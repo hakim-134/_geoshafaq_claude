@@ -45,6 +45,19 @@ Players find their way by reading signs, so the game speaks that language
   earned yet stays out of sight: before the first game the button breathes (no words on it)
   and the sign has no "0 / 185"; after one, the count, a quiet "Oxirgi o‘yin: 12 780 ball"
   and, for a guest, "Natijalarni saqlash · ✈ Telegram" as a link, not a button.
+- **A room's lobby has one job, bringing friends in** (P1028 2.2, 2026-10-28): one big sky
+  "Do‘stlarni chaqirish" (the phone's share sheet; on a laptop it copies, "Nusxa olindi", and
+  the QR stands beside it), the number plate under it with a QR icon, the players as faces
+  (each in their colour's ring, 👑 on the host's) popping in with a two-note sound, a dashed "+"
+  seat that invites too, one card for the place and rules, and "Boshlash · 3" at the bottom,
+  quiet while the host is alone. Once a friend is in, the invite goes quiet and the green
+  button is the only filled one. A friend sees the faces first. No explaining sentences.
+- **A room's end is a stage:** a podium (gold, silver, bronze steps) where third, second and
+  first rise with rising notes, then a fanfare and confetti on every phone, and each phone says
+  its own place ("Siz 2-o‘rindasiz", "Siz g‘olibsiz!"). On a phone it comes first and the map is
+  under the streets. One next step: the host's "Yana o‘ynash" (friends are taken in), the
+  friends' "Xona egasi yangi o‘yin boshlaydi" beside the host's face; "Natijani ulashish"
+  quiet; the rest under ⋯.
 - **On a laptop the home's right half is "Sizning Toshkentingiz":** Tashkent's 13 tumanlar
   drawn from their borders, each with its name, paper where the player hasn't been and gold as
   streets are seen and learned, as strong as the share of its streets (solid only when all are

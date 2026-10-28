@@ -54,6 +54,12 @@ _Last checked: 2026-10-28 (the home with one Play button; the taste review and t
   (unlisted on the server; old games and rooms keep it). On a laptop the right half is
   "Sizning Toshkentingiz": the 13 tumanlar with their names, gold where the player has been,
   the chosen place marked. The review's leftovers (the picker, the end page) are in 2.4.
+- **Rooms that explain themselves** (2026-10-28, P1028 2.2 a and b): the lobby is one big
+  "Do‘stlarni chaqirish" (the phone's share sheet opens by itself after the tap where it can; a
+  laptop copies the link and shows the QR), the plate and a QR icon, friends popping in as
+  faces with a sound, one card for place and rules, "Boshlash · 3" at the bottom. The end is a
+  podium on every phone, "Siz 2-o‘rindasiz", one "Yana o‘ynash" that takes everyone in, a quiet
+  "Natijani ulashish" and ⋯. Next: the next round by itself (2.2 c) and the hint's cost (2.3).
 - Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: rooms, the
   hint's cost, the small fixes, the result map, the map of Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt

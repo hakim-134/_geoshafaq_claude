@@ -12,6 +12,8 @@ Claude reads [CLAUDE.md](CLAUDE.md) first.
 | [players.md](players.md) | who plays, and what that means for the game |
 | [design.md](design.md) | look and feel |
 | [roadmap.md](roadmap.md) | what's next |
+| [P1028.md](P1028.md) | the plan to finish the game, in order (2026-10-28) |
+| [P1028-prompts.md](P1028-prompts.md) | one prompt per session for P1028, sent by the owner in order |
 | [deploy.md](deploy.md) | putting it on the server |
 | [before-launch.md](before-launch.md) | what the owner buys: Yandex license, hosting in Uzbekistan, a company |
 | [skills/](skills/) | skills Claude loads here (via `../.claude/skills`): `game-ui-frontend` |

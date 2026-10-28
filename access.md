@@ -17,7 +17,9 @@ access, no permission questions. This page is the detail behind
 
 - Read-only git (`status`, `diff`, `log`, `show`, `fetch`) any time.
 - One branch, `main`, in every repo ([decision 0002](decisions/0002-deploy-branches.md)). No
-  `alw…` working branches here.
+  `alw…` working branches here. **Since 2026-10-28 the owner works on `cld20261028`** in all
+  three repos ([P1028.md](P1028.md#how-each-session-works)): "push" commits and pushes that
+  branch, not `main`; merging it into `main` is the owner's word.
 - Nothing is committed until the owner says **"push"** (or `p2r`, "git push", "commit and
   push"). Then, in each repo here that has changes:
   1. `git status`. Build output, dumps and keys must not go in; if one shows up, add it to
@@ -25,8 +27,8 @@ access, no permission questions. This page is the detail behind
   2. Commit all of it, other sessions' changes included: the owner tested the whole working
      tree. Short English messages that say what changed for the player; a few commits when
      the work splits easily, otherwise one.
-  3. `git push origin main`. Rejected because `main` moved? `git pull --rebase origin main`,
-     then push again. Resolve conflicts you understand; otherwise stop and name the files.
+  3. `git push origin main` (while the owner works on `cld20261028`: `git push -u origin
+     cld20261028`). Rejected because the branch moved? `git pull --rebase`, then push again. Resolve conflicts you understand; otherwise stop and name the files.
 - Never force-push, rewrite pushed history or delete tags.
 - A push deploys nothing: no server pulls `main` by itself ([deploy.md](deploy.md)).
 - `~/131/git.sriss.uz/abdullayevsh/_claude` (the owner's general rules) changes only when a

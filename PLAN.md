@@ -149,6 +149,9 @@ Ordered by dependency. Each phase ends with something usable. ☐ = task, ☑ = 
 
 One line = about one session. Take them top-down; skip a line only if the owner says so.
 
+> **2026-10-28:** the order now lives in [P1028.md](P1028.md), from the owner's intentions. Its
+> Stage 6 takes 8.3 and 3.5 from this table; Phase 6 is its Stage 7, Phase 9 its Stage 8.
+
 | # | Tasks | What the session delivers |
 |---|---|---|
 | 1 | **8.3, 3.5** | Challenge links, and "challenge a friend" from a finished game. |

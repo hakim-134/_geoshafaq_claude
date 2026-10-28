@@ -42,7 +42,9 @@ _Last checked: 2026-10-26 (Phase 5 built: live rooms that survive a deploy; Phas
   ([design.md → Game feel](design.md#game-feel-the-redesign-2026-10-27)); then the short
   profile with its own pages, "my streets" (the server's one addition: `GET /v1/me/streets`),
   friends mode's three steps, and sharing as a link. Waits for the owner to play it; it goes into `main` on their word.
-- Next: the queue in `PLAN.md` §5.0 ("Next up"): 8.3, 3.5 (challenge links).
+- Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: the Steve
+  Jobs review, one Play button, rooms, the hint's cost, the result map, the map of
+  Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt
   by every `docker up` ([local.md](local.md)).
 

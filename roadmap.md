@@ -3,7 +3,7 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-10-26 (Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-10-28 (the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -42,6 +42,11 @@ _Last checked: 2026-10-26 (Phase 5 built: live rooms that survive a deploy; Phas
   ([design.md → Game feel](design.md#game-feel-the-redesign-2026-10-27)); then the short
   profile with its own pages, "my streets" (the server's one addition: `GET /v1/me/streets`),
   friends mode's three steps, and sharing as a link. Waits for the owner to play it; it goes into `main` on their word.
+- **The taste review** (2026-10-28, P1028 1.1 and 1.2): the `steve-jobs` skill plays the game
+  like a stranger and hands exact fixes; `npm run playtest` in `geo-shafaq` plays every journey
+  on demo panoramas and saves the screenshots. It now gates every change players see
+  ([decision 0014](decisions/0014-taste-review.md)). The first review said "Not yet": its ten
+  points are P1028's new §1, the leftovers in 2.4.
 - Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: the Steve
   Jobs review, one Play button, rooms, the hint's cost, the result map, the map of
   Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).

@@ -68,10 +68,10 @@ The owner's **"docker up"** (also "update docker"), and the end of every task:
    It builds, starts `shafaq-web` if it isn't running, and nginx serves the new `build/` at once.
 3. **Check.** `curl -s localhost:8131/v1/ready` (db and valkey ok), then
    `ORIGIN=http://localhost:8130 scripts/smoke.sh` in `api-geo-shafaq` (plays a demo game).
-   Then play one round in Chrome at <http://localhost:8130> with the demo switch on (§1):
-   phone size and laptop width, light and dark. If Claude in Chrome is not connected, headless
-   `google-chrome` driven over its DevTools port does the same. Run it with `--disable-gpu`,
-   not SwiftShader: with SwiftShader, Yandex's map draws only part of its tiles on a laptop-size
+   Then play it with the demo switch on (§1), phone size and laptop width, light and dark, in
+   a headless Chrome only: `npm run playtest` in `geo-shafaq` plays every journey and saves
+   the screenshots (`scripts/playtest/out/`; the [steve-jobs](skills/steve-jobs/SKILL.md)
+   review reads them). Headless Chrome runs with `--disable-gpu`, not SwiftShader: with SwiftShader, Yandex's map draws only part of its tiles on a laptop-size
    map (grey "Для этого участка местности нет данных" squares or an empty map) though every tile
    downloads. That is the headless browser, not the game (checked 2026-10-26).
    Rooms: `go run ./cmd/roomsim` in `api-geo-shafaq` plays a 12-player room (demo panoramas);

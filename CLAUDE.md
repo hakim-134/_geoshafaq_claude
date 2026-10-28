@@ -46,6 +46,7 @@ the owner's other projects on this laptop ([access.md §6](access.md#6-still-the
 |---|---|
 | **"push"** (also `p2r`, "git push") | commit the uncommitted work in the repos here and push `main`, or `cld20261028` while the owner works there ([access.md §2](access.md#2-git)) |
 | **"docker up"** (also "update docker") | rebuild and restart the two local containers from the current code, play it once, give the links ([local.md §3](local.md#3-docker-up)) |
+| **"steve jobs"** | the taste review of what runs now, in a fresh agent ([skills/steve-jobs](skills/steve-jobs/SKILL.md)) |
 | **"do 3.2"** (or "do P1028 2.1") | that task from `PLAN.md` (or [P1028.md](P1028.md)); tick it there and update [roadmap.md](roadmap.md) |
 
 ## Who plays
@@ -127,6 +128,7 @@ change would make a later rename harder.
 | The order now (2026-10-28): what comes next, from the owner's intentions | [P1028.md](P1028.md) |
 | What the owner buys before launch | [before-launch.md](before-launch.md) |
 | Putting it on the server | [deploy.md](deploy.md) |
+| The taste review ("steve jobs"): play it like a stranger, hand exact fixes | [skills/steve-jobs](skills/steve-jobs/SKILL.md), [decision 0014](decisions/0014-taste-review.md) |
 | In-game UI: HUD over the panorama, map, overlays | [skills/game-ui-frontend](skills/game-ui-frontend/SKILL.md) |
 | HUD clarity; game feel (guess, line, score); aesthetic direction | [game-ui-design](skills/game-ui-design/SKILL.md); [game-designer](skills/game-designer/SKILL.md), [playfulness-fun](skills/playfulness-fun/SKILL.md); [frontend-design](skills/frontend-design/SKILL.md) |
 | Why things are the way they are | [decisions/](decisions/README.md) |

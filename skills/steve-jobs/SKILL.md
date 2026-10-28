@@ -51,7 +51,7 @@ The game must be up (`docker up`, [local.md §3](../../local.md#3-docker-up)) at
 <http://localhost:8130>. Run the playtest in `~/131/github.com/hakim-134/geo-shafaq`:
 
 ```bash
-npm run playtest                           # ~5 minutes: every journey, three views
+npm run playtest                           # ~7 minutes: every journey, four views
 npm run playtest -- --views laptop --only room   # one part again
 ```
 
@@ -63,7 +63,7 @@ It plays what a stranger does, on demo panoramas, and saves a screenshot of ever
 | `room` | a host opens a room, a friend opens its link in another browser, three rounds on "O‘rta" (the friend takes a hint), the end on both phones |
 | `places` | the home → the place picker → Tashkent → a district → a street there |
 
-Views: `phone-light` and `phone-dark` (390×844, touch) and `laptop` (1366×800). Output in
+Views: `phone-light` and `phone-dark` (390×844, touch), `laptop` and `laptop-dark` (1366×800). Output in
 `geo-shafaq/scripts/playtest/out/`: `<view>/NN-<who>-<screen>.png`, `steps.json` (per screen:
 the taps and seconds since the journey began, the buttons and the words in sight), and
 `problems.txt` (page errors, failed steps; a `FAIL-<journey>.png` shows where it stopped).

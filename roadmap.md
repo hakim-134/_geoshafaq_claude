@@ -3,7 +3,7 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-10-28 (the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-10-28 (the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -47,9 +47,15 @@ _Last checked: 2026-10-28 (the taste review and the playtest; Phase 5 built: liv
   on demo panoramas and saves the screenshots. It now gates every change players see
   ([decision 0014](decisions/0014-taste-review.md)). The first review said "Not yet": its ten
   points are P1028's new §1, the leftovers in 2.4.
-- Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: the Steve
-  Jobs review, one Play button, rooms, the hint's cost, the result map, the map of
-  Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).
+- **One Play button** (2026-10-28, P1028 2.1, branch `cld20261028`): the home is one sign
+  (where you'll play; a tap opens the place picker, which now starts with the ready-made maps),
+  one quiet settings line, one green "O‘ynash" (one tap to a street), then one quiet row of
+  links, "Do‘stlar bilan o‘ynash" (a room at once) and "Kodim bor". "Toshkent" left the home
+  (unlisted on the server; old games and rooms keep it). On a laptop the right half is
+  "Sizning Toshkentingiz": the 13 tumanlar with their names, gold where the player has been,
+  the chosen place marked. The review's leftovers (the picker, the end page) are in 2.4.
+- Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: rooms, the
+  hint's cost, the small fixes, the result map, the map of Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt
   by every `docker up` ([local.md](local.md)).
 

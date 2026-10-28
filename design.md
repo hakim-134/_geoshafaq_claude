@@ -19,29 +19,44 @@ Players find their way by reading signs, so the game speaks that language
 ([decision 0013](decisions/0013-accounts.md) came with it, 2026-10-26):
 
 - **Every map is a road sign of Uzbekistan:** a plate with a white inner border and two
-  bolts, a small line on top (as the district on a street plate) and the name big. "Toshkent
-  ko‘chalari" is a blue street plate, "Toshkent" a white town sign, "Tarixiy shaharlar" a
-  brown sign for sights, "Butun O‘zbekiston" a green highway sign (`src/lib/maps/sign.ts`).
-  Small plates mark the map in lists. A new kind of map gets a sign of its own, not a card.
-  A place picked in the place picker is a white entry sign with its outline, the larger place
-  on the small line ("Toshkent" over "Chilonzor tumani"); the way to the picker is a blank
-  dashed plate.
+  bolts, a small line on top (as the district on a street plate: a name, not a slogan, e.g.
+  "Asosiy ko‘chalar") and the name big. "Toshkent
+  ko‘chalari" is a blue street plate, "Tarixiy shaharlar" a brown sign for sights, "Butun
+  O‘zbekiston" a green highway sign (`src/lib/maps/sign.ts`); old games on "Toshkent" keep its
+  white town sign. Small plates mark the map in lists. A new kind of map gets a sign of its
+  own, not a card. A place picked in the place picker is a white entry sign with its outline,
+  the larger place on the small line ("Toshkent" over "Chilonzor tumani").
 - **A room's code is an Uzbek number plate** (white, a black rim, the flag and UZ at the
   right end): friends read it out like a car's number. Each player keeps one colour in the
   room (their avatar's ring, their pin on the result map); green stays the real place's.
-- **The home is a lobby, not a landing page:** a greeting by the time of day and the player's
-  name, one question ("Bugun qayerga boramiz?"), one switch (Yolg‘iz / Do‘stlar bilan), the
-  settings as three facts (a coloured dot for how hard, a flag for rounds, a clock for time)
-  that open a sheet, then the signs. **A sign is the Play button**: a tap starts the game, or
-  opens a room in friends mode. A friend's code is typed onto a number plate and joins by
-  itself at five letters. What a player has not earned yet stays out of sight: "Shu yerdan
-  boshlang" on the first sign only before the first game, "keep your games" only after one.
+- **The home is a lobby with one green button** (P1028 2.1, 2026-10-28): a greeting by the
+  time of day and the player's name (none while a guest still has the made-up "🐼_42"), one
+  question ("Bugun qayerga boramiz?"), then **one
+  sign: where you'll play** (the last place played or picked; "Toshkent ko‘chalari" the first
+  time), with how much is known there and "⇄ Boshqa joy". **The sign says where; the one
+  button plays.** A tap on the sign opens the place picker, whose first page is the
+  ready-made maps as signs, then the regions (no "choose all of Uzbekistan": "Butun
+  O‘zbekiston" is that). Under the sign, the settings as one quiet line of three facts (a
+  coloured dot for how hard, a flag for rounds, a clock for time) that opens a sheet. Then the
+  big green **"O‘ynash"**, the only box: one tap and you are on a street. Under it, one quiet
+  row of links: **"Do‘stlar bilan o‘ynash"** opens a room at once with the same place and
+  settings, **"Kodim bor"** opens the number plate, where a friend's code joins by itself at
+  five letters. One count of the streets on the home: the one under the sign. What a player has not
+  earned yet stays out of sight: before the first game the button breathes (no words on it)
+  and the sign has no "0 / 185"; after one, the count, a quiet "Oxirgi o‘yin: 12 780 ball"
+  and, for a guest, "Natijalarni saqlash · ✈ Telegram" as a link, not a button.
+- **On a laptop the home's right half is "Sizning Toshkentingiz":** Tashkent's 13 tumanlar
+  drawn from their borders, each with its name, paper where the player hasn't been and gold as
+  streets are seen and learned, as strong as the share of its streets (solid only when all are
+  learned; in dark, the stars' gold with a gold edge). The sign's place is marked: a district
+  filled sky blue with its name below the map, "Toshkent ko‘chalari" the whole city edged. A
+  district's count shows on hover; a tap opens it in the picker
+  (`src/lib/maps/CityMap.svelte`). Before the first game the city glows. The place map and "my
+  map" (P1028 4.2, 4.3) grow out of it.
 - **The profile is about the streets, and short** (2026-10-27): the big number is the
   Tashkent streets learned, three numbers on a dark scoreboard (games, best, perfect), then a
   menu to simple pages of their own: my games, my streets (each a street plate, learned ones
   ticked), records, settings, ways to sign in, name and picture.
-- **Friends mode says how a room starts:** three steps above the signs (tap a map, send the
-  code, start); a friend's code goes on a number plate below.
 - **The real place is a small Uzbekistan flag on a pole**, planted on the spot (`flagSvg` in
   `geo-shafaq/src/lib/map/map.ts`). No player's pin can look like it: theirs are drops of one
   colour each, and green stays out of their colours.

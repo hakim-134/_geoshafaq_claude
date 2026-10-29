@@ -30,13 +30,12 @@ Players find their way by reading signs, so the game speaks that language
   right end): friends read it out like a car's number. Each player keeps one colour in the
   room (their avatar's ring, their pin on the result map); green stays the real place's.
 - **The home is a lobby with one green button** (P1028 2.1, 2026-10-28): a greeting by the
-  time of day and the player's name (none while a guest still has the made-up "🐼_42"), one
+  time of day and the player's name (a guest's is the avatar's word and a number, "Ukki 42"), one
   question ("Bugun qayerga boramiz?"), then **one
   sign: where you'll play** (the last place played or picked; "Toshkent ko‘chalari" the first
   time), with how much is known there and "⇄ Boshqa joy". **The sign says where; the one
-  button plays.** A tap on the sign opens the place picker, whose first page is the
-  ready-made maps as signs, then the regions (no "choose all of Uzbekistan": "Butun
-  O‘zbekiston" is that). Under the sign, the settings as one quiet line of three facts (a
+  button plays.** A tap on the sign opens the place map at the sign's place (a ready map: the
+  country). Under the sign, the settings as one quiet line of three facts (a
   coloured dot for how hard, a flag for rounds, a clock for time) that opens a sheet. Then the
   big green **"O‘ynash"**, the only box: one tap and you are on a street. Under it, one quiet
   row of links: **"Do‘stlar bilan o‘ynash"** opens a room at once with the same place and
@@ -46,38 +45,72 @@ Players find their way by reading signs, so the game speaks that language
   and the sign has no "0 / 185"; after one, the count, a quiet "Oxirgi o‘yin: 12 780 ball"
   and, for a guest, "Natijalarni saqlash · ✈ Telegram" as a link, not a button.
 - **A room's lobby has one job, bringing friends in** (P1028 2.2, 2026-10-28): one big sky
-  "Do‘stlarni chaqirish" (the phone's share sheet; on a laptop it copies, "Nusxa olindi", and
+  "Do‘stlarni chaqirish" (the phone's share sheet; on a laptop it copies, "Havola nusxalandi", and
   the QR stands beside it), the number plate under it with a QR icon, the players as faces
   (each in their colour's ring, 👑 on the host's) popping in with a two-note sound, a dashed "+"
-  seat that invites too, one card for the place and rules, and "Boshlash · 3" at the bottom,
-  quiet while the host is alone. Once a friend is in, the invite goes quiet and the green
-  button is the only filled one. A friend sees the faces first. No explaining sentences.
+  seat that invites too, one line for the place and rules (the small sign, then the facts; on a
+  phone the rounds are a number by the flag and the clock shows only when there is a limit, so
+  they fit beside the sign), and "Boshlash ▶" at the bottom, quiet while the host is alone (no
+  number on it: by "⚑ 3" it read as the rounds; the faces say who is in). Once a friend is in,
+  the invite goes quiet and the green button is the only filled one. A friend sees the faces first. No explaining sentences.
 - **A room's end is a stage:** a podium (gold, silver, bronze steps) where third, second and
   first rise with rising notes, then a fanfare and confetti on every phone, and each phone says
   its own place ("Siz 2-o‘rindasiz", "Siz g‘olibsiz!"). On a phone it comes first and the map is
-  under the streets. One next step: the host's "Yana o‘ynash" (friends are taken in), the
+  under the streets. One next step: the host's "Yana o‘ynash" (friends are taken in; new
+  streets, away from the ones just played), the
   friends' "Xona egasi yangi o‘yin boshlaydi" beside the host's face; "Natijani ulashish"
   quiet; the rest under ⋯.
 - **A room goes on by itself** (P1028 2.2 c): after a round's reveal a green ring counts ten
   seconds on every phone, beside "Keyingi raund" ("Keyingi" on the host's, or "Natijalar"); it turns gold with a soft
   tick on the last three. The host has a pause button and a green "Hozir" beside it; a held
-  result gives the host the big button back. Nobody waits on one person's tap.
-- **A hint's cost is shown, never explained** (P1028 2.3): at the end of the big score's line,
-  small and grey, the score before the hint struck through and a gold "−20% 💡" chip (one per
-  hint). The number
-  counts up to the struck score, the chip drops in with a soft falling note, and the number
-  ticks down. On a phone the result has no score bar (the stars say it), so a room's three rows
-  fit above the buttons. A room's row carries the same gold pill, "💡 ~~4 412~~", before "+3 530"; the
+  result gives the host the big button back. Nobody waits on one person's tap. That ring's ⏸
+  is a room's only pause: a room's round has ☰ "Menyu" (compass, sound, "Xonadan chiqish"),
+  never "Pauza", because a room's clock never stops.
+- **A room's round shows its clock in the players' chip,** "👥 1/2 · 0:45", not in the middle
+  where it covered the count. After the first guess the others get 45 s, in a room with no time
+  limit too: the clock appears then, turns gold under 0:15 and red under 0:10 with the red
+  edges, so nobody is cut off without warning. On a phone the row stays one row (a second
+  would cover the compass): the chip's clock has no icon, the round dots are smaller, and a
+  ten-round room shows "3/10 raund" instead of ten dots.
+- **A hint's cost is shown, never explained** (P1028 2.3), the way the owner drew it: small and
+  grey over the big score, the score before the hint and a solid gold "−20% 💡" chip (one per hint; the bulb's gold, in light and dark):
+  "4 412 −20% 💡" over "3 530". The number counts up to 4 412, the small line drops in with a
+  soft falling note, and the big number ticks down. On a phone the result has no score bar
+  (the stars say it) and a long street name gets smaller to stay on one line, so a room's three
+  rows fit above the buttons. A room's row carries the same gold pill, "💡 ~~4 412~~", before "+3 530"; the
   podium puts what the hints cost under the total, "💡 −639"; the game page's room table and
-  history say "💡 2". Free hints show nothing.
+  history say "💡 2". Before the tap the bulb carries its price in the same gold, "−20%" (red
+  read as "wrong"). Free hints show nothing.
 - **On a laptop the home's right half is "Sizning Toshkentingiz":** Tashkent's 13 tumanlar
   drawn from their borders, each with its name, paper where the player hasn't been and gold as
   streets are seen and learned, as strong as the share of its streets (solid only when all are
   learned; in dark, the stars' gold with a gold edge). The sign's place is marked: a district
   filled sky blue with its name below the map, "Toshkent ko‘chalari" the whole city edged. A
-  district's count shows on hover; a tap opens it in the picker
-  (`src/lib/maps/CityMap.svelte`). Before the first game the city glows. The place map and "my
+  district's count shows on hover; a click makes it the sign at once and the page stays on the
+  home, so "O‘ynash" plays it (`src/lib/maps/CityMap.svelte`). Before the first game the city glows under a gold "Shu
+  yerdan boshlang" instead of the title. The place map and "my
   map" (P1028 4.2, 4.3) grow out of it.
+- **The place map is the map people know** (P1028 4.2, 2026-10-29, the owner's words): the
+  map of Uzbekistan, its 14 parts drawn from their borders, paper where the player hasn't been
+  and gold as streets are learned, names where they fit; Tashkent city, a few pixels wide, is a
+  round badge, and on a first visit it glows under a gold "Shu yerdan boshlang". A tap on a
+  region flies into it and its districts and towns come up, framed on what can be played (the
+  "Tez orada" rest runs off the edges); Tashkent shows its 13 tumanlar. A
+  tap on a place with nothing inside picks it (sky blue); a second tap lets go. **What plays is
+  where you stopped:** the picked place, else the place on screen, in one bar at the bottom
+  (its sign, the progress, the green "O‘ynash", which starts the game and makes it the home's
+  sign). On the country's map the choice is the ready maps as road signs, all in sight:
+  "Butun O‘zbekiston" (the country edged), "Toshkent ko‘chalari" (Tashkent lit), "Tarixiy
+  shaharlar" (gold stars on Samarqand, Buxoro, Xiva, Shahrisabz). Places without panoramas
+  are hatched and say "Tez orada" (in dark they sink into the background; the playable ones
+  are the raised navy; their names grey). A name is a tap on its place; a town is a dot with
+  its name in a white pill ("Samarqand shahri"); a district's name stands inside its own shape
+  (along it, when the shape is a thin strip), and names never move when a place lights. The
+  same places are a list behind one folded "Ro‘yxat". No statistics, no legend, no explaining
+  sentences; a phone's country page fits the screen.
+- **Guests' names are words** (P1028 2.4): the avatar stays the emoji, the name is its Uzbek
+  word and a number from 10 to 99, "Ukki 42", the same in every language, in the header too.
+  No avatar whose word teases (🦥 "yalqov", 🐵 "maymun").
 - **The profile is about the streets, and short** (2026-10-27): the big number is the
   Tashkent streets learned, three numbers on a dark scoreboard (games, best, perfect), then a
   menu to simple pages of their own: my games, my streets (each a street plate, learned ones
@@ -114,7 +147,7 @@ a picture, a colour or a motion instead of words. The game UI skills
 - **Everything pressable is a chunky plate** with a darker edge under it that sinks when
   pressed (`.btn` in `app.css`). Labels are sentence case, never capitals.
 - **A round shows little:** one status pill (round dots, score), the clock only when there is
-  one, a pause button (compass style, sound, leave). The hint and "back to start" sit under the
+  one, a pause button (compass style, sound, leave; ☰ "Menyu" in a room). The hint and "back to start" sit under the
   thumb; on a phone one big button says what to do ("Xaritada belgilash"), and the map slides
   up as a sheet with the street still in sight above it.
 - **Each round opens with its number** on a small blue plate ("2-raund · Qayerdasiz?").

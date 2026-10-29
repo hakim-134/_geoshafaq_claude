@@ -60,7 +60,7 @@ It plays what a stranger does, on demo panoramas, and saves a screenshot of ever
 | Journey | What it plays |
 |---|---|
 | `solo` | first visit → the first street → a hint → the guess map → the result → five rounds → the end → share → the home again (the next day) |
-| `room` | a host opens a room, a friend opens its link in another browser, three rounds on "O‘rta" (the friend takes a hint), the end on both phones |
+| `room` | a host opens a room; one friend opens its link, another types its code after "Kodim bor" (each in their own browser); three rounds on "O‘rta" (the first friend takes a hint; the rounds go on by the ring, "Hozir" and a hold); the podium on every phone; the host's "Yana o‘ynash" takes everyone into the next game |
 | `places` | the home → the place picker → Tashkent → a district → a street there |
 
 Views: `phone-light` and `phone-dark` (390×844, touch), `laptop` and `laptop-dark` (1366×800). Output in

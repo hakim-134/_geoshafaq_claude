@@ -76,7 +76,7 @@ The owner's **"docker up"** (also "update docker"), and the end of every task:
    downloads. That is the headless browser, not the game (checked 2026-10-26).
    Rooms: `go run ./cmd/roomsim` in `api-geo-shafaq` plays a 12-player room (demo panoramas);
    a `docker restart shafaq-api` while it runs must not stop it. Each run makes 12 guests, and
-   guests are limited to 30 an hour per address: clear `rl:guest:*` in Redis database 1 if needed.
+   guests are limited to 120 an hour per address: clear `rl:guest:*` in Redis database 1 if needed.
 4. **Tidy.** `docker image prune -f` (dangling images only; the disk is over 80% full).
 5. **Report** the two links and what to try ([owner.md](owner.md#the-report)).
 

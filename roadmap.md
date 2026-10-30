@@ -3,7 +3,7 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-10-29 (the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-10-30 (P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -68,7 +68,17 @@ _Last checked: 2026-10-29 (the place map of Uzbekistan, P1028 4.1–4.2, and gue
   result a ten-second ring runs on every phone and the next round starts by itself; the host
   has "Hozir" and a pause. It survives a restart in the middle of the ring. On "O‘rta" every
   result shows "4 412 −20% 💡" small over the big number, which ticks down; a room's rows, the
-  podium, the game page and history show the hint too. Next: 2.4, the small fixes, then the friend test (1.3).
+  podium, the game page and history show the hint too.
+- **The small fixes** (2026-10-30, P1028 2.4): Yandex's "open in Yandex Maps" box can't go
+  on the free key, so it moved to the top of every map, away from the thumb; Tashkent's
+  streets read once whole (177, no doubles, no English, `o‘`/`g‘` everywhere, each checked on
+  Yandex's map); the settings sheet is three rows of big tiles and a closed "Ko‘proq"; the end of a game scrolls as one page with five readable flags; no street
+  twice in one game; "Birinchi o‘yin!". Yandex's map stays light in dark mode (the owner).
+- **The real place's badge** (2026-10-30, P1028 3.1–3.2): a round green 🏁 badge with a white
+  ring, numbered on the end map like its guess; tap it (or "Panoramada ko‘rish ↗" under the
+  street plate, or a street in "my streets") and Yandex Maps opens that street's panorama,
+  facing the way the round began. Next: the friend test (1.3) is the owner's; then 3.3, the
+  crowd circle.
 - Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: rooms, the
   hint's cost, the small fixes, the result map, the map of Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt

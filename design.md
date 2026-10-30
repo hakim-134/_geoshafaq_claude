@@ -7,7 +7,8 @@ The game should feel **Uzbek, warm and playful**, not like a generic map app.
 - **Colours of the flag:** sky blue, green and red, with gold and deep lapis blue
   (the blue of old tiles). Green always marks the real place.
 - **Warm paper background** in light mode, deep night blue in dark mode. Both themes
-  must look finished, not one "real" and one afterthought.
+  must look finished, not one "real" and one afterthought. **Yandex's maps stay light in
+  dark mode** (the owner, 2026-10-30): never darken or filter their tiles.
 - **Girih pattern:** a soft eight-point star lattice, as on Uzbek tiles. Use it as a quiet
   texture, never as noise.
 - **Fonts:** Unbounded for titles (bold, round, game-like), Onest for everything else.
@@ -115,9 +116,21 @@ Players find their way by reading signs, so the game speaks that language
   Tashkent streets learned, three numbers on a dark scoreboard (games, best, perfect), then a
   menu to simple pages of their own: my games, my streets (each a street plate, learned ones
   ticked), records, settings, ways to sign in, name and picture.
-- **The real place is a small Uzbekistan flag on a pole**, planted on the spot (`flagSvg` in
-  `geo-shafaq/src/lib/map/map.ts`). No player's pin can look like it: theirs are drops of one
+- **The real place is a round 🏁 badge** (P1028 3.1, 2026-10-30; `flagSvg` in
+  `geo-shafaq/src/lib/map/map.ts`): about 36 px, a white ring with a faint dark hairline, a
+  green disc, a white finish flag with a navy chequer, a short point to the exact spot and a
+  soft shadow on the ground. The white ring keeps it clear on Sputnik and Gibrid. On the end
+  map each badge has its round's number in a gold dot on its shoulder, and the guess pin of that
+  round carries the same number; a later round sits on top. The same badge is the legend's
+  "Haqiqiy joy", and in "my streets". No player's pin can look like it: theirs are drops of one
   colour each, and green stays out of their colours.
+- **Tap the badge, see the place** (P1028 3.2): it opens that place's panorama on Yandex Maps
+  in a new tab, facing the way the round began (`panoramaUrl` in `map.ts`; inside Telegram
+  through its `openLink`). On a laptop the badge's hint says "Panoramada ko‘rish ↗"; the
+  link under the result's street plate ("Panoramada ko‘rish ↗") opens the same (the plate
+  itself stays a sign), and in "my streets" each whole row does. No words over the map: on a device's first result the
+  badge's ring keeps calling a few times more instead. Only after the result: during a round
+  nothing links to the place.
 - **Settings show each choice as what it looks like:** the words in each language, a tiny
   screen in light and dark, the compasses turning over a bit of street, the map looks, the
   sound playing when turned on. The chosen tile has a green rim and a tick.
@@ -153,8 +166,8 @@ a picture, a colour or a motion instead of words. The game UI skills
 - **Each round opens with its number** on a small blue plate ("2-raund · Qayerdasiz?").
 - **The first game teaches by showing:** a finger swipes over the street, then the big
   button breathes, then the map shows where to tap. Never again on that device.
-- **The reveal is the reward:** the line runs from the guess to the real place, the real pin
-  drops with a ring, and only then the verdict pops, up to three stars light (1 000, 2 500,
+- **The reveal is the reward:** the line runs from the guess to the real place, the real place's
+  badge drops with a ring, and only then the verdict pops, up to three stars light (1 000, 2 500,
   4 000 points), the score counts up with soft ticks, and **the place's own sign swings in**: a
   blue Tashkent street plate with the district above the name, a white entry sign for a
   district or town, a green one for a region. A perfect round gets confetti of girih stars in

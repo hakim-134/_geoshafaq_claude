@@ -24,3 +24,5 @@ it with a new file and mark the old one `superseded by NNNN`.
 - [0013](0013-accounts.md) — accounts: Telegram through the bot's link, merging, moderation by the command line (accepted)
 - [0014](0014-taste-review.md) — the taste review (`steve-jobs`) gates every change players see (accepted)
 - [0015](0015-place-map.md) — our own map of borders for choosing a place, Yandex's for playing (accepted)
+- [0016](0016-place-map-whole.md) — the place map: whole places, shared borders, no place cut off: few panoramas, an italic name (accepted)
+- [0017](0017-difficulty-is-the-place.md) — Qiyinlik is how hard the place is to guess, and nothing else (accepted)

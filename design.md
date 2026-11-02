@@ -92,18 +92,20 @@ Players find their way by reading signs, so the game speaks that language
   yerdan boshlang" instead of the title. The place map and "my
   map" (P1028 4.2, 4.3) grow out of it.
 - **The place map is the map people know** (P1028 4.2, 2026-10-29, the owner's words): the
-  map of Uzbekistan, its 14 parts drawn from their borders, paper where the player hasn't been
-  and gold as streets are learned, names where they fit; Tashkent city, a few pixels wide, is a
+  map of Uzbekistan, whole, its 14 parts drawn from their borders, neighbours on one shared line,
+  paper where the player hasn't been and gold from the first street seen, deeper as streets are
+  learned, names where they fit; Tashkent city, a few pixels wide, is a
   round badge, and on a first visit it glows under a gold "Shu yerdan boshlang". A tap on a
-  region flies into it and its districts and towns come up, framed on what can be played (the
-  "Tez orada" rest runs off the edges); Tashkent shows its 13 tumanlar. A
+  region flies into it and its districts and towns come up, the region whole in its own shape;
+  Tashkent shows its 13 tumanlar. A
   tap on a place with nothing inside picks it (sky blue); a second tap lets go. **What plays is
-  where you stopped:** the picked place, else the place on screen, in one bar at the bottom
+  where you stopped:** the picked place, else the place on screen (Tashkent: its one sign, the
+  blue "Toshkent ko‘chalari"), in one bar at the bottom
   (its sign, the progress, the green "O‘ynash", which starts the game and makes it the home's
   sign). On the country's map the choice is the ready maps as road signs, all in sight:
   "Butun O‘zbekiston" (the country edged), "Toshkent ko‘chalari" (Tashkent lit), "Tarixiy
-  shaharlar" (gold stars on Samarqand, Buxoro, Xiva, Shahrisabz). Places without panoramas
-  are hatched and say "Tez orada" (in dark they sink into the background; the playable ones
+  shaharlar" (gold stars on Samarqand, Buxoro, Xiva, Shahrisabz). A place with few panoramas (under 10)
+  plays what it has, its name in italics; only a place with none is hatched and says "Tez orada" (in dark they sink into the background; the playable ones
   are the raised navy; their names grey). A name is a tap on its place; a town is a dot with
   its name in a white pill ("Samarqand shahri"); a district's name stands inside its own shape
   (along it, when the shape is a thin strip), and names never move when a place lights. The
@@ -124,6 +126,16 @@ Players find their way by reading signs, so the game speaks that language
   round carries the same number; a later round sits on top. The same badge is the legend's
   "Haqiqiy joy", and in "my streets". No player's pin can look like it: theirs are drops of one
   colour each, and green stays out of their colours.
+- **The crowd's ring** (P1028 3.3, 2026-11-02): on every round's result, a soft gold ring
+  around the real place, its radius the round's average distance. As the badge lands it pulses
+  out from the badge twice; the ring stays where the first pulse ends, and the gold pill
+  "O‘rtacha 2.3 km" comes on its edge when the last has gone, on the part of the ring in sight
+  and clear of the pins. Under "2.3 km uzoqda" one line with a little gold ring: "O‘rtachadan 1.2 km
+  yaqinroq" or "uzoqroq". In a room: that round's players, two guesses or more. Alone: other
+  players on the same panorama, three or more. Gold, because green is the real place, red the
+  line, and a player has their own colour. The map frames the ring unless it is over eight
+  times the farthest guess; then it runs past the edges and the line says it. Still for reduced
+  motion: the ring and its pill just stand there.
 - **Tap the badge, see the place** (P1028 3.2): it opens that place's panorama on Yandex Maps
   in a new tab, facing the way the round began (`panoramaUrl` in `map.ts`; inside Telegram
   through its `openLink`). On a laptop the badge's hint says "Panoramada ko‘rish ↗"; the
@@ -131,6 +143,14 @@ Players find their way by reading signs, so the game speaks that language
   itself stays a sign), and in "my streets" each whole row does. No words over the map: on a device's first result the
   badge's ring keeps calling a few times more instead. Only after the result: during a round
   nothing links to the place.
+- **The place map goes close** (2026-11-02, the owner's idea): a pinch, the wheel, or + and − in the
+  corner, and a finger or the mouse moves the map; up to 12×. It stays the same level: the country's
+  map shows regions however close, a region's its districts; going deeper is a tap. Close up every
+  place gets its name, inside its own shape, big or small, with panoramas or not, and pills and
+  their lines mostly go by themselves: looking at the map teaches the shapes and the names.
+- **Qiyinlik is how hard the place is to guess, nothing else** ([0017](decisions/0017-difficulty-is-the-place.md)):
+  Oson, O‘rta and Qiyin pick from a map's easier or harder places; the map, its names, labels, hints
+  and scoring stay the same on all three.
 - **Settings show each choice as what it looks like:** the words in each language, a tiny
   screen in light and dark, the compasses turning over a bit of street, the map looks, the
   sound playing when turned on. The chosen tile has a green rim and a tick.

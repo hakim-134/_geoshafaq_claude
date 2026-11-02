@@ -1,7 +1,7 @@
 # 0015 — Our own map of borders for choosing a place; Yandex's for playing
 
 - **Date:** 2026-10-29
-- **Status:** accepted
+- **Status:** accepted; how it draws and what it lights: [0016](0016-place-map-whole.md)
 - **Deciders:** the owner (asked for it), Claude (how)
 
 ## Context

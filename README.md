@@ -16,5 +16,5 @@ Claude reads [CLAUDE.md](CLAUDE.md) first.
 | [P1028-prompts.md](P1028-prompts.md) | one prompt per session for P1028, sent by the owner in order |
 | [deploy.md](deploy.md) | putting it on the server |
 | [before-launch.md](before-launch.md) | what the owner buys: Yandex license, hosting in Uzbekistan, a company |
-| [skills/](skills/) | skills Claude loads here (via `../.claude/skills`): `game-ui-frontend` |
+| [skills/](skills/) | skills Claude loads here (via `../.claude/skills`): the owner's words (`steve-jobs`, `before-after`) and the design skills (`game-ui-frontend` and others) |
 | [decisions/](decisions/README.md) | why things are the way they are |

@@ -51,6 +51,11 @@ Not done / known issues
 No file lists, code or diffs unless the owner asks. If something could not be done, say so
 first, in one line.
 
+When the task came with **`+w/b&as`**, the report also hands over a page with a before and an
+after picture of every change, and uses that page's numbers
+([skills/before-after](skills/before-after/SKILL.md)). Its before pictures are taken before
+the first edit.
+
 ## What the owner does not want
 
 - Permission questions about anything in [access.md](access.md).

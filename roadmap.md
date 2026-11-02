@@ -3,7 +3,7 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-11-02 (P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-11-02 (P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -85,9 +85,17 @@ _Last checked: 2026-11-02 (P1028 3.3, the crowd circle; sessions 7 and 8, the pl
 - **The place map, checked** (2026-11-02, session 8): regions drawn whole, neighbours on one shared
   border, no place cut off (few panoramas: an italic name and a short game), Tashkent's one sign.
   The map goes close (pinch, wheel, + and −), every place named up close. Qiyinlik is only how hard
-  the place is to guess. Next:
-  session 9, 4.3 My map; the friend tests (1.3) are the owner's; the leftovers in P1028 4.2's note,
-  with a host choosing a place from the lobby first.
+  the place is to guess.
+- **My map** (2026-11-02, P1028 4.3): the profile's big picture and the laptop home's right half:
+  Tashkent's 13 tumanlar in the stars' gold as far as the player knows them; a tap shows a district's
+  streets and "Shu yerda o‘ynash". Every count now counts learned streets. **The owner's next: the
+  second friend test (P1028 1.3).**
+- **Challenge links** (2026-11-02, PLAN 8.3, 3.5): "Do‘stni chaqirish" on a game's end and a room's
+  end; whoever opens the link, guests too, plays the same streets once and lands on one leaderboard;
+  a card for Telegram. Built before the server: a real Telegram group waits for the soft launch.
+- Next: session 10, the soft launch (P1028 5.1), when the server, DNS and the bot exist; else session
+  12, the daily challenge. Leftovers: P1028 4.2's note, with a host choosing a place from the lobby
+  first.
 - Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: rooms, the
   hint's cost, the small fixes, the result map, the map of Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt

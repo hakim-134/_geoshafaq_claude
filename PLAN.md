@@ -279,11 +279,11 @@ how to register the database, which company), so it is a short job when its time
   _Done: a guest that signs in becomes the account; a guest that signs in to an existing
   account moves into it with its games. No coins yet (Phase 9); the merge moves whatever the
   user owns._
-- ◐ **3.5** **Game history** (TODO 5): every game and round stored; "My games" list; one game page with
+- ☑ **3.5** **Game history** (TODO 5): every game and round stored; "My games" list; one game page with
   the round map replay; "play this again" / "challenge a friend" from it.
   _Stored; the last games on the home and the profile, all of them on "All games"; a finished
   game opens by its link with the map, also for others ("⚽_90's game", their page one tap
-  away, "Play this map"); "challenge a friend" waits for Phase 8._
+  away, "Play this map"); "Do‘stni chaqirish" on a game's end and a room's end (2026-11-02)._
 - ☑ **3.6** Profile page: name, avatar, stats, streets learned.
   _Done: `/me` (change name and avatar, ways to sign in, sign out here or everywhere) and every
   player's page `/u/<id>`. "Learned" = a guess within 500 m of the street at least once; the
@@ -411,8 +411,11 @@ The provider interface (§4) keeps the door open.
 - ☐ **8.1** **Map maker**: pick places, draw a polygon, or click streets; the library fills it with
   panoramas; or hand-pick panoramas. Default Rules. Private / unlisted / public.
 - ☐ **8.2** Map pages: plays, likes, best scores, tags, search; moderation queue for public maps.
-- ☐ **8.3** **Challenge links**: same panoramas + rules for everyone; leaderboard per challenge; share
+- ◐ **8.3** **Challenge links**: same panoramas + rules for everyone; leaderboard per challenge; share
   card for Telegram.
+  _Built and played on the laptop, guests on one board (2026-11-02,
+  [decision 0018](decisions/0018-challenge-links.md)). Left: a link sent to a real Telegram group,
+  which needs the site up (P1028 5.1)._
 - ☐ **8.4** **Daily challenge**: one per day per official map, Wordle-style share text.
 - ☐ **8.5** (Own idea, for the learning goal) **"Streets I miss"**: a map built from the player's worst
   rounds, replayed until learned.

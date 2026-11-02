@@ -98,6 +98,9 @@ so a reload shows the new version.
   `10.42.0.1` (developer.tech.yandex.ru, the owner's account). Demo panoramas work anywhere.
 - On the phone over plain http, a few things wait for https: the share sheet and "install as
   app". They get checked on the real site.
+- A challenge's Telegram card: `curl localhost:8131/v1/challenges/<code>/card` and `…/card.png`.
+  Telegram can't reach the laptop; on the server Caddy serves it to preview robots
+  (`deploy/caddy/Caddyfile`, [decision 0018](decisions/0018-challenge-links.md)).
 - A fresh database: drop `shafaq_lcl`, then `make up` and `make setup` (OpenStreetMap and v0's
   pools). The old `shafaq-geo-db-1` (6 072 panoramas, the test games) was copied in on
   2026-10-24; its full dump waits in `~/131/github.com/hakim-134/tmp/` until the owner deletes

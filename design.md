@@ -83,18 +83,19 @@ Players find their way by reading signs, so the game speaks that language
   history say "💡 2". Before the tap the bulb carries its price in the same gold, "−20%" (red
   read as "wrong"). Free hints show nothing.
 - **On a laptop the home's right half is "Sizning Toshkentingiz":** Tashkent's 13 tumanlar
-  drawn from their borders, each with its name, paper where the player hasn't been and gold as
-  streets are seen and learned, as strong as the share of its streets (solid only when all are
-  learned; in dark, the stars' gold with a gold edge). The sign's place is marked: a district
-  filled sky blue with its name below the map, "Toshkent ko‘chalari" the whole city edged. A
+  drawn from their borders, each with its name, paper where the player hasn't been and the stars'
+  gold with a gold edge as streets are seen and learned, as strong as the share of them (solid only
+  when all are learned). "23 / 177 ko‘cha o‘rganildi" beside the title. The sign's place is marked: a district
+  filled sky blue, its count and a way to its streets beside the title ("Chilonzor: 9 / 25 ko‘cha ›"),
+  "Toshkent ko‘chalari" the whole city edged. A
   district's count shows on hover; a click makes it the sign at once and the page stays on the
   home, so "O‘ynash" plays it (`src/lib/maps/CityMap.svelte`). Before the first game the city glows under a gold "Shu
-  yerdan boshlang" instead of the title. The place map and "my
-  map" (P1028 4.2, 4.3) grow out of it.
+  yerdan boshlang" instead of the title. On this map Mirzo Ulug‘bek's far piece isn't drawn; the
+  place map keeps it.
 - **The place map is the map people know** (P1028 4.2, 2026-10-29, the owner's words): the
   map of Uzbekistan, whole, its 14 parts drawn from their borders, neighbours on one shared line,
-  paper where the player hasn't been and gold from the first street seen, deeper as streets are
-  learned, names where they fit; Tashkent city, a few pixels wide, is a
+  paper where the player hasn't been and the stars' gold from the first street seen, deeper as streets
+  are seen and learned, names where they fit; Tashkent city, a few pixels wide, is a
   round badge, and on a first visit it glows under a gold "Shu yerdan boshlang". A tap on a
   region flies into it and its districts and towns come up, the region whole in its own shape;
   Tashkent shows its 13 tumanlar. A
@@ -114,10 +115,28 @@ Players find their way by reading signs, so the game speaks that language
 - **Guests' names are words** (P1028 2.4): the avatar stays the emoji, the name is its Uzbek
   word and a number from 10 to 99, "Ukki 42", the same in every language, in the header too.
   No avatar whose word teases (🦥 "yalqov", 🐵 "maymun").
-- **The profile is about the streets, and short** (2026-10-27): the big number is the
-  Tashkent streets learned, three numbers on a dark scoreboard (games, best, perfect), then a
-  menu to simple pages of their own: my games, my streets (each a street plate, learned ones
-  ticked), records, settings, ways to sign in, name and picture.
+- **The profile is about the streets, and short** (2026-10-27): its big picture is **my map**
+  (P1028 4.3): "Sizning Toshkentingiz", the 13 tumanlar coloured by what the player knows, "23 / 177
+  ko‘cha o‘rganildi" over them, names level, edge to edge on a phone. A tap on a district is a sheet
+  of its streets (each a plate; learned ones ticked), how many still wait, and a green "Shu yerda
+  o‘ynash". Then three numbers on a dark scoreboard (games, best, perfect), then a
+  menu to simple pages of their own: my games, my streets, records, settings, ways to sign in, name
+  and picture.
+- **Every count counts the learned streets** (2026-11-02, the review): "23 / 177 o‘rganildi"; a bar
+  is green for learned over gold for seen. What was only seen shows as gold, in bars and on maps, and
+  in the street lists; never as a number that disagrees. No "0 / 177": what isn't earned stays out of
+  sight, and the map says how it starts, "Birinchi ko‘chani 500 m ichida toping". Under a guess within
+  500 m of a street, "✓ Ko‘cha o‘rganildi" in green with a rising note.
+- **A name wraps at its spaces, never inside a word:** a heading with a player's name shrinks until
+  its longest word fits (`src/lib/fit.ts`).
+- **A challenge's link is a friend saying "beat this"** (PLAN 8.3, 2026-11-02;
+  [decision 0018](decisions/0018-challenge-links.md)): "Do‘stni chaqirish" on a game's end and a
+  room's end, the same streets for whoever opens it. A friend meets the sender's face, "Suvsar 86
+  sizni chaqirdi", their score big in gold, "Yenga olasizmi?", the sign, one green button, and the
+  board from two players up. Before one's own game the board's rows
+  lead nowhere: they show where the streets are. After it: "Siz 2-o‘rindasiz", the board, "Do‘stni
+  chaqirish". In Telegram: a card on night blue with the flag's stripe, the sender, the map's sign,
+  the score in the stars' gold, its squares and a green "O‘ynash" (`internal/card` in the server).
 - **The real place is a round 🏁 badge** (P1028 3.1, 2026-10-30; `flagSvg` in
   `geo-shafaq/src/lib/map/map.ts`): about 36 px, a white ring with a faint dark hairline, a
   green disc, a white finish flag with a navy chequer, a short point to the exact spot and a
@@ -155,9 +174,10 @@ Players find their way by reading signs, so the game speaks that language
   screen in light and dark, the compasses turning over a bit of street, the map looks, the
   sound playing when turned on. The chosen tile has a green rim and a tick.
 - **Long lists have numbered pages**, not endless scrolling (all games: ten a page, by day).
-- **Sharing a game is a link** to it on the site (`geo.shafaq.uz/game/…`, from
-  `geo-shafaq/src/lib/config.ts`), with a row of coloured squares, not a picture. A room's final table shares the player's own
-  game of it (everyone's table is on that page); a room's invitation is the room's link.
+- **Sharing a game is a challenge's link** (`/c/…`), with a row of coloured squares, not a picture. A
+  room's end shares the same, with everyone there on its board; a room's invitation is the room's
+  link. On a game's end "Do‘stni chaqirish" and the way home stand under the green button, always in
+  sight, as on a room's end.
 - Avoid what makes a page look machine-made: a gradient banner with a giant slogan, rows of
   identical cards, stat pills, numbered circles.
 

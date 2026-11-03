@@ -31,7 +31,7 @@ real secrets here: no players' data yet, only development keys.
 | Area | Without asking, Claude may | Details |
 |---|---|---|
 | Code | read and change everything under `~/131/github.com/hakim-134/` | [access.md §1](access.md#1-code) |
-| Git | read-only git any time; on **"push"**, commit and push `main` (`cld20261028` while the owner works there, since 2026-10-28) | [access.md §2](access.md#2-git) |
+| Git | read-only git any time; on **"push"**, commit and push `main` | [access.md §2](access.md#2-git) |
 | Keys | read and use every key and password of this project, and show them in chat. They only stay out of git | [access.md §3](access.md#3-secrets-and-keys) |
 | Docker | build, run, recreate and remove Shafaq's own containers and images | [local.md](local.md) |
 | Databases | in the shared `postgres`: create, migrate, fill, reset and drop the `shafaq_*` databases; in the shared `redis`: database 1 | [local.md §2](local.md#2-the-shared-postgres-and-redis) |
@@ -44,7 +44,7 @@ the owner's other projects on this laptop ([access.md §6](access.md#6-still-the
 
 | The owner says | Claude does |
 |---|---|
-| **"push"** (also `p2r`, "git push") | commit the uncommitted work in the repos here and push `main`, or `cld20261028` while the owner works there ([access.md §2](access.md#2-git)) |
+| **"push"** (also `p2r`, "git push") | commit the uncommitted work in the repos here and push `main` ([access.md §2](access.md#2-git)) |
 | **"docker up"** (also "update docker") | rebuild and restart the two local containers from the current code, play it once, give the links ([local.md §3](local.md#3-docker-up)) |
 | **"steve jobs"** | the taste review of what runs now, in a fresh agent ([skills/steve-jobs](skills/steve-jobs/SKILL.md)) |
 | **`+w/b&as`** (added to a task) | with before & after screenshots: photograph the game before the first edit; the task ends with one page of what was asked and every change, before next to after ([skills/before-after](skills/before-after/SKILL.md)) |

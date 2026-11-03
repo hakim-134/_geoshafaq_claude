@@ -28,3 +28,4 @@ it with a new file and mark the old one `superseded by NNNN`.
 - [0017](0017-difficulty-is-the-place.md) — Qiyinlik is how hard the place is to guess, and nothing else (accepted)
 - [0018](0018-challenge-links.md) — challenge links: one try each, the share button becomes the challenge, a card for link previews (accepted)
 - [0019](0019-missed-streets.md) — streets I miss: each player's own private map, rewritten at each new game (accepted)
+- [0021](0021-barg.md) — Barg: an append-only ledger, earned by learning and winning, never by time; a shop of looks at fixed prices (accepted)

@@ -29,7 +29,7 @@ Players find their way by reading signs, so the game speaks that language
   the larger place on the small line ("Toshkent" over "Chilonzor tumani").
 - **A room's code is an Uzbek number plate** (white, a black rim, the flag and UZ at the
   right end): friends read it out like a car's number. Each player keeps one colour in the
-  room (their avatar's ring, their pin on the result map); green stays the real place's.
+  room (a tiny pin on their face's corner, their pin on the result map); green stays the real place's.
 - **The home is a lobby with one green button** (P1028 2.1, 2026-10-28): a greeting by the
   time of day and the player's name (a guest's is the avatar's word and a number, "Ukki 42"), one
   question ("Bugun qayerga boramiz?"), then **one
@@ -48,7 +48,7 @@ Players find their way by reading signs, so the game speaks that language
 - **A room's lobby has one job, bringing friends in** (P1028 2.2, 2026-10-28): one big sky
   "Do‘stlarni chaqirish" (the phone's share sheet; on a laptop it copies, "Havola nusxalandi", and
   the QR stands beside it), the number plate under it with a QR icon, the players as faces
-  (each in their colour's ring, 👑 on the host's) popping in with a two-note sound, a dashed "+"
+  (each with a tiny pin of their colour, 👑 on the host's: the only ring on a face is a bought frame) popping in with a two-note sound, a dashed "+"
   seat that invites too, one line for the place and rules (the small sign, then the facts; on a
   phone the rounds are a number by the flag and the clock shows only when there is a limit, so
   they fit beside the sign), and "Boshlash ▶" at the bottom, quiet while the host is alone (no
@@ -57,6 +57,14 @@ Players find their way by reading signs, so the game speaks that language
 - **Streets I miss** wear red only on the way in (a pale red row with a pin and the count, in my
   streets): red is where the guess went. The list is plain street plates, worst first; a
   street leaves it without ceremony, and the last one gets confetti.
+- **Barg is the owner's leaf coin** (PLAN 9.2, 2026-11-03), never an emoji; `Coin.svelte`. It shows when it's
+  earned ("✓ Ko‘cha o‘rganildi +5", a gold plate and confetti for a whole district, "+35 · 3 ko‘cha, g‘alaba" at
+  a game's end) and beside the name on the profile; nowhere at 0,
+  and not on the home, which keeps its one job. **The shop** is calm paper tiles with the thing itself, its
+  name and its price: no sales, no timers, no "new", nothing random. A tap shows it big with one button, and
+  bought it goes on at once, with a pop, a shine and a rising note before the sheet goes; too little Barg says how much is missing, with no dead button. **Frames** are a
+  ring on the face's own edge, so they take no room, at any size (`data-frame` on any `.avatar`). No
+  pin or trail is green: green is the real place. In a room each player's pin keeps their colour, and their line is their own trail on every phone.
 - **A room's end is a stage:** a podium (gold, silver, bronze steps) where third, second and
   first rise with rising notes, then a fanfare and confetti on every phone, and each phone says
   its own place ("Siz 2-o‘rindasiz", "Siz g‘olibsiz!"). On a phone it comes first and the map is

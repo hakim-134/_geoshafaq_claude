@@ -432,16 +432,22 @@ The provider interface (§4) keeps the door open.
 ### Phase 9 — Economy and shop (TODO 7–8)
 
 - ☐ **9.1** **Shop gate** (Phase 0): a legal entity exists. Until then, Barg is only earned, never sold.
-- ☐ **9.2** **Barg icon**: the owner's `Glossy Green Leaf Coin Icon.png` (1254 px, transparent, AI-made).
-  Left: crop to the coin (it fills only ~880 px and sits
-  off-centre), export 512/128/64/32/24 px WebP + PNG, move into `geo-shafaq` assets. Checked: it reads
-  well on light and dark and down to ~20 px; draw a flat SVG only if 16 px looks weak in the real UI.
-  Never an emoji in place of the icon.
-- ☐ **9.3** **Barg**, the one currency. **Wallet as a ledger**:
-  append-only entries, balance = sum, idempotency keys, no edits. Earn Barg by playing (daily,
-  streaks, challenges), buy Barg with money.
-- ☐ **9.4** **Shop**: profile frames first (TODO 8); then avatar packs, compass skins, pin and trail skins,
+- ☑ **9.2** **Barg icon**: the owner's `Glossy Green Leaf Coin Icon.png` (1254 px, transparent, AI-made).
+  Cropped to the coin, stray flecks outside it removed, exported 512/128/64/32/24 px WebP + PNG to
+  `geo-shafaq/static/barg/`. It reads well on light and dark down to 16 px, so no flat SVG.
+  Never an emoji in place of the icon. _Done 2026-11-03._
+- ☑ **9.3** **Barg**, the one currency. **Wallet as a ledger**:
+  append-only entries, balance = sum, idempotency keys, no edits. Earn Barg by learning and playing
+  well, never by time spent; buy Barg with money (9.5, later).
+  _Done 2026-11-03 ([decision 0021](decisions/0021-barg.md)): +5 a street learned, +50 a district learned,
+  +20 a challenge won; on the profile and `/me/wallet`. **The daily challenge earns nothing yet: 8.4 isn't
+  built.** When it is, it earns through the same ledger. Nothing is sold._
+- ◐ **9.4** **Shop**: profile frames first (TODO 8); then avatar packs, compass skins, pin and trail skins,
   room emotes. **Cosmetic only, never pay-to-win.** The three basic compasses stay free.
+  _Done 2026-11-03: `/shop`, earned Barg only, fixed prices, nothing random: frames, pins, trails. Frames show in
+  rooms, on the podium, on challenge boards and profiles. **Compass skins and room emotes were built, played and
+  taken out for now** (the owner, 2026-11-03: compass skins are extra; emotes need real animation, which takes
+  time). The three basic compasses stay free. Avatar packs weren't in the session's prompt: not built._
 - ☐ **9.5** Payments: **Payme / Click** on the web; **Telegram Stars** inside the Mini App. Webhooks → River
   jobs → ledger.
 - ☐ **9.6** Admin: items, prices, sales, refunds, a ledger audit view.

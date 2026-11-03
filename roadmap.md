@@ -3,7 +3,7 @@
 Only what the owner has said. Remove a line when it's done. The full plan is
 [PLAN.md](PLAN.md) (its checkboxes show what is built).
 
-_Last checked: 2026-11-03 (PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-11-03 (PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -95,13 +95,16 @@ _Last checked: 2026-11-03 (PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3
   a card for Telegram. Built before the server: a real Telegram group waits for the soft launch.
 - **Streets I miss** (2026-11-02, PLAN 8.5): "Adashgan ko‘chalarim", in my streets: the streets guessed
   far off, worst first, played until each is found within 500 m and leaves the list.
+- **Barg and the shop** (2026-11-03, PLAN 9.2–9.4): the leaf coin; +5 a street learned, +50 a district, +20 a
+  challenge won; a wallet on the profile; a shop of frames, pins and trails at fixed prices (compass skins and
+  room emotes were tried and taken out for now). Earned only: nothing is sold (9.5 waits for a company and the license).
 - **Players' maps are parked** (2026-11-03): the first map maker and map pages live on the branch
   `cld20261103_maps` in all three repos, with the owner's plan for the next version (`maps-next.txt`).
   Make the playtest cheaper before the next round of them: it loads Yandex's script on every page of
   every player, and that spends the key's daily limit ([local.md §1](local.md#1-what-runs)).
 - Next: session 10, the soft launch (P1028 5.1), when the server, DNS and the bot exist: it also opens the
   real Telegram group test of Phase 8. **Session 12, the daily challenge (8.4), wasn't sent: sessions
-  13–15 were done without it.** Leftovers: P1028 4.2's note, with a host choosing a place from the lobby
+  13–15, 20 and 21 were done without it, so it earns no Barg yet.** Leftovers: P1028 4.2's note, with a host choosing a place from the lobby
   first.
 - Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: rooms, the
   hint's cost, the small fixes, the result map, the map of Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).

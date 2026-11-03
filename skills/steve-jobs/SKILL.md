@@ -68,6 +68,7 @@ It plays what a stranger does, on demo panoramas, and saves a screenshot of ever
 | `places` | the home → the place picker → Tashkent → a district → a street there |
 | `challenge` | a finished game → "Do‘stni chaqirish" → two friends, guests in their own browsers, open the link, play the same streets and land on one leaderboard |
 | `missed` | a game guessed far off → my streets → "Adashgan ko‘chalarim" → a game there: a street found leaves the list; "Yana o‘ynash" until none is left |
+| `maker` | my profile → "Xaritalarim" → "Yangi xarita": a map from a district and a street; "Mening mahallam" drawn with a finger; its page; played; its challenge → two guests on one leaderboard; the map's page; made public, waiting for a person |
 
 Views: `phone-light` and `phone-dark` (390×844, touch), `laptop` and `laptop-dark` (1366×800). Output in
 `geo-shafaq/scripts/playtest/out/`: `<view>/NN-<who>-<screen>.png`, `steps.json` (per screen:

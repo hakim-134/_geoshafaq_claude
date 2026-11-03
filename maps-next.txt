@@ -1,0 +1,22 @@
+Players' maps: the owner's plan for the next version
+====================================================
+
+The map maker and map pages on this branch (all three repos, cld20261103_maps) are a first version.
+They are parked: not in the game on cld20261028. The owner's words, 2026-11-03:
+
+"Current drowing and selecring panaramas is kinda off, This is not what we wanted, Next planes: When some one trys to create its own challens/maps, He chooses root place first, like Uzbekistan , Tashkent or Buxoro, Yunsobod; And He can select panaramas only in That Place, There is two ways of selecting panaramas: 1. current one which is drowing, 2. just click on one panarama and selecting it; Keep in mind unlike current one, He can select many panaramas and drow many time, and All panaram selected and included-in-drowing will be His Map; It can be public, and might get likes (or dislikes) and also player can comment about it;
+One more thing: Currently only our panarams might be selected but in yandex-panaramas there is more then ours and other users might want to add some spedsific locaton/panaramas, for this resion they can send resuests about it and admins will check then might add that place (admins will reponce + with comment)"
+
+"Currently Drowing should be done in one go, but for biger places simple users it might be harder, so I think we can make it more user-friendly"
+
+
+Where this branch stood when it was parked
+------------------------------------------
+- Picture numbers 7–18 and 20 of the before & after page (tmp/ba/261102-1536-maps/before-after.html).
+- The last taste review said "Not yet". Its two musts were fixed but not reviewed again.
+- Not seen on a real map, because Yandex's daily limit ran out: opening on the city's middle without a
+  location, + and − on the draw map, the gold strip while drawing, gold dots for a map's streets.
+- Before playing it again: run one view only (local.md §1). Pages with a Yandex map spend the key's limit.
+- The local database already has this branch's migration (00014): the owner's own "Mening mahallam"
+  (m-e35zqhw) is kept there. cld20261028 runs fine beside it. On a fresh database, the migration runs
+  when this branch's server starts. Its number may clash if cld20261028 adds a 00014 first: renumber it.

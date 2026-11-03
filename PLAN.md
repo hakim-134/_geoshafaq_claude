@@ -410,17 +410,24 @@ The provider interface (§4) keeps the door open.
 
 - ☐ **8.1** **Map maker**: pick places, draw a polygon, or click streets; the library fills it with
   panoramas; or hand-pick panoramas. Default Rules. Private / unlisted / public.
+  _A first version is parked on the branch `cld20261103_maps` (all three repos), not in the game: the
+  owner, 2026-11-03: "this is not what we wanted". Their plan for the next one is `maps-next.txt` on
+  that branch._
 - ☐ **8.2** Map pages: plays, likes, best scores, tags, search; moderation queue for public maps.
+  _Parked with 8.1._
 - ◐ **8.3** **Challenge links**: same panoramas + rules for everyone; leaderboard per challenge; share
   card for Telegram.
   _Built and played on the laptop, guests on one board (2026-11-02,
   [decision 0018](decisions/0018-challenge-links.md)). Left: a link sent to a real Telegram group,
   which needs the site up (P1028 5.1)._
 - ☐ **8.4** **Daily challenge**: one per day per official map, Wordle-style share text.
-- ☐ **8.5** (Own idea, for the learning goal) **"Streets I miss"**: a map built from the player's worst
+- ☑ **8.5** (Own idea, for the learning goal) **"Streets I miss"**: a map built from the player's worst
   rounds, replayed until learned.
+  _Done 2026-11-02: `/me/missed`, from my streets (the owner, 2026-11-03: not under my map)._
 - **Done when:** a player makes "My mahalla", sends the challenge link to a Telegram group, and
   friends land on the leaderboard as guests.
+  _Not met: 8.1 and 8.2 wait for the owner's new plan, 8.4 (session 12) isn't built, and a real Telegram
+  group waits for the site (P1028 5.1)._
 
 ### Phase 9 — Economy and shop (TODO 7–8)
 

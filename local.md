@@ -27,6 +27,11 @@ games here spend real Yandex views. `demo` (drawn test panoramas, free) is a tes
 (`TEST_PROVIDERS=demo`): it plays only in games that name it. That is the smoke test, and
 Claude's browser checks with the hidden switch: in the page's console,
 `localStorage.sg_test_providers = 'demo'` (remove it to go back). The game shows no sign of it.
+**Demo panoramas still spend the key:** every page that opens a Yandex map counts against the key's own
+daily limit. On 2026-11-02 about 25 journey runs in one day used it up: the script answered 403 "Limit is
+exceeded", and every map in the game stopped, the owner's too. So run one view and only the journeys a task
+touches; a review's full run is the expensive one. Test without the map by blocking `yandex` hosts in
+puppeteer. After a 403, stop: going over again and again gets the key blocked for good.
 **Never set it in the owner's own Chrome** (Claude in Chrome): it stays there, and the owner's
 games show drawn rectangles instead of streets (it happened on 2026-10-26). Set it only in a
 headless Chrome with its own throwaway profile (§3); if it ever was set in the owner's Chrome,

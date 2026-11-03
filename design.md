@@ -54,6 +54,9 @@ Players find their way by reading signs, so the game speaks that language
   they fit beside the sign), and "Boshlash ▶" at the bottom, quiet while the host is alone (no
   number on it: by "⚑ 3" it read as the rounds; the faces say who is in). Once a friend is in,
   the invite goes quiet and the green button is the only filled one. A friend sees the faces first. No explaining sentences.
+- **Streets I miss** wear red only on the way in (a pale red row with a pin and the count, in my
+  streets): red is where the guess went. The list is plain street plates, worst first; a
+  street leaves it without ceremony, and the last one gets confetti.
 - **A room's end is a stage:** a podium (gold, silver, bronze steps) where third, second and
   first rise with rising notes, then a fanfare and confetti on every phone, and each phone says
   its own place ("Siz 2-o‘rindasiz", "Siz g‘olibsiz!"). On a phone it comes first and the map is

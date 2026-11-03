@@ -50,6 +50,10 @@ notes yet. Play first, write your first impressions, then read.
 The game must be up (`docker up`, [local.md §3](../../local.md#3-docker-up)) at
 <http://localhost:8130>. Run the playtest in `~/131/github.com/hakim-134/geo-shafaq`:
 
+Every page with a Yandex map spends the key's daily limit, demo panoramas or not
+([local.md §1](../../local.md#1-what-runs)), so play one or two views of the journeys the task touches
+unless asked for all. If maps stop drawing and the script answers 403 "Limit is exceeded", stop and say so.
+
 ```bash
 npm run playtest                           # ~15 minutes: every journey, four views
 npm run playtest -- --views laptop --only room   # one part again
@@ -63,6 +67,7 @@ It plays what a stranger does, on demo panoramas, and saves a screenshot of ever
 | `room` | a host opens a room; one friend opens its link, another types its code after "Kodim bor" (each in their own browser); three rounds on "O‘rta" (the first friend takes a hint; the rounds go on by the ring, "Hozir" and a hold); the podium on every phone; the host's "Yana o‘ynash" takes everyone into the next game |
 | `places` | the home → the place picker → Tashkent → a district → a street there |
 | `challenge` | a finished game → "Do‘stni chaqirish" → two friends, guests in their own browsers, open the link, play the same streets and land on one leaderboard |
+| `missed` | a game guessed far off → my streets → "Adashgan ko‘chalarim" → a game there: a street found leaves the list; "Yana o‘ynash" until none is left |
 
 Views: `phone-light` and `phone-dark` (390×844, touch), `laptop` and `laptop-dark` (1366×800). Output in
 `geo-shafaq/scripts/playtest/out/`: `<view>/NN-<who>-<screen>.png`, `steps.json` (per screen:

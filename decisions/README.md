@@ -27,3 +27,4 @@ it with a new file and mark the old one `superseded by NNNN`.
 - [0016](0016-place-map-whole.md) — the place map: whole places, shared borders, no place cut off: few panoramas, an italic name (accepted)
 - [0017](0017-difficulty-is-the-place.md) — Qiyinlik is how hard the place is to guess, and nothing else (accepted)
 - [0018](0018-challenge-links.md) — challenge links: one try each, the share button becomes the challenge, a card for link previews (accepted)
+- [0019](0019-missed-streets.md) — streets I miss: each player's own private map, rewritten at each new game (accepted)

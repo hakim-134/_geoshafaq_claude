@@ -29,3 +29,5 @@ it with a new file and mark the old one `superseded by NNNN`.
 - [0018](0018-challenge-links.md) — challenge links: one try each, the share button becomes the challenge, a card for link previews (accepted)
 - [0019](0019-missed-streets.md) — streets I miss: each player's own private map, rewritten at each new game (accepted)
 - [0021](0021-barg.md) — Barg: an append-only ledger, earned by learning and winning, never by time; a shop of looks at fixed prices (accepted)
+- [0022](0022-four-tabs.md) — the finished game: four tabs round the map of Uzbekistan, place-in-parent for banners, a new look, a health duel; a fixed finish line for November (accepted; supersedes the home of P1028 2.1 and the style of design.md)
+- [0023](0023-kadastr-borders.md) — mahalla borders from the Kadastr agency before its yes: marked `KADASTR`, the file out of git, removable in one go (accepted; the agency's answer is open)

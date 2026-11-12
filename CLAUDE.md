@@ -3,6 +3,10 @@
 Shafaq Geo is the owner's own game: you land on a street in Uzbekistan, look around, and
 guess on the map where you are. Alone, or live with friends. Mostly played on phones.
 
+In November 2026 it is being finished as **four tabs round the map of Uzbekistan**: O‘yin
+(play), Do‘stlar (rooms with friends), O‘rganish (learn the regions, districts, mahallas, the
+world, Tashkent's buses) and Profil. What "finished" is, and the order: [P1111.md](P1111.md).
+
 > The owner's general rules are in `~/131/git.sriss.uz/abdullayevsh/_claude/`. Where they
 > differ from this brief (git, keys, Docker), **this brief wins in this project**.
 
@@ -48,7 +52,7 @@ the owner's other projects on this laptop ([access.md §6](access.md#6-still-the
 | **"docker up"** (also "update docker") | rebuild and restart the two local containers from the current code, play it once, give the links ([local.md §3](local.md#3-docker-up)) |
 | **"steve jobs"** | the taste review of what runs now, in a fresh agent ([skills/steve-jobs](skills/steve-jobs/SKILL.md)) |
 | **`+w/b&as`** (added to a task) | with before & after screenshots: photograph the game before the first edit; the task ends with one page of what was asked and every change, before next to after ([skills/before-after](skills/before-after/SKILL.md)) |
-| **"do 3.2"** (or "do P1028 2.1") | that task from `PLAN.md` (or [P1028.md](P1028.md)); tick it there and update [roadmap.md](roadmap.md) |
+| **"do P1111 3.2"** (or "do P1028 2.1", "do 3.2") | that task from [P1111.md](P1111.md) (or [P1028.md](P1028.md), or `PLAN.md`); tick it there and update [roadmap.md](roadmap.md). A P1111 task is done the way [P1111 §4](P1111.md#4-how-each-session-works) says |
 
 ## Who plays
 
@@ -59,9 +63,26 @@ More: [players.md](players.md).
 
 ## Why it exists
 
-**The owner wants to learn Tashkent**, the city they live in: real main streets they can
-later drive or take the bus to. Not yards, villages or the outskirts.
-New ideas should serve this first.
+**The owner wanted to learn geography, found GeoGuessr, and wanted to play it in their own
+country.** Google barely covers Uzbekistan; Yandex covers it widely. The owner, 2026-11-11:
+*"I knew I'm not alone … who doesn't know his country well enough, just lives, goes to work …
+But life is more than that. You should be curious about your country."*
+
+- **For all Uzbeks**, *"a lot of people, not just my friends"* ([players.md](players.md)).
+- **Show, don't type.** *"I'm a really visual person. I want to represent and show things."*
+  Shapes on a map are remembered; lists of names are not. So our map of borders is the heart
+  of every screen, and a place's face is its **place-in-parent** picture: the parent's whole
+  shape with the place filled in ([P1111 §5](P1111.md#5-the-three-building-blocks)).
+- **Useful in life.** Where Buxoro is, which district is which, where bus 67 goes. Uzbekistan
+  goes deep (*"it's our nation, it's our place"*); the world gets the basics.
+- **Tashkent first**, the city the owner lives in: real main streets they can later drive or
+  take the bus to. Not yards, villages or the outskirts.
+- **Rivalry between people who know each other.** Friends first, strangers for rating second.
+
+The owner's own words, whole: [P1111-owner-words.md](P1111-owner-words.md). New ideas should
+serve these. **In November 2026 nothing new is added:** the finish line is fixed in
+[P1111.md](P1111.md) ([decision 0022](decisions/0022-four-tabs.md)); a new idea goes to its
+[§11](P1111.md#11-what-waits).
 
 ## What the owner cares about
 
@@ -70,11 +91,15 @@ New ideas should serve this first.
   Keep the credit to BeloGuessr, but nothing else Belarus-shaped.
 - **Feels like a game, not a form.** Clear, quick, fun. The owner's own example: a red glow
   at the screen edges when time runs low, "like low health in a game".
+- **One thing at a time** (Steve Jobs's way): one screen, one job, one main button. Fewer
+  things, each one right; when a new thing replaces an old one, the old one goes.
 - **Easy to understand.** A friend should be able to play without being told how.
 - **Made for friends.** Sharing a room, a result or a picture should be one tap.
 - **Uzbek first**, then English and Russian.
 
-Look and feel: [design.md](design.md).
+Look and feel: [design.md](design.md). Its road-sign style is being replaced by a bolder game
+look ([P1111 1.1](P1111.md#-11-the-new-look)); until design.md is rewritten (session 3), the
+new look's rules are P1111 §7 and [research/P1111-references.md](research/P1111-references.md).
 
 ## How to work here
 
@@ -84,6 +109,9 @@ Look and feel: [design.md](design.md).
   don't force it.
 - Keep it simple while it is still "just an idea". No extra machinery.
 - Try every change the way players use it: on a phone, in light and dark.
+- **P1111 sessions have one lead and many hands** (the owner runs them on Fable): the lead
+  decides, briefs and checks by playing; Opus agents build; Sonnet agents do the plain work
+  ([P1111 §4](P1111.md#4-how-each-session-works)).
 
 ## Domains
 
@@ -109,6 +137,10 @@ change would make a later rename harder.
 - The free Yandex key allows ~100 panorama views a day. Claude tests on `demo` through the
   hidden switch ([local.md §1](local.md#1-what-runs)); real Yandex rounds only when checking
   Yandex itself.
+- **The Kadastr agency's mahalla borders are used before its yes**
+  ([decision 0023](decisions/0023-kadastr-borders.md)). Everything that exists because of them
+  carries a `KADASTR:` comment, every row its source, and the agency's file stays out of git,
+  so it can all come out in one go.
 - One branch, `main` ([decision 0002](decisions/0002-deploy-branches.md)).
 - No database or cache containers of our own: the shared `postgres` and `redis` only
   ([decision 0010](decisions/0010-local-docker.md)).
@@ -125,8 +157,11 @@ change would make a later rename harder.
 | Who plays | [players.md](players.md) |
 | Look and feel | [design.md](design.md) |
 | What's next | [roadmap.md](roadmap.md) |
+| **The order now (2026-11-11): the finished game, in 15 sessions** | [P1111.md](P1111.md); one prompt per session: [P1111-prompts.md](P1111-prompts.md) |
+| What the owner wants, in their own words (2026-11-10/11) | [P1111-owner-words.md](P1111-owner-words.md) |
+| What was checked before building: the three model games, the data for mahallas, buses and the world | [research/](research/) |
+| The order before it (2026-10-28); its open stages wait for P1111 | [P1028.md](P1028.md) |
 | The full plan (from prototype to product) | [PLAN.md](PLAN.md) |
-| The order now (2026-10-28): what comes next, from the owner's intentions | [P1028.md](P1028.md) |
 | What the owner buys before launch | [before-launch.md](before-launch.md) |
 | Putting it on the server | [deploy.md](deploy.md) |
 | The taste review ("steve jobs"): play it like a stranger, hand exact fixes | [skills/steve-jobs](skills/steve-jobs/SKILL.md), [decision 0014](decisions/0014-taste-review.md) |

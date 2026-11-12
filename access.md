@@ -73,6 +73,11 @@ add it here.
 - Install the packages and tools the work needs (`npm install`, `go get`, `go install`).
 - Search the web whenever it helps: docs, prices, other geo games.
 - Drive Chrome (Claude in Chrome) to test the game at its local addresses ([local.md](local.md)).
+- **Other games, for study:** play them in the owner's Chrome. If one asks for sign-in, the
+  owner's word (2026-11-12) is *"feel free to use my google acc to login/join"*: the
+  "Continue with Google" button with the account Chrome is already signed in to. Claude never
+  types a password and never buys anything there; if a site wants more than that one button
+  (a new password, a card, a phone number), say so and leave it to the owner.
 
 ## 6. Still the owner's call
 

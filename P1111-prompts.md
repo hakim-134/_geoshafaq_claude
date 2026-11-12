@@ -115,10 +115,15 @@ Follow P1111 §4.
 
 ## 8. Tashkent's mahallas
 
+The owner's word on the borders is given (2026-11-12,
+[decision 0023](decisions/0023-kadastr-borders.md)), so this can be sent in its turn.
+
 ```text
 Shafaq Geo, P1111 session 8 of 15. Do P1111 3.3: Tashkent's mahallas.
 
 Build what research/P1111-mahallas.md says is possible: inside a district of Tashkent, its mahallas, drawn and learned the same way as regions and districts, one level deeper. Place-in-parent for a mahalla is its district with the mahalla filled. Tashkent only. If the data covers only some districts, build those well and say plainly which are missing.
+
+Borders: the Kadastr agency's where it has them, OpenStreetMap laid in where it has none. I am still asking the agency, so follow decision 0023 to the letter: a `KADASTR:` comment on everything that exists because of its data, the source on every row, its file out of git, its name shown as the source. If they say no, it must all come out in one go.
 
 Done when I learn the mahallas of my own district on the map.
 
@@ -139,12 +144,12 @@ Follow P1111 §4.
 
 ## 10. Tashkent's buses
 
-**Send only when** the owner has approved the list of buses from session 1.
+The list is approved (2026-11-12): all 23 routes, as proposed.
 
 ```text
 Shafaq Geo, P1111 session 10 of 15. Do P1111 3.5: Tashkent's buses.
 
-The approved list is in research/P1111-buses.md. A route is drawn on the map of Tashkent; I pick its number from a few. After the answer, name the route's main stops: that is the useful part. Same engine, same two ways to play. Check each route's line against Yandex's map before it goes in.
+The approved list is in research/P1111-buses.md: all 23, the four lines OpenStreetMap lacks (131, 116, 67, 115) and the repair of 93 included. Don't spend time on the choice again. A route is drawn on the map of Tashkent; I pick its number from a few. After the answer, name the route's main stops: that is the useful part. Same engine, same two ways to play. Check each route's line against Yandex's map before it goes in.
 
 Done when I can tell the popular buses apart by their routes.
 

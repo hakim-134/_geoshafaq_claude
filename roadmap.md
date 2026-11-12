@@ -1,12 +1,40 @@
 # What's next
 
-Only what the owner has said. Remove a line when it's done. The full plan is
-[PLAN.md](PLAN.md) (its checkboxes show what is built).
+Only what the owner has said. Remove a line when it's done. **The order now is
+[P1111.md](P1111.md)** (its ticks show what is done); the full plan behind it is
+[PLAN.md](PLAN.md).
 
-_Last checked: 2026-11-03 (PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-11-12 (P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
+- **P1111 is the order** (2026-11-11, [decision 0022](decisions/0022-four-tabs.md)): the game
+  finished in November as four tabs round the map of Uzbekistan (O‘yin, Do‘stlar, O‘rganish,
+  Profil), in 15 sessions, one prompt each ([P1111-prompts.md](P1111-prompts.md)). The rest of
+  this list is what exists today; on the way the home with one Play button, the places'
+  banners and the road-sign look are replaced.
+- **P1111 session 1 is done** (2026-11-12, tasks 0.1–0.4; nothing players see changed). All
+  three model games were really played: Squiz, then StudyGe and GeoGuessr in the owner's
+  Chrome once he had signed in (a full StudyGe round; GeoGuessr's daily challenge and a whole
+  duel). Four findings in [research/](research/):
+  - **The models** ([references](research/P1111-references.md)): what we take from StudyGe (the
+    map is the whole screen, tap then confirm, a wrong tap names what you tapped and shows the
+    right one), from Squiz (choices that start at two and grow), from GeoGuessr (the bold
+    lettering, the duel's numbers, the 5 000 moment), and what we leave.
+  - **Mahallas** ([finding](research/P1111-mahallas.md)): not possible now. The Kadastr agency
+    has 426 of Tashkent's 585 with borders, three districts whole, but no licence;
+    OpenStreetMap is half done. **The owner's word (2026-11-12):** build from the agency's
+    borders now, marked `KADASTR` so they can be taken out
+    ([decision 0023](decisions/0023-kadastr-borders.md)).
+  - **Buses** ([finding](research/P1111-buses.md)): OpenStreetMap has routes 1–60 well, almost
+    nothing above. 23 proposed; 131, 116, 67 and 115 must be built by us. **Approved by the
+    owner as it is, 2026-11-12.**
+  - **The world** ([finding](research/P1111-world.md)): nothing blocks it. 195 countries on the
+    UN's list and map, flags, capitals, three languages; 31 Uzbek names for the owner's eye.
+  - Found on the way: **the game's border between Mirzo Ulug‘bek and Yashnobod is an old one**
+    (P1111 3.2 fixes it before the districts quiz).
+- **Next: P1111 session 2**, the new look on three screens (1.1). It ends with the owner's yes
+  or changes; session 3 waits for that yes.
 - **The rebuild (v1)** is on `main` in both repos (pushed 2026-10-22): Phase 0 (free items), Phase 1
   (code side) and Phase 2 of the plan (done 2026-10-26, with 2.7: the server is ready for Google
   and keeps every provider inside a daily budget). A solo game plays end to end on a phone and a
@@ -102,16 +130,28 @@ _Last checked: 2026-11-03 (PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets 
   `cld20261103_maps` in all three repos, with the owner's plan for the next version (`maps-next.txt`).
   Make the playtest cheaper before the next round of them: it loads Yandex's script on every page of
   every player, and that spends the key's daily limit ([local.md §1](local.md#1-what-runs)).
-- Next: session 10, the soft launch (P1028 5.1), when the server, DNS and the bot exist: it also opens the
+- **Waits until P1111 is done** ([P1111 §11](P1111.md#11-what-waits)): P1028's session 10, the soft launch (5.1), when the server, DNS and the bot exist: it also opens the
   real Telegram group test of Phase 8. **Session 12, the daily challenge (8.4), wasn't sent: sessions
   13–15, 20 and 21 were done without it, so it earns no Barg yet.** Leftovers: P1028 4.2's note, with a host choosing a place from the lobby
   first.
-- Next: [P1028.md](P1028.md) (2026-10-28), the order from the owner's intentions: rooms, the
-  hint's cost, the small fixes, the result map, the map of Uzbekistan; then PLAN's Phases 8, 6 and 9 (8.3 and 3.5 are in its Stage 6).
+- After P1111: what is still open in [P1028.md](P1028.md) (the soft launch, the daily challenge,
+  the map maker, launch), then PLAN's Phases 6 and 9.
 - **The local game** runs in Docker for the owner to try, at <http://localhost:8130>, rebuilt
   by every `docker up` ([local.md](local.md)).
 
 ## The owner's to-dos
+
+For P1111 ([§12](P1111.md#12-for-the-owner)):
+
+- **The Kadastr agency:** keep trying to reach it for leave to show its mahalla borders (with
+  credit), and tell Claude the answer. We build from them meanwhile
+  ([decision 0023](decisions/0023-kadastr-borders.md)); a "no" means they all come out.
+- **Which district of Tashkent is yours?** Session 8 is judged on it.
+- **31 Uzbek names** of countries and capitals to look over
+  ([research/P1111-world.md](research/P1111-world.md#uzbek-names)). Needed before session 9.
+- **After session 2:** look at the three screens of the new look.
+
+Older, still open:
 
 - **The game's own Telegram bot** (BotFather, free; e.g. @ShafaqGeoBot, with the game's
   picture and a short description). Sign-in uses `tmp67bot` ("tmp") until then. Put its token

@@ -12,8 +12,13 @@ Claude reads [CLAUDE.md](CLAUDE.md) first.
 | [players.md](players.md) | who plays, and what that means for the game |
 | [design.md](design.md) | look and feel |
 | [roadmap.md](roadmap.md) | what's next |
-| [P1028.md](P1028.md) | the plan to finish the game, in order (2026-10-28) |
-| [P1028-prompts.md](P1028-prompts.md) | one prompt per session for P1028, sent by the owner in order |
+| [P1111.md](P1111.md) | **the order now** (2026-11-11): the finished game, four tabs round the map, in 15 sessions |
+| [P1111-prompts.md](P1111-prompts.md) | one prompt per session for P1111, sent by the owner in order |
+| [P1111-owner-words.md](P1111-owner-words.md) | what the owner wants, in their own words; P1111 is built from it |
+| [research/](research/) | what P1111's first session checked: the model games (StudyGe, Squiz, GeoGuessr), the data for Tashkent's mahallas and buses, the world's countries |
+| [P1028.md](P1028.md) | the plan before it (2026-10-28); what is still open there waits for P1111 |
+| [P1028-prompts.md](P1028-prompts.md) | one prompt per session for P1028 |
+| [PLAN.md](PLAN.md) | the full plan, from prototype to product |
 | [deploy.md](deploy.md) | putting it on the server |
 | [before-launch.md](before-launch.md) | what the owner buys: Yandex license, hosting in Uzbekistan, a company |
 | [skills/](skills/) | skills Claude loads here (via `../.claude/skills`): the owner's words (`steve-jobs`, `before-after`) and the design skills (`game-ui-frontend` and others) |

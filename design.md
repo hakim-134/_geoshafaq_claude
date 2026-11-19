@@ -1,5 +1,11 @@
 # Look and feel
 
+> **This file describes the old look.** The home, a round and a round's result wear the new one,
+> chosen by the owner in the look lab: Turquoise tile, milk, M PLUS Rounded leaning 8°, one green
+> key, the home's map zooming in place ([decision 0024](decisions/0024-look-chosen-in-a-lab.md)).
+> Where this file and those three screens differ, the screens are right. Session 3 rewrites this
+> file for the new look.
+
 The game should feel **Uzbek, warm and playful**, not like a generic map app.
 
 ## Style

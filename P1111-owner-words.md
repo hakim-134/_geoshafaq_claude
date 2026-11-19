@@ -255,3 +255,68 @@ Asked how (2026-11-11):
   about them, and about those two risks. I have a lot of tokens, and they need to do it like
   a product. The tokens don't matter. Make it perfect. Make it the way I want. Also give them
   my intentions, what I want."*
+
+## 11. After seeing the first new look (2026-11-13)
+
+Typed, after the before and after page of session 2 ("Lojuvard": lapis, gold, Geologica).
+Lightly tidied; the numbers are his.
+
+> To be honest, I mostly like it, I see potential, but it has a lot of misunderstandings and
+> leaks.
+>
+> **First, the font.** It is not the one from GeoGuessr. In GeoGuessr it is nicer, and not this
+> edgy; you can see it in `a`, `m`, `s` and many more. This is not the font.
+>
+> **Second**, my idea of the place-in-parent is not being used. One more thing: on the home
+> page you can see a really good-looking SVG of Uzbekistan, and if you click on it, it goes to
+> another page, another screen, and shows another SVG map. There is an inconsistency. My
+> intention was having a simple, good, OK SVG map on the home page, and by clicking it, it
+> shouldn't go to another page. Just make it look like it zoomed in; don't change the other
+> buttons and components around it. We need to remove the inconsistency, make it consistent.
+> Also, if the user wants to change the location, when zoomed in, somewhere at the bottom
+> right make a button, "choose this location", something like this. We need something
+> consistent.
+>
+> **3.** I like the logo, it looks good to me. And by the way, it is not ShafaqGeo, it is
+> **GeoShafaq**.
+>
+> **4.** Before-and-after 12 and 13 [a round's result on a phone, light and dark]: I like
+> these, the place-in-parent thing being used, I really like it. 👍
+>
+> **5.** The colour is OK, but it kind of feels sharp to me. It used to have a nice colour,
+> like the colour of milk. It might not be the best for us, but it was nicer, it was not just
+> white, and it looked good. To be honest, I don't like "Lojuvard" (lapis) much. We need to
+> try some different ones: better, more suitable, nicer ones.
+>
+> Now I want you to act like Claude Design: make configurable layout alternatives in the tmp
+> folder. Think about different options, different colours and more. I test different
+> configurations and choose what I like, then we keep going with that.
+
+What it settles, and what it opens:
+
+- **The name players see is GeoShafaq**, one word, "Geo" first. (The domain is already
+  `geo.shafaq.uz`. The folders, repos and this knowledge base keep their names.)
+- **The logo stays:** the gold eight-point star beside the name.
+- **The result's plaque with its place-in-parent picture stays.** This is what he means by
+  place-in-parent being used: a small picture next to a place's name, wherever a place is
+  named. The home had none.
+- **The home's map does not lead to another page.** A tap zooms in, in place; nothing round
+  the map changes; a button at the map's bottom right chooses the place on screen. One map,
+  one behaviour, everywhere (this is P1111 §5 "The map", and he wants it on the home itself).
+- **The font is open again:** rounder and softer than Geologica's slanted letters, close in
+  feeling to GeoGuessr's own (which is licensed and has no Cyrillic, so it can't be used).
+- **The colours are open again:** not lapis as it was; softer; a warm "milk" surface instead
+  of plain white is what he remembers liking in the old look.
+- **How he wants to choose:** a page where he switches options himself and picks, not one
+  finished design to say yes or no to.
+
+**His pick from the look lab (2026-11-19)**, sent as the lab's line, nothing else said:
+
+> `GeoShafaq look · colours=firuza · night=yes · font=mplusrounded · lean=8 · keys=caps · corners=soft · depth=raised · map=tiles · name=above`
+
+That is: Turquoise tile (Khiva's turquoise with milk panels and milk map tiles), M PLUS Rounded
+for titles, numbers and keys, leaning 8°, capitals on keys, soft corners, raised keys with a
+lip, the map as tiles, the place's name above the map with its place-in-parent picture. He
+picked it looking at the night side; the game keeps following the phone's light or dark, with
+both sides of the palette built.
+

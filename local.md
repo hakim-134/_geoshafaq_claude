@@ -14,6 +14,12 @@ already runs one Postgres and one Redis for all projects
 | `shafaq-api` | the server: migrations at start, then the worker and the API | `8131` | `api-geo-shafaq/docker-compose.lcl.yml` (its `Dockerfile`) |
 
 `shafaq-api` joins the Docker network `infra` and reaches the shared containers by name.
+
+**For a while, a third one:** `shafaq-lab` (nginx, port `8133`) serves the look lab, the page
+where the owner chooses the new look's colours, font and layout
+(`~/131/github.com/hakim-134/tmp/look-lab/index.html`, built by `src/build.py` there; outside
+git). <http://localhost:8133>, on the phone <http://10.42.0.1:8133>. Remove it
+(`docker rm -f shafaq-lab`) once the look is chosen and built ([P1111 1.1](P1111.md#-11-the-new-look)).
 `shafaq-web` mounts the whole `geo-shafaq` folder read-only, because each build replaces
 `build/`.
 

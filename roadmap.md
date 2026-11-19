@@ -4,7 +4,7 @@ Only what the owner has said. Remove a line when it's done. **The order now is
 [P1111.md](P1111.md)** (its ticks show what is done); the full plan behind it is
 [PLAN.md](PLAN.md).
 
-_Last checked: 2026-11-12 (P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-11-19 (P1111 session 2: the owner's pick from the look lab built on three screens, GeoShafaq; P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -33,8 +33,22 @@ _Last checked: 2026-11-12 (P1111 session 1: the model games played, the data for
     UN's list and map, flags, capitals, three languages; 31 Uzbek names for the owner's eye.
   - Found on the way: **the game's border between Mirzo Ulug‘bek and Yashnobod is an old one**
     (P1111 3.2 fixes it before the districts quiz).
-- **Next: P1111 session 2**, the new look on three screens (1.1). It ends with the owner's yes
-  or changes; session 3 waits for that yes.
+- **P1111 session 2 is built and waits for the owner's yes** (2026-11-12, the first half of
+  1.1): the new look, "Lojuvard" (lapis), on the home, a round and a round's result, phone and
+  laptop, light and dark; every other screen is still in the old look on purpose. What it is:
+  [P1111 1.1, "Shown"](P1111.md#-11-the-new-look). Before and after pictures:
+  `~/131/github.com/hakim-134/tmp/ba/261112-1106-new-look/before-after.html`.
+- **The owner's answer to that look (2026-11-13): potential, but not yet.** A rounder font,
+  softer colours with the old milk warmth, the home's map zooming in place with a "choose this
+  place" button, and the name is **GeoShafaq**
+  ([his words](P1111-owner-words.md#11-after-seeing-the-first-new-look-2026-11-13)).
+- **His pick from the look lab is built** (2026-11-19, [decision 0024](decisions/0024-look-chosen-in-a-lab.md)):
+  Turquoise tile, M PLUS Rounded leaning 8°, on the home, a round and a round's result; the
+  home's map zooms in place with "Shu joyni tanlash"; the name is GeoShafaq everywhere players
+  read it. Before and after: `~/131/github.com/hakim-134/tmp/ba/261112-1106-new-look/before-after.html`.
+  The lab stays at `http://localhost:8133` (`shafaq-lab`) until the owner says the look is done.
+- **Next: the owner plays it**; then P1111 session 3 (the look on every screen, design.md
+  rewritten, place-in-parent everywhere).
 - **The rebuild (v1)** is on `main` in both repos (pushed 2026-10-22): Phase 0 (free items), Phase 1
   (code side) and Phase 2 of the plan (done 2026-10-26, with 2.7: the server is ready for Google
   and keeps every provider inside a daily budget). A solo game plays end to end on a phone and a

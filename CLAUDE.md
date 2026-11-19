@@ -3,6 +3,10 @@
 Shafaq Geo is the owner's own game: you land on a street in Uzbekistan, look around, and
 guess on the map where you are. Alone, or live with friends. Mostly played on phones.
 
+**Players read its name as "GeoShafaq"**, one word, "Geo" first (the owner, 2026-11-13). The
+folders, the repos and these files still say "Shafaq Geo"; in the game itself the name is
+GeoShafaq.
+
 In November 2026 it is being finished as **four tabs round the map of Uzbekistan**: O‘yin
 (play), Do‘stlar (rooms with friends), O‘rganish (learn the regions, districts, mahallas, the
 world, Tashkent's buses) and Profil. What "finished" is, and the order: [P1111.md](P1111.md).
@@ -96,10 +100,17 @@ serve these. **In November 2026 nothing new is added:** the finish line is fixed
 - **Easy to understand.** A friend should be able to play without being told how.
 - **Made for friends.** Sharing a room, a result or a picture should be one tap.
 - **Uzbek first**, then English and Russian.
+- **He chooses by trying, not by reading.** For a question of taste (a look, a layout), give
+  him a page where he switches the options himself and picks; one finished design to say yes or
+  no to is the slow way (2026-11-13).
+- **One map, one behaviour.** A map never leads to another page with another map: a tap zooms
+  in, in place, and what is round the map stays where it is.
 
 Look and feel: [design.md](design.md). Its road-sign style is being replaced by a bolder game
-look ([P1111 1.1](P1111.md#-11-the-new-look)); until design.md is rewritten (session 3), the
-new look's rules are P1111 §7 and [research/P1111-references.md](research/P1111-references.md).
+look ([P1111 1.1](P1111.md#-11-the-new-look)): the owner chose it in the look lab, Turquoise
+tile with M PLUS Rounded ([decision 0024](decisions/0024-look-chosen-in-a-lab.md)); it is on the
+home, a round and a round's result since 2026-11-19. Until design.md is rewritten (session 3),
+the new look's rules are decision 0024 and the tokens in `geo-shafaq/src/app.css` ("THE NEW LOOK").
 
 ## How to work here
 

@@ -148,10 +148,11 @@ change would make a later rename harder.
 - The free Yandex key allows ~100 panorama views a day. Claude tests on `demo` through the
   hidden switch ([local.md §1](local.md#1-what-runs)); real Yandex rounds only when checking
   Yandex itself.
-- **The Kadastr agency's mahalla borders are used before its yes**
+- **The mahalla borders (Tashkent city and Qibray) are the state cadastre's data**, from an
+  open set that republishes it, used without the agency's yes
   ([decision 0023](decisions/0023-kadastr-borders.md)). Everything that exists because of them
-  carries a `KADASTR:` comment, every row its source, and the agency's file stays out of git,
-  so it can all come out in one go.
+  carries a `KADASTR:` comment, every row its source, and the file stays out of git, so it
+  can all come out in one go.
 - One branch, `main` ([decision 0002](decisions/0002-deploy-branches.md)).
 - No database or cache containers of our own: the shared `postgres` and `redis` only
   ([decision 0010](decisions/0010-local-docker.md)).

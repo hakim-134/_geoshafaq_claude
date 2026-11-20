@@ -115,17 +115,18 @@ Follow P1111 §4.
 
 ## 8. Tashkent's mahallas
 
-The owner's word on the borders is given (2026-11-12,
-[decision 0023](decisions/0023-kadastr-borders.md)), so this can be sent in its turn.
+The owner's word on the borders is given and the data is ready (2026-11-20,
+[decision 0023](decisions/0023-kadastr-borders.md)), so this can be sent in its turn, after
+session 7.
 
 ```text
 Shafaq Geo, P1111 session 8 of 15. Do P1111 3.3: Tashkent's mahallas.
 
-Build what research/P1111-mahallas.md says is possible: inside a district of Tashkent, its mahallas, drawn and learned the same way as regions and districts, one level deeper. Place-in-parent for a mahalla is its district with the mahalla filled. Tashkent only. If the data covers only some districts, build those well and say plainly which are missing.
+Inside a district of Tashkent, its mahallas, drawn and learned the same way as regions and districts, one level deeper. Place-in-parent for a mahalla is its district with the mahalla filled. Tashkent's twelve old districts (Yangi Toshkent says "Tez orada"), and Qibray in Toshkent viloyati, my home: Salar.
 
-Borders: the Kadastr agency's where it has them, OpenStreetMap laid in where it has none. I am still asking the agency, so follow decision 0023 to the letter: a `KADASTR:` comment on everything that exists because of its data, the source on every row, its file out of git, its name shown as the source. If they say no, it must all come out in one go.
+Borders: the cleaned open set in ~/131/github.com/hakim-134/tmp/P1111/mahallas/soato/mahallas.geojson (645 mahallas: the city's 585 and Qibray's 60; read its README.md). Follow decision 0023 to the letter: a `KADASTR:` comment on everything that exists because of this data, `soato` as the source on every row, the file in a gitignored folder and never in git, the credit shown where mahallas are. If anyone objects, it must all come out in one go.
 
-Done when I learn the mahallas of my own district on the map.
+Done when I learn the mahallas round Salar, in Qibray, on the map, and the mahallas of any district of Tashkent.
 
 Follow P1111 §4.
 ```

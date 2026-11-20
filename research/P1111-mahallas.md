@@ -1,11 +1,38 @@
 # P1111 0.2: Tashkent's mahallas
 
-_Checked 2026-11-11._
+_Checked 2026-11-11; the open set added 2026-11-20._
 
-> **The owner's decision, 2026-11-12** ([decision 0023](../decisions/0023-kadastr-borders.md)):
-> build from the Kadastr agency's borders now, while he keeps asking the agency (it has not
-> answered his calls). Everything that comes from them is marked `KADASTR` and comes out in one
-> go if the agency says no. The verdict below is what was found, before that decision.
+## Settled: the open set (2026-11-20)
+
+The agency never answered the owner's calls, and he asked for an open, public source. What was
+looked for on 2026-11-19, and what came of it:
+
+- **No fully open and complete set exists.** data.gov.uz has no mahalla borders; OpenStreetMap
+  is half done; geoBoundaries, GADM and HDX stop at districts; nothing on Wikimapia. The agency
+  and the Mahallas Association surveyed 9 008 borders into one database (Kursiv, 2026-02-03)
+  and have not said they will publish it.
+- **One set is published openly: github.com/pdlpad/SOATO**, CC BY 4.0, all of Uzbekistan
+  (9 471 shapes), 593 for Tashkent. Its author does not say where the shapes came from; a
+  second repository (fabioakitaa/mahallalar, no licence, "do not contact contributor") holds
+  the same shapes. They match the agency's own, so it is the cadastre's data, republished.
+- **Cleaned, it is exactly the city's book:** 585 mahallas, the book's count in every one of
+  the twelve old districts, names in the book's Latin spelling, no overlaps; Mirzo Ulug‘bek
+  59.3 km² (the city says 59.4). Gaps are the airport and some industrial land. Yangi Toshkent
+  has none, as everywhere.
+- **The decision** is [0023](../decisions/0023-kadastr-borders.md): use it, credited, marked
+  `KADASTR`, the file never in git, removable in one go.
+- **Qibray too** (the owner's home, Salar; added 2026-11-20): the set has 71; the Tashkent
+  region council's decision of 2025-07-03 (VII-9-85-10-0-K/25, lex.uz) merged 8 of them into
+  neighbours and leaves 60; merging those 8 and 3 older inner shapes gives exactly 60. Salar's
+  mahallas: Ahillik, Bobur, Bunyodkor, Farovon, Fayzobod, Ma’rifat, Navruz, O‘nqo‘rg‘on, Oybek.
+  OpenStreetMap has no border for Salar shaharchasi, so the game shows Qibray whole. Names are
+  the set's Cyrillic in Latin, 16 set right by hand; no official Latin list exists to check.
+- **The file, the script and the pictures:** `~/131/github.com/hakim-134/tmp/P1111/mahallas/soato/`
+  (`mahallas.geojson`, `prepare.py`, `tashkent_mahallas.png`, `qibray_mahallas.png`, `README.md`). The
+  cleaning dropped 8 old Mirzo Ulug‘bek shapes lying under their replacements, named 9
+  mahallas by hand, and cut Bektemir's old Musaffo shape back to today's.
+
+Everything below is the first check (2026-11-11), kept for the record.
 
 ## Verdict: not possible now, one letter away
 
@@ -136,10 +163,8 @@ are in the same folder (`README.md`, `scripts/`).
 
 ## For session 8
 
-Build from the Kadastr now, with OpenStreetMap laid in where it has none, as
-[decision 0023](../decisions/0023-kadastr-borders.md) says: a `KADASTR:` comment on everything
-that exists because of this data, `kadastr` or `osm` as the source on every row, the agency's
-file in a gitignored folder (never committed), the agency named as the source on the screen.
+**Superseded 2026-11-20:** build from the cleaned open set in `tmp/P1111/mahallas/soato/`
+(see "Settled" at the top). The notes below on the agency's layer stay for the record.
 
 - **Source**: `https://db.ngis.uz/db/rest/services/UZKAD/MAHALLA_UZKAD_DB16/FeatureServer/0/query`
   with `where=region_code='1726'&outFields=*&outSR=4326&f=geojson`, paged by 200

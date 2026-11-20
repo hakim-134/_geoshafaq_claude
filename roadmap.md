@@ -4,7 +4,7 @@ Only what the owner has said. Remove a line when it's done. **The order now is
 [P1111.md](P1111.md)** (its ticks show what is done); the full plan behind it is
 [PLAN.md](PLAN.md).
 
-_Last checked: 2026-11-19 (P1111 session 2: the owner's pick from the look lab built on three screens, GeoShafaq; P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-11-20 (Tashkent's and Qibray's mahalla borders settled and cleaned for session 8, decision 0023; P1111 session 2: the owner's pick from the look lab built on three screens, GeoShafaq; P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -23,9 +23,10 @@ _Last checked: 2026-11-19 (P1111 session 2: the owner's pick from the look lab b
     lettering, the duel's numbers, the 5 000 moment), and what we leave.
   - **Mahallas** ([finding](research/P1111-mahallas.md)): not possible now. The Kadastr agency
     has 426 of Tashkent's 585 with borders, three districts whole, but no licence;
-    OpenStreetMap is half done. **The owner's word (2026-11-12):** build from the agency's
-    borders now, marked `KADASTR` so they can be taken out
-    ([decision 0023](decisions/0023-kadastr-borders.md)).
+    OpenStreetMap is half done. **Settled 2026-11-20:** an open set that republishes the
+    cadastre's data (pdlpad/SOATO, CC BY 4.0), cleaned to the city's 585, all twelve old
+    districts whole, and Qibray's 60 (the owner's Salar); marked `KADASTR` so it can be taken
+    out ([decision 0023](decisions/0023-kadastr-borders.md)). Ready for session 8.
   - **Buses** ([finding](research/P1111-buses.md)): OpenStreetMap has routes 1–60 well, almost
     nothing above. 23 proposed; 131, 116, 67 and 115 must be built by us. **Approved by the
     owner as it is, 2026-11-12.**
@@ -157,10 +158,6 @@ _Last checked: 2026-11-19 (P1111 session 2: the owner's pick from the look lab b
 
 For P1111 ([§12](P1111.md#12-for-the-owner)):
 
-- **The Kadastr agency:** keep trying to reach it for leave to show its mahalla borders (with
-  credit), and tell Claude the answer. We build from them meanwhile
-  ([decision 0023](decisions/0023-kadastr-borders.md)); a "no" means they all come out.
-- **Which district of Tashkent is yours?** Session 8 is judged on it.
 - **31 Uzbek names** of countries and capitals to look over
   ([research/P1111-world.md](research/P1111-world.md#uzbek-names)). Needed before session 9.
 - **After session 2:** look at the three screens of the new look.

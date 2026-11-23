@@ -55,7 +55,7 @@ the owner's other projects on this laptop ([access.md §6](access.md#6-still-the
 | **"push"** (also `p2r`, "git push") | commit the uncommitted work in the repos here and push `main` ([access.md §2](access.md#2-git)) |
 | **"docker up"** (also "update docker") | rebuild and restart the two local containers from the current code, play it once, give the links ([local.md §3](local.md#3-docker-up)) |
 | **"steve jobs"** | the taste review of what runs now, in a fresh agent ([skills/steve-jobs](skills/steve-jobs/SKILL.md)) |
-| **`+w/b&as`** (added to a task) | with before & after screenshots: photograph the game before the first edit; the task ends with one page of what was asked and every change, before next to after ([skills/before-after](skills/before-after/SKILL.md)) |
+| **`+w/b&as`** (added to a task; only then) | with before & after screenshots: photograph the game before the first edit; the task ends with one page of what was asked and every change, before next to after ([skills/before-after](skills/before-after/SKILL.md)) |
 | **"do P1111 3.2"** (or "do P1028 2.1", "do 3.2") | that task from [P1111.md](P1111.md) (or [P1028.md](P1028.md), or `PLAN.md`); tick it there and update [roadmap.md](roadmap.md). A P1111 task is done the way [P1111 §4](P1111.md#4-how-each-session-works) says |
 
 ## Who plays
@@ -121,14 +121,20 @@ or a banner ([decision 0025](decisions/0025-place-faces.md)). The tokens and the
 - Keep it simple while it is still "just an idea". No extra machinery.
 - Try every change the way players use it: on a phone, in light and dark.
 - **P1111 sessions have one lead and many hands** (the owner runs them on Fable): the lead
-  decides, briefs and checks by playing; Opus agents build; Sonnet agents do the plain work
-  ([P1111 §4](P1111.md#4-how-each-session-works)).
-- **Codex trial, 2026-11-23 → 2026-11-30** (the owner): use OpenAI's Codex plugin
-  (`codex@openai-codex`, installed at user level, ChatGPT login) for **review loops** and
-  **well-defined build tasks**. Review: in the repo, `node ~/.claude/plugins/cache/openai-codex/codex/*/scripts/codex-companion.mjs review --wait`
-  (`adversarial-review` for focused text); build: the `codex:codex-rescue` agent. Claude
-  still leads and checks by playing. After the week, report in a few lines how it went, and
-  take this line out unless the owner keeps it.
+  decides, briefs and checks by playing; Codex and Opus agents build; Sonnet agents do the
+  plain work ([P1111 §4](P1111.md#4-how-each-session-works)).
+- **Save Claude tokens; Codex does the bounded work** (the owner, 2026-11-23;
+  [decision 0026](decisions/0026-codex-and-lean-sessions.md)):
+  - **Codex** (OpenAI's plugin, on the owner's ChatGPT Plus) reviews the code of every task
+    before the report, builds well-defined slices from a written brief, and digs through code
+    and logs. Claude leads, designs, plays the game, reviews taste and writes this knowledge
+    base. How: [codex.md](codex.md).
+  - **The steve-jobs review: one full round, then one re-check of its musts**, on the touched
+    journeys. More only on the owner's "steve jobs".
+  - **Screenshots are read by agents**, not in the lead's session.
+  - **`+w/b&as` only on the owner's word.** Claude never adds it.
+  - **Knowledge goes into this knowledge base, not a long chat:** write a finished task down
+    first, then a new session can start small. Read big files in parts.
 
 ## Domains
 
@@ -183,7 +189,8 @@ change would make a later rename harder.
 | What the owner buys before launch | [before-launch.md](before-launch.md) |
 | Putting it on the server | [deploy.md](deploy.md) |
 | The taste review ("steve jobs"): play it like a stranger, hand exact fixes | [skills/steve-jobs](skills/steve-jobs/SKILL.md), [decision 0014](decisions/0014-taste-review.md) |
-| Before & after pictures of a task (`+w/b&as`) | [skills/before-after](skills/before-after/SKILL.md) |
+| What goes to Codex, and how | [codex.md](codex.md) |
+| Before & after pictures of a task (`+w/b&as`, only on the owner's word) | [skills/before-after](skills/before-after/SKILL.md) |
 | In-game UI: HUD over the panorama, map, overlays | [skills/game-ui-frontend](skills/game-ui-frontend/SKILL.md) |
 | HUD clarity; game feel (guess, line, score); aesthetic direction | [game-ui-design](skills/game-ui-design/SKILL.md); [game-designer](skills/game-designer/SKILL.md), [playfulness-fun](skills/playfulness-fun/SKILL.md); [frontend-design](skills/frontend-design/SKILL.md) |
 | Why things are the way they are | [decisions/](decisions/README.md) |

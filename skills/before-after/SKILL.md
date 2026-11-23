@@ -1,6 +1,6 @@
 ---
 name: before-after
-description: Before and after screenshots of everything a task changed in Shafaq Geo, on one page the owner can judge at a glance. Use when the owner's message has the word +w/b&as (also w/b&as, +w/b&a), or asks for before and after pictures of a change. The before pictures must be taken before the first edit, so read this at the start of the task.
+description: Before and after screenshots of everything a task changed in Shafaq Geo, on one page the owner can judge at a glance. Use ONLY when the owner's own message has the word +w/b&as (also w/b&as, +w/b&a), or asks for before and after pictures of a change; never add it yourself. The before pictures must be taken before the first edit, so read this at the start of the task.
 ---
 
 # `+w/b&as`: with before & after screenshots
@@ -12,6 +12,9 @@ good" or "not that one", without playing through the whole game first.
 
 The word is `+` an add-on, `w/` with, `b&a` before and after, `s` screenshots. It adds to the
 usual flow ([owner.md](../../owner.md#how-a-task-goes)) and replaces no step of it.
+
+**Only on the owner's word.** It costs extra playtests and hundreds of pictures, so Claude
+never adds it to a task or a prompt ([decision 0026](../../decisions/0026-codex-and-lean-sessions.md)).
 
 ## 1. Before the first edit: the before pictures
 
@@ -61,8 +64,12 @@ again.
 
 ## 4. Look at every pair
 
-**Open the pictures and compare them yourself.** A file comparison is no use: each game is
-random, so the streets, scores, guest names and avatars differ on every run.
+**A Sonnet agent opens the pictures and compares them**, not the lead's own session (a
+picture read in a long session is paid again on every later turn). Brief it with the
+owner's words, the task's changes in a player's words and `$BA`; it applies the rules below
+and writes `$BA/changes.json`. The lead checks the JSON and opens a pair only when in doubt.
+A file comparison is no use: each game is random, so the streets, scores, guest names and
+avatars differ on every run.
 
 - **Every change gets a picture.** Go through what the task asked and `git diff`, and tick off
   each thing a player would see. One pair may show several changes on one page; a change that

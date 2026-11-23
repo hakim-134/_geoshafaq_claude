@@ -22,7 +22,7 @@ it with a new file and mark the old one `superseded by NNNN`.
 - [0011](0011-server-stack.md) — the server stack: one compose file deployed by hand, no CI; Caddy, Prometheus/Grafana, Loki, GlitchTip, pgBackRest (accepted)
 - [0012](0012-yandex-map.md) — Yandex's map for guessing and results, instead of MapLibre on OpenStreetMap (accepted; supersedes the map part of 0005)
 - [0013](0013-accounts.md) — accounts: Telegram through the bot's link, merging, moderation by the command line (accepted)
-- [0014](0014-taste-review.md) — the taste review (`steve-jobs`) gates every change players see (accepted)
+- [0014](0014-taste-review.md) — the taste review (`steve-jobs`) gates every change players see (accepted; the loop capped by 0026)
 - [0015](0015-place-map.md) — our own map of borders for choosing a place, Yandex's for playing (accepted)
 - [0016](0016-place-map-whole.md) — the place map: whole places, shared borders, no place cut off: few panoramas, an italic name (accepted)
 - [0017](0017-difficulty-is-the-place.md) — Qiyinlik is how hard the place is to guess, and nothing else (accepted)
@@ -33,3 +33,4 @@ it with a new file and mark the old one `superseded by NNNN`.
 - [0023](0023-kadastr-borders.md) — Tashkent's mahalla borders: the cadastre's data from the open SOATO set (585, all twelve old districts; Qibray's 60), without the agency's yes; marked `KADASTR`, the file out of git, removable in one go (accepted)
 - [0024](0024-look-chosen-in-a-lab.md) — the new look, Turquoise tile with M PLUS Rounded, chosen by the owner option by option in a look lab; the home's map zooms in place; the name players read is GeoShafaq (accepted on three screens)
 - [0025](0025-place-faces.md) — every place wears its face (place-in-parent, `GET /v1/places/{slug}/face`); the road signs and banners go; the room code stays a number plate; the new look is the only look (accepted)
+- [0026](0026-codex-and-lean-sessions.md) — save Claude tokens: Codex reviews every task and builds well-defined slices; the taste review is one round plus one re-check; screenshots read by agents; `+w/b&as` only on the owner's word; knowledge in this base, not long chats (accepted)

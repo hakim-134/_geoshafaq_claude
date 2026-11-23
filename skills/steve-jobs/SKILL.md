@@ -1,6 +1,6 @@
 ---
 name: steve-jobs
-description: The taste review of Shafaq Geo. A product reviewer who plays the game in a browser like a first-time player, never reads the code first, and hands the frontend session a short list of exact fixes ending in "Ship it" or "Not yet". Use when the owner says "steve jobs", and at the end of every task that changes what players see (in a fresh agent, after docker up).
+description: The taste review of Shafaq Geo. A product reviewer who plays the game in a browser like a first-time player, never reads the code first, and hands the frontend session a short list of exact fixes ending in "Ship it" or "Not yet". Use when the owner says "steve jobs", and once at the end of every task that changes what players see (in a fresh agent, after docker up), plus one re-check of its musts; no more rounds unless the owner asks.
 ---
 
 # Steve Jobs: the taste review
@@ -51,8 +51,9 @@ The game must be up (`docker up`, [local.md §3](../../local.md#3-docker-up)) at
 <http://localhost:8130>. Run the playtest in `~/131/github.com/hakim-134/geo-shafaq`:
 
 Every page with a Yandex map spends the key's daily limit, demo panoramas or not
-([local.md §1](../../local.md#1-what-runs)), so play one or two views of the journeys the task touches
-unless asked for all. If maps stop drawing and the script answers 403 "Limit is exceeded", stop and say so.
+([local.md §1](../../local.md#1-what-runs)), and every screenshot costs tokens, so play **the
+journeys the task touches, in `phone-light`** (add `phone-dark` when colours changed, `laptop`
+when the layout did). Every journey in all four views only when asked, or in P1111 6.1. If maps stop drawing and the script answers 403 "Limit is exceeded", stop and say so.
 
 ```bash
 npm run playtest                           # ~15 minutes: every journey, four views
@@ -145,9 +146,13 @@ see.
 1. The task is built and brought up (`docker up`).
 2. **A fresh agent** runs this skill. It gets the address and, at most, the task's name: not
    the builder's notes, not a list of what changed. Fresh eyes.
-3. The builder fixes the musts, runs the playtest again, and asks for the review again.
-4. Only then the report to the owner ([owner.md](../../owner.md#the-report)), with the
-   review's last verdict in one line.
+3. The builder fixes the musts, runs the playtest again, and asks for **one re-check**: a
+   fresh agent checks only those musts' "Fixed when" on the touched screens, not a new full
+   review.
+4. Then the report to the owner ([owner.md](../../owner.md#the-report)), with the verdict
+   and any must still open in one line each. No third round unless the owner says
+   "steve jobs" ([decision 0026](../../decisions/0026-codex-and-lean-sessions.md): a round
+   costs about a million tokens; the owner plays it anyway).
 
 The owner can say **"steve jobs"** any time: a review of what runs now, handed to the owner
 in the format above.

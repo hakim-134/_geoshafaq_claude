@@ -1,7 +1,7 @@
 # 0014 — The taste review gates every change players see
 
 - **Date:** 2026-10-28
-- **Status:** accepted
+- **Status:** accepted; its "review again" loop capped to one re-check by [0026](0026-codex-and-lean-sessions.md) (2026-11-23)
 - **Deciders:** the owner (asked for the skill), Claude (how it runs)
 
 ## Context

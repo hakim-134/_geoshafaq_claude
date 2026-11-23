@@ -123,6 +123,12 @@ or a banner ([decision 0025](decisions/0025-place-faces.md)). The tokens and the
 - **P1111 sessions have one lead and many hands** (the owner runs them on Fable): the lead
   decides, briefs and checks by playing; Opus agents build; Sonnet agents do the plain work
   ([P1111 §4](P1111.md#4-how-each-session-works)).
+- **Codex trial, 2026-11-23 → 2026-11-30** (the owner): use OpenAI's Codex plugin
+  (`codex@openai-codex`, installed at user level, ChatGPT login) for **review loops** and
+  **well-defined build tasks**. Review: in the repo, `node ~/.claude/plugins/cache/openai-codex/codex/*/scripts/codex-companion.mjs review --wait`
+  (`adversarial-review` for focused text); build: the `codex:codex-rescue` agent. Claude
+  still leads and checks by playing. After the week, report in a few lines how it went, and
+  take this line out unless the owner keeps it.
 
 ## Domains
 

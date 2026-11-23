@@ -12,9 +12,11 @@ in `geo-shafaq/src/app.css`, whose header lists every class.
   night), a soft glow in the middle. Text straight on the ground is white.
 - **Raised things are milk**, never plain white (`#FFF9EC`): panels, sheets, the map's tiles.
   Ink on milk is deep teal. By night the panels are deep teal and the map's tiles stay milk.
-- **Colours mean things.** Gold: the chosen place, stars, what is learned. Green: the real place
-  and the one key to press. Red: a miss, low time. Blue: a place marked but not yet chosen. A
-  player's own colour: their pin and their line in a room (never green).
+- **Colours mean things.** Gold: stars, what is learned, the face in the map's square. Green:
+  the real place and the one key to press. Red: a miss, low time. The picked places: each its
+  own colour of eight (`--pick-1…8`, light and dark), the same on the map at every level and on
+  its picture in the list. A player's own colour: their pin and their line in a room (never
+  green).
 - **Lettering:** M PLUS Rounded 1c Black for titles, numbers and keys, leaning 8° (`.d`, and
   `.lbl` inside a key; the font has no italic, so the lean is a skew); Onest for text. Digits
   are one width, so a counting score doesn't jump. A title on the ground floats on a stacked
@@ -61,12 +63,17 @@ part, you can recognise it easily."* A place is never a word alone and never a s
 
 ## The screens
 
-- **The home** (P1111 1.1): "Xayrli kun, Ukki 42", the place's face and name above the map of
-  Uzbekistan as milk tiles. A tap on the map zooms in, in place (one map, one behaviour); the
-  small square at its top left goes back; a tap marks a district blue and the gold "Shu joyni
-  tanlash" chooses it. The settings as one quiet line of facts that opens a sheet; the big green
-  "O‘YNASH"; under it "Do‘stlar bilan o‘ynash" and "Kodim bor". The four tabs replace it in
-  P1111 1.4.
+- **The home** (P1111 1.1, 1.3): "Xayrli kun, Ukki 42", the list of picked places above the
+  map of Uzbekistan as milk tiles (one place: its face and name; several: a row of their faces
+  on a phone, rows of face, name and × at the left on a laptop; a "+" for the ready-made maps).
+  The map is the picker ([decision 0027](decisions/0027-several-places-one-mixed-map.md)): it
+  opens on Uzbekistan with no way up; a tap goes in, in place (a region, Tashkent, then a
+  district or town); the square at the top left wears the face of what is on screen and goes
+  up one level; inside a place one quiet outline key, "Tanlash", adds it to the list ("✓
+  Tanlangan" in its colour takes it out). Picked places wear their colours at every level. The
+  settings as one quiet line of facts that opens a sheet; the big green "O‘YNASH" plays the
+  list; under it "Do‘stlar bilan o‘ynash" and "Kodim bor". The four tabs replace it in P1111
+  1.4.
 - **A round:** little over the street: small dark capsules with a lip (round, score, the clock
   only when there is one), no blur. A round opens with a slanted plaque, gone in a second and a
   half. Under 0:10 the clock is red and beats and the screen's edges glow red, "like low health
@@ -91,10 +98,6 @@ part, you can recognise it easily."* A place is never a word alone and never a s
   in gold as strong as what is learned (a district's sheet lists its streets and plays there);
   three numbers on a milk strip; a milk menu with raised colour tiles. On a laptop the map large
   at the right.
-- **The places page** is the home's map on a page of its own until the map picker replaces it
-  (P1111 1.3): the place's face, its parent as the gold tag, the name; milk tiles, gold for what
-  is learned, blue for what is marked, quiet and hatched for "Tez orada"; one milk card at the
-  bottom with what plays and the green key; "Ro‘yxat" a folded milk list of faces.
 - **The shop** is calm milk tiles with the thing itself, its name and its price in Barg: no
   sales, no timers, no "new", nothing random, "Faqat chiroy uchun: ballni o‘zgartirmaydi". A
   tap shows it big with one key; too little Barg says how much is missing, never a dead key.

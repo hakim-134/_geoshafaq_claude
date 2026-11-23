@@ -4,7 +4,7 @@ Only what the owner has said. Remove a line when it's done. **The order now is
 [P1111.md](P1111.md)** (its ticks show what is done); the full plan behind it is
 [PLAN.md](PLAN.md).
 
-_Last checked: 2026-11-20 (P1111 session 3: the look on every screen, every place's face, banners and road signs gone; Tashkent's and Qibray's mahalla borders settled and cleaned for session 8, decision 0023; P1111 session 2: the owner's pick from the look lab built on three screens, GeoShafaq; P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-11-23 (P1111 session 4: the map picker, several places in one game, `/places` gone, decision 0027; P1111 session 3: the look on every screen, every place's face, banners and road signs gone; Tashkent's and Qibray's mahalla borders settled and cleaned for session 8, decision 0023; P1111 session 2: the owner's pick from the look lab built on three screens, GeoShafaq; P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -55,7 +55,19 @@ _Last checked: 2026-11-20 (P1111 session 3: the look on every screen, every plac
   place-in-parent picture wherever it is named; the Telegram card and the app's icon are in the
   look; design.md is rewritten. Before and after:
   `~/131/github.com/hakim-134/tmp/ba/261120-1401-look-everywhere/before-after.html`.
-- **Next: the owner plays it**; then P1111 session 4 (the map picker; games across several places).
+- **The map picker; several places in one game** (2026-11-23, P1111 session 4, task 1.3,
+  [decision 0027](decisions/0027-several-places-one-mixed-map.md)): the home's map goes in
+  (region or Tashkent, then a district or town) and up (the square at the top left); "Tanlash"
+  adds the place on screen to the list over the map; each pick has its own colour on the map
+  and on its face. A new player's first pick replaces the default Toshkent. The green
+  "O‘YNASH" plays the place on screen if it isn't picked, else the list, and says which on a
+  second line. Several places are one mixed map (`POST /v1/maps/mix`): each place in its turn,
+  each round scored by its own place's size; rooms and challenges play it as any map.
+  `/places` is gone; its old links open the home's map there. Left: the picked places'
+  outlines on the guess map; a room's and history's look for a mix (a joined name and
+  Uzbekistan's face for now); more than eight picks.
+- **Next: the owner plays it**; then P1111 session 5 (the four tabs; O‘yin and Do‘stlar round
+  the map).
 - **The rebuild (v1)** is on `main` in both repos (pushed 2026-10-22): Phase 0 (free items), Phase 1
   (code side) and Phase 2 of the plan (done 2026-10-26, with 2.7: the server is ready for Google
   and keeps every provider inside a daily budget). A solo game plays end to end on a phone and a

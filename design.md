@@ -1,242 +1,189 @@
 # Look and feel
 
-> **This file describes the old look.** The home, a round and a round's result wear the new one,
-> chosen by the owner in the look lab: Turquoise tile, milk, M PLUS Rounded leaning 8°, one green
-> key, the home's map zooming in place ([decision 0024](decisions/0024-look-chosen-in-a-lab.md)).
-> Where this file and those three screens differ, the screens are right. Session 3 rewrites this
-> file for the new look.
+The game should feel **Uzbek, bold and playful**: a real game, as finished as GeoGuessr, but
+ours. The owner chose the look himself, option by option, in a look lab
+([decision 0024](decisions/0024-look-chosen-in-a-lab.md)); since P1111 session 3 (2026-11-20) it
+is on every screen ([decision 0025](decisions/0025-place-faces.md)). The tokens and the kit are
+in `geo-shafaq/src/app.css`, whose header lists every class.
 
-The game should feel **Uzbek, warm and playful**, not like a generic map app.
+## The look: Turquoise tile
 
-## Style
-
-- **Colours of the flag:** sky blue, green and red, with gold and deep lapis blue
-  (the blue of old tiles). Green always marks the real place.
-- **Warm paper background** in light mode, deep night blue in dark mode. Both themes
-  must look finished, not one "real" and one afterthought. **Yandex's maps stay light in
-  dark mode** (the owner, 2026-10-30): never darken or filter their tiles.
-- **Girih pattern:** a soft eight-point star lattice, as on Uzbek tiles. Use it as a quiet
-  texture, never as noise.
-- **Fonts:** Unbounded for titles (bold, round, game-like), Onest for everything else.
-- Rounded corners, soft shadows, clear big buttons.
-
-## Signs, not cards
-
-Players find their way by reading signs, so the game speaks that language
-([decision 0013](decisions/0013-accounts.md) came with it, 2026-10-26):
-
-- **Every map is a road sign of Uzbekistan:** a plate with a white inner border and two
-  bolts, a small line on top (as the district on a street plate: a name, not a slogan, e.g.
-  "Asosiy ko‘chalar") and the name big. "Toshkent
-  ko‘chalari" is a blue street plate, "Tarixiy shaharlar" a brown sign for sights, "Butun
-  O‘zbekiston" a green highway sign (`src/lib/maps/sign.ts`); old games on "Toshkent" keep its
-  white town sign. Small plates mark the map in lists. A new kind of map gets a sign of its
-  own, not a card. A place picked in the place picker is a white entry sign with its outline,
-  the larger place on the small line ("Toshkent" over "Chilonzor tumani").
-- **A room's code is an Uzbek number plate** (white, a black rim, the flag and UZ at the
-  right end): friends read it out like a car's number. Each player keeps one colour in the
-  room (a tiny pin on their face's corner, their pin on the result map); green stays the real place's.
-- **The home is a lobby with one green button** (P1028 2.1, 2026-10-28): a greeting by the
-  time of day and the player's name (a guest's is the avatar's word and a number, "Ukki 42"), one
-  question ("Bugun qayerga boramiz?"), then **one
-  sign: where you'll play** (the last place played or picked; "Toshkent ko‘chalari" the first
-  time), with how much is known there and "⇄ Boshqa joy". **The sign says where; the one
-  button plays.** A tap on the sign opens the place map at the sign's place (a ready map: the
-  country). Under the sign, the settings as one quiet line of three facts (a
-  coloured dot for how hard, a flag for rounds, a clock for time) that opens a sheet. Then the
-  big green **"O‘ynash"**, the only box: one tap and you are on a street. Under it, one quiet
-  row of links: **"Do‘stlar bilan o‘ynash"** opens a room at once with the same place and
-  settings, **"Kodim bor"** opens the number plate, where a friend's code joins by itself at
-  five letters. One count of the streets on the home: the one under the sign. What a player has not
-  earned yet stays out of sight: before the first game the button breathes (no words on it)
-  and the sign has no "0 / 185"; after one, the count, a quiet "Oxirgi o‘yin: 12 780 ball"
-  and, for a guest, "Natijalarni saqlash · ✈ Telegram" as a link, not a button.
-- **A room's lobby has one job, bringing friends in** (P1028 2.2, 2026-10-28): one big sky
-  "Do‘stlarni chaqirish" (the phone's share sheet; on a laptop it copies, "Havola nusxalandi", and
-  the QR stands beside it), the number plate under it with a QR icon, the players as faces
-  (each with a tiny pin of their colour, 👑 on the host's: the only ring on a face is a bought frame) popping in with a two-note sound, a dashed "+"
-  seat that invites too, one line for the place and rules (the small sign, then the facts; on a
-  phone the rounds are a number by the flag and the clock shows only when there is a limit, so
-  they fit beside the sign), and "Boshlash ▶" at the bottom, quiet while the host is alone (no
-  number on it: by "⚑ 3" it read as the rounds; the faces say who is in). Once a friend is in,
-  the invite goes quiet and the green button is the only filled one. A friend sees the faces first. No explaining sentences.
-- **Streets I miss** wear red only on the way in (a pale red row with a pin and the count, in my
-  streets): red is where the guess went. The list is plain street plates, worst first; a
-  street leaves it without ceremony, and the last one gets confetti.
-- **Barg is the owner's leaf coin** (PLAN 9.2, 2026-11-03), never an emoji; `Coin.svelte`. It shows when it's
-  earned ("✓ Ko‘cha o‘rganildi +5", a gold plate and confetti for a whole district, "+35 · 3 ko‘cha, g‘alaba" at
-  a game's end) and beside the name on the profile; nowhere at 0,
-  and not on the home, which keeps its one job. **The shop** is calm paper tiles with the thing itself, its
-  name and its price: no sales, no timers, no "new", nothing random. A tap shows it big with one button, and
-  bought it goes on at once, with a pop, a shine and a rising note before the sheet goes; too little Barg says how much is missing, with no dead button. **Frames** are a
-  ring on the face's own edge, so they take no room, at any size (`data-frame` on any `.avatar`). No
-  pin or trail is green: green is the real place. In a room each player's pin keeps their colour, and their line is their own trail on every phone.
-- **A room's end is a stage:** a podium (gold, silver, bronze steps) where third, second and
-  first rise with rising notes, then a fanfare and confetti on every phone, and each phone says
-  its own place ("Siz 2-o‘rindasiz", "Siz g‘olibsiz!"). On a phone it comes first and the map is
-  under the streets. One next step: the host's "Yana o‘ynash" (friends are taken in; new
-  streets, away from the ones just played), the
-  friends' "Xona egasi yangi o‘yin boshlaydi" beside the host's face; "Natijani ulashish"
-  quiet; the rest under ⋯.
-- **A room goes on by itself** (P1028 2.2 c): after a round's reveal a green ring counts ten
-  seconds on every phone, beside "Keyingi raund" ("Keyingi" on the host's, or "Natijalar"); it turns gold with a soft
-  tick on the last three. The host has a pause button and a green "Hozir" beside it; a held
-  result gives the host the big button back. Nobody waits on one person's tap. That ring's ⏸
-  is a room's only pause: a room's round has ☰ "Menyu" (compass, sound, "Xonadan chiqish"),
-  never "Pauza", because a room's clock never stops.
-- **A room's round shows its clock in the players' chip,** "👥 1/2 · 0:45", not in the middle
-  where it covered the count. After the first guess the others get 45 s, in a room with no time
-  limit too: the clock appears then, turns gold under 0:15 and red under 0:10 with the red
-  edges, so nobody is cut off without warning. On a phone the row stays one row (a second
-  would cover the compass): the chip's clock has no icon, the round dots are smaller, and a
-  ten-round room shows "3/10 raund" instead of ten dots.
-- **A hint's cost is shown, never explained** (P1028 2.3), the way the owner drew it: small and
-  grey over the big score, the score before the hint and a solid gold "−20% 💡" chip (one per hint; the bulb's gold, in light and dark):
-  "4 412 −20% 💡" over "3 530". The number counts up to 4 412, the small line drops in with a
-  soft falling note, and the big number ticks down. On a phone the result has no score bar
-  (the stars say it) and a long street name gets smaller to stay on one line, so a room's three
-  rows fit above the buttons. A room's row carries the same gold pill, "💡 ~~4 412~~", before "+3 530"; the
-  podium puts what the hints cost under the total, "💡 −639"; the game page's room table and
-  history say "💡 2". Before the tap the bulb carries its price in the same gold, "−20%" (red
-  read as "wrong"). Free hints show nothing.
-- **On a laptop the home's right half is "Sizning Toshkentingiz":** Tashkent's 13 tumanlar
-  drawn from their borders, each with its name, paper where the player hasn't been and the stars'
-  gold with a gold edge as streets are seen and learned, as strong as the share of them (solid only
-  when all are learned). "23 / 177 ko‘cha o‘rganildi" beside the title. The sign's place is marked: a district
-  filled sky blue, its count and a way to its streets beside the title ("Chilonzor: 9 / 25 ko‘cha ›"),
-  "Toshkent ko‘chalari" the whole city edged. A
-  district's count shows on hover; a click makes it the sign at once and the page stays on the
-  home, so "O‘ynash" plays it (`src/lib/maps/CityMap.svelte`). Before the first game the city glows under a gold "Shu
-  yerdan boshlang" instead of the title. On this map Mirzo Ulug‘bek's far piece isn't drawn; the
-  place map keeps it.
-- **The place map is the map people know** (P1028 4.2, 2026-10-29, the owner's words): the
-  map of Uzbekistan, whole, its 14 parts drawn from their borders, neighbours on one shared line,
-  paper where the player hasn't been and the stars' gold from the first street seen, deeper as streets
-  are seen and learned, names where they fit; Tashkent city, a few pixels wide, is a
-  round badge, and on a first visit it glows under a gold "Shu yerdan boshlang". A tap on a
-  region flies into it and its districts and towns come up, the region whole in its own shape;
-  Tashkent shows its 13 tumanlar. A
-  tap on a place with nothing inside picks it (sky blue); a second tap lets go. **What plays is
-  where you stopped:** the picked place, else the place on screen (Tashkent: its one sign, the
-  blue "Toshkent ko‘chalari"), in one bar at the bottom
-  (its sign, the progress, the green "O‘ynash", which starts the game and makes it the home's
-  sign). On the country's map the choice is the ready maps as road signs, all in sight:
-  "Butun O‘zbekiston" (the country edged), "Toshkent ko‘chalari" (Tashkent lit), "Tarixiy
-  shaharlar" (gold stars on Samarqand, Buxoro, Xiva, Shahrisabz). A place with few panoramas (under 10)
-  plays what it has, its name in italics; only a place with none is hatched and says "Tez orada" (in dark they sink into the background; the playable ones
-  are the raised navy; their names grey). A name is a tap on its place; a town is a dot with
-  its name in a white pill ("Samarqand shahri"); a district's name stands inside its own shape
-  (along it, when the shape is a thin strip), and names never move when a place lights. The
-  same places are a list behind one folded "Ro‘yxat". No statistics, no legend, no explaining
-  sentences; a phone's country page fits the screen.
-- **Guests' names are words** (P1028 2.4): the avatar stays the emoji, the name is its Uzbek
-  word and a number from 10 to 99, "Ukki 42", the same in every language, in the header too.
-  No avatar whose word teases (🦥 "yalqov", 🐵 "maymun").
-- **The profile is about the streets, and short** (2026-10-27): its big picture is **my map**
-  (P1028 4.3): "Sizning Toshkentingiz", the 13 tumanlar coloured by what the player knows, "23 / 177
-  ko‘cha o‘rganildi" over them, names level, edge to edge on a phone. A tap on a district is a sheet
-  of its streets (each a plate; learned ones ticked), how many still wait, and a green "Shu yerda
-  o‘ynash". Then three numbers on a dark scoreboard (games, best, perfect), then a
-  menu to simple pages of their own: my games, my streets, records, settings, ways to sign in, name
-  and picture.
-- **Every count counts the learned streets** (2026-11-02, the review): "23 / 177 o‘rganildi"; a bar
-  is green for learned over gold for seen. What was only seen shows as gold, in bars and on maps, and
-  in the street lists; never as a number that disagrees. No "0 / 177": what isn't earned stays out of
-  sight, and the map says how it starts, "Birinchi ko‘chani 500 m ichida toping". Under a guess within
-  500 m of a street, "✓ Ko‘cha o‘rganildi" in green with a rising note.
-- **A name wraps at its spaces, never inside a word:** a heading with a player's name shrinks until
-  its longest word fits (`src/lib/fit.ts`).
-- **A challenge's link is a friend saying "beat this"** (PLAN 8.3, 2026-11-02;
-  [decision 0018](decisions/0018-challenge-links.md)): "Do‘stni chaqirish" on a game's end and a
-  room's end, the same streets for whoever opens it. A friend meets the sender's face, "Suvsar 86
-  sizni chaqirdi", their score big in gold, "Yenga olasizmi?", the sign, one green button, and the
-  board from two players up. Before one's own game the board's rows
-  lead nowhere: they show where the streets are. After it: "Siz 2-o‘rindasiz", the board, "Do‘stni
-  chaqirish". In Telegram: a card on night blue with the flag's stripe, the sender, the map's sign,
-  the score in the stars' gold, its squares and a green "O‘ynash" (`internal/card` in the server).
-- **The real place is a round 🏁 badge** (P1028 3.1, 2026-10-30; `flagSvg` in
-  `geo-shafaq/src/lib/map/map.ts`): about 36 px, a white ring with a faint dark hairline, a
-  green disc, a white finish flag with a navy chequer, a short point to the exact spot and a
-  soft shadow on the ground. The white ring keeps it clear on Sputnik and Gibrid. On the end
-  map each badge has its round's number in a gold dot on its shoulder, and the guess pin of that
-  round carries the same number; a later round sits on top. The same badge is the legend's
-  "Haqiqiy joy", and in "my streets". No player's pin can look like it: theirs are drops of one
-  colour each, and green stays out of their colours.
-- **The crowd's ring** (P1028 3.3, 2026-11-02): on every round's result, a soft gold ring
-  around the real place, its radius the round's average distance. As the badge lands it pulses
-  out from the badge twice; the ring stays where the first pulse ends, and the gold pill
-  "O‘rtacha 2.3 km" comes on its edge when the last has gone, on the part of the ring in sight
-  and clear of the pins. Under "2.3 km uzoqda" one line with a little gold ring: "O‘rtachadan 1.2 km
-  yaqinroq" or "uzoqroq". In a room: that round's players, two guesses or more. Alone: other
-  players on the same panorama, three or more. Gold, because green is the real place, red the
-  line, and a player has their own colour. The map frames the ring unless it is over eight
-  times the farthest guess; then it runs past the edges and the line says it. Still for reduced
-  motion: the ring and its pill just stand there.
-- **Tap the badge, see the place** (P1028 3.2): it opens that place's panorama on Yandex Maps
-  in a new tab, facing the way the round began (`panoramaUrl` in `map.ts`; inside Telegram
-  through its `openLink`). On a laptop the badge's hint says "Panoramada ko‘rish ↗"; the
-  link under the result's street plate ("Panoramada ko‘rish ↗") opens the same (the plate
-  itself stays a sign), and in "my streets" each whole row does. No words over the map: on a device's first result the
-  badge's ring keeps calling a few times more instead. Only after the result: during a round
-  nothing links to the place.
-- **The place map goes close** (2026-11-02, the owner's idea): a pinch, the wheel, or + and − in the
-  corner, and a finger or the mouse moves the map; up to 12×. It stays the same level: the country's
-  map shows regions however close, a region's its districts; going deeper is a tap. Close up every
-  place gets its name, inside its own shape, big or small, with panoramas or not, and pills and
-  their lines mostly go by themselves: looking at the map teaches the shapes and the names.
-- **Qiyinlik is how hard the place is to guess, nothing else** ([0017](decisions/0017-difficulty-is-the-place.md)):
-  Oson, O‘rta and Qiyin pick from a map's easier or harder places; the map, its names, labels, hints
-  and scoring stay the same on all three.
-- **Settings show each choice as what it looks like:** the words in each language, a tiny
-  screen in light and dark, the compasses turning over a bit of street, the map looks, the
-  sound playing when turned on. The chosen tile has a green rim and a tick.
-- **Long lists have numbered pages**, not endless scrolling (all games: ten a page, by day).
-- **Sharing a game is a challenge's link** (`/c/…`), with a row of coloured squares, not a picture. A
-  room's end shares the same, with everyone there on its board; a room's invitation is the room's
-  link. On a game's end "Do‘stni chaqirish" and the way home stand under the green button, always in
-  sight, as on a room's end.
+- **The ground is Khiva's turquoise** (`#0D808D → #08606C` by day, `#0C3B43 → #062830` by
+  night), a soft glow in the middle. Text straight on the ground is white.
+- **Raised things are milk**, never plain white (`#FFF9EC`): panels, sheets, the map's tiles.
+  Ink on milk is deep teal. By night the panels are deep teal and the map's tiles stay milk.
+- **Colours mean things.** Gold: the chosen place, stars, what is learned. Green: the real place
+  and the one key to press. Red: a miss, low time. Blue: a place marked but not yet chosen. A
+  player's own colour: their pin and their line in a room (never green).
+- **Lettering:** M PLUS Rounded 1c Black for titles, numbers and keys, leaning 8° (`.d`, and
+  `.lbl` inside a key; the font has no italic, so the lean is a skew); Onest for text. Digits
+  are one width, so a counting score doesn't jump. A title on the ground floats on a stacked
+  shadow (`.float`); a small gold tag over it (`.kick-tag`) names a kind or a parent.
+- **Keys are raised, with a lip, and go down when pressed.** Their words are capitals. One
+  green key per screen (`.btn-primary`); everything else is quiet: a glass chip on the ground
+  (`.btn-chip`), an outline on milk (`.btn-ghost`), a red outline for leaving (`.btn-danger`).
+  Telegram's button keeps Telegram's blue.
+- **Soft corners** (24 px), soft shadows, motion with a purpose (a podium rising, a key going
+  down), still for reduced motion.
+- **The top bar** (`GameBar`) is on every page: the gold eight-point star and "Geo**Shafaq**"
+  ("Geo" white, "Shafaq" gold, leaning), the language, light or dark, and the player's face as
+  a gold coin. The same star on a turquoise tile is the app's icon.
+- **A sub page** (`SubPage`) has a round glass back key and its title big, white and leaning;
+  its content stands on milk panels and lists (`.panel`, `.panel-list`), big numbers on a milk
+  strip (`.stats`).
+- **On a laptop** the ground fills the window and the content stands in a centred column, or
+  the map large at one side with a column beside it. Nothing stretched edge to edge, nothing
+  stuck in the top half.
+- **Yandex's maps stay light at night** (the owner, 2026-10-30): never darken or filter them.
 - Avoid what makes a page look machine-made: a gradient banner with a giant slogan, rows of
   identical cards, stat pills, numbered circles.
+
+## Places wear their faces
+
+The owner: *"You may not know the shape of Buxoro, but by looking at its parent and the selected
+part, you can recognise it easily."* A place is never a word alone and never a sign.
+
+- **A place's face** is its parent's whole shape with the place filled gold (`PlaceInParent`,
+  `<PlaceInParent place="jondor-tumani" on="panel|ground">`): milk tiles with teal seams on the
+  ground, faint turquoise tiles on milk. About 32–42 px beside a name in a row, 64–160 px on a
+  page's head. A place too small to see (Tashkent on the country, Kogon) gets a gold ring.
+- **What frames it:** a Tashkent district in Tashkent's districts; a district or town elsewhere
+  in its region; a region in Uzbekistan; Tashkent city in Toshkent viloyati, its shape filling
+  the region's hole; Uzbekistan all gold. Mahallas will sit in their district.
+- **It stands wherever a place is named:** a round's result (on the plaque), the end of a game
+  and each of its streets (the district's face), history, records, a room's place, a challenge,
+  the places page and its list, the wallet's learned districts, the Telegram card.
+- **A street is its name** in the leaning letters, its district under it in small text, the
+  district's face beside it. No street plates, no road signs, no banners.
+- **The one real-world object kept: a room's code is an Uzbek number plate** (white, a black
+  rim, the flag and UZ at the right end), raised off the ground: friends read it aloud like a
+  car's number.
+
+## The screens
+
+- **The home** (P1111 1.1): "Xayrli kun, Ukki 42", the place's face and name above the map of
+  Uzbekistan as milk tiles. A tap on the map zooms in, in place (one map, one behaviour); the
+  small square at its top left goes back; a tap marks a district blue and the gold "Shu joyni
+  tanlash" chooses it. The settings as one quiet line of facts that opens a sheet; the big green
+  "O‘YNASH"; under it "Do‘stlar bilan o‘ynash" and "Kodim bor". The four tabs replace it in
+  P1111 1.4.
+- **A round:** little over the street: small dark capsules with a lip (round, score, the clock
+  only when there is one), no blur. A round opens with a slanted plaque, gone in a second and a
+  half. Under 0:10 the clock is red and beats and the screen's edges glow red, "like low health
+  in a game". On a phone one big key says what to do ("Xaritada belgilash") and the map slides
+  up as a sheet with the street still in sight.
+- **The reveal is the reward:** the line runs from the guess to the real place, the 🏁 badge
+  drops with a ring, the verdict pops, up to three stars light (1 000, 2 500, 4 000), the score
+  counts up big in the leaning numbers, and the place's plaque swings in: deep teal with a gold
+  seam, the district in gold capitals over the street, its face at the left. A perfect round
+  gets confetti.
+- **The end of a game is the streets collected**, on the ground under the map: the map's face
+  and name with its kind, the headline ("Yangi rekord!", "Birinchi o‘yin!"), the total counting
+  up, the stars and the distance, then the streets on one milk panel: the round's number on a
+  gold coin (the same number as its badge on the map), then the district's face, whole, then the
+  street in the leaning letters over its district. A room's end has the same list. A tap shows
+  that round on the map. "YANA O‘YNASH" green and fixed at the bottom; "Do‘stni
+  chaqirish" and home quiet under it. On a laptop the column at the left, the map large beside it.
+- **History** (`/games`): days in small white capitals, each a milk panel of rows: the map's
+  face, its name, rounds and hints, the score.
+- **The profile is about the streets, and short:** the face as a big gold coin with a pen, the
+  name floating, the Barg chip; **"Sizning Toshkentingiz"**, Tashkent's districts as milk tiles
+  in gold as strong as what is learned (a district's sheet lists its streets and plays there);
+  three numbers on a milk strip; a milk menu with raised colour tiles. On a laptop the map large
+  at the right.
+- **The places page** is the home's map on a page of its own until the map picker replaces it
+  (P1111 1.3): the place's face, its parent as the gold tag, the name; milk tiles, gold for what
+  is learned, blue for what is marked, quiet and hatched for "Tez orada"; one milk card at the
+  bottom with what plays and the green key; "Ro‘yxat" a folded milk list of faces.
+- **The shop** is calm milk tiles with the thing itself, its name and its price in Barg: no
+  sales, no timers, no "new", nothing random, "Faqat chiroy uchun: ballni o‘zgartirmaydi". A
+  tap shows it big with one key; too little Barg says how much is missing, never a dead key.
+  **The wallet** is the leaf coin and the balance big, how Barg is earned, and its history.
+- **Settings show each choice as what it looks like:** the words in each language, a tiny home
+  by day and by night, the compasses over a street, the map looks. The chosen tile has a gold
+  ring and a tick.
+- **The error page:** the milk map with a gold "?" pin looking about, "Bu ko‘cha bizda yo‘q",
+  one green key home.
+
+## Rooms
+
+- **The lobby has one job, bringing friends in** (P1028 2.2): one big "DO‘STLARNI CHAQIRISH"
+  (the phone's share sheet; on a laptop it copies and the QR stands beside it), the number plate
+  under it with a QR key, the players as milk faces popping in with a two-note sound (👑 on the
+  host's, a tiny pin of each one's colour, the player's own name gold), a dashed "+" seat that
+  invites too, one milk card for the place and the rules (its face, its name, the facts; the
+  host taps it to change them), and "BOSHLASH" at the bottom, a quiet glass key while the host
+  is alone. Once a friend is in the invite goes quiet and the green key is the only filled one.
+  A friend sees the faces first and "Xona egasi boshlaydi" with the host's face. No explaining
+  sentences.
+- **A room goes on by itself** (P1028 2.2 c): after a reveal a green ring counts ten seconds on
+  every phone; the host has ⏸ and a green "HOZIR"; held, the host gets the big key back. A
+  room's round has ☰ "Menyu" with "Xonadan chiqish", never a pause: a room's clock never stops.
+- **A room's round shows its clock in the players' chip,** "👥 1/2 · 0:45". After the first
+  guess the others get 45 s; the clock turns gold under 0:15 and red under 0:10 with the red
+  edges.
+- **A room's end is a stage** on the ground: "Siz 2-o‘rindasiz" floating white; third, second
+  and first rise as raised bronze, silver and gold steps with big leaning numbers, then a
+  fanfare and confetti on every phone; then the streets on milk with their faces, the map with
+  every badge, and one next step: the host's "YANA O‘YNASH" (friends are taken in; new streets),
+  the friends' "Xona egasi yangi o‘yin boshlaydi" beside the host's face; "Do‘stni chaqirish"
+  quiet; the rest under ⋯.
+
+## Rules that stay
+
+- **A hint's cost is shown, never explained** (P1028 2.3): small over the big score, the score
+  before the hint and a gold "−20% 💡" chip: "4 412 −20% 💡" over "3 530", counting up, then
+  ticking down. A room's row carries "💡 ~~4 412~~"; the podium "💡 −639"; history "💡 2". Free
+  hints show nothing.
+- **The real place is a round 🏁 badge** (P1028 3.1, `flagSvg` in `src/lib/map/map.ts`): a white
+  ring, a green disc, a white finish flag, a short point to the spot. On the end map each badge
+  wears its round's number in a gold dot. A tap opens the place's panorama on Yandex Maps
+  (P1028 3.2), only after the result.
+- **The crowd's ring** (P1028 3.3): a soft gold ring round the real place at the round's average
+  distance, pulsing out twice as the badge lands, "O‘rtacha 2.3 km" on its edge, and one line:
+  "O‘rtachadan 1.2 km yaqinroq" or "uzoqroq".
+- **Every count counts the learned streets:** "23 / 177 o‘rganildi". **Gold on a map is learned
+  streets only** (the taste review, 2026-11-23): a district only played in stays milk; the first
+  learned street is a light gold wash, all of them full gold. On the home's map gold is the chosen
+  place instead. **No zero is ever shown**: no "0 / 177", no "0 Aniq topildi", no Barg at 0, no
+  "O‘rganilgan · 0"; what isn't earned stays out of sight. Under a guess within 500 m,
+  "✓ Ko‘cha o‘rganildi" with a rising note.
+- **A face on the gold coin must show**: no mostly-yellow emoji among the faces (🌙 ⭐ 🍋 🌽 🌻
+  went, 2026-11-23).
+- **A map's names stand on it:** zoomed into a place, every part has its name, inside its shape
+  where it fits, else a milk pill with a short line.
+- **Barg is the owner's leaf coin** (`Coin.svelte`), never an emoji; shown when earned and beside
+  the name, nowhere at 0, not on the home. **Frames** are a ring on the face's own edge.
+- **Guests' names are words** (P1028 2.4): "Ukki 42", the same in every language.
+- **A challenge's link is a friend saying "beat this"** ([decision 0018](decisions/0018-challenge-links.md)):
+  the sender's face, "Suvsar 86 sizni chaqirdi", their score big in gold, "Yenga olasizmi?", the
+  map's card with its face, one green key; after playing, "Siz 2-o‘rindasiz" and the board. In
+  Telegram the card is the game's ground with the star, the map's face and name, the score in
+  gold, its squares and a green "O‘YNASH" (`internal/card` in the server).
+- **Qiyinlik is how hard the place is to guess, nothing else** ([0017](decisions/0017-difficulty-is-the-place.md)).
+- **Long lists have numbered pages**, not endless scrolling. **A name wraps at its spaces**,
+  never inside a word (`src/lib/fit.ts`).
 
 ## Feel
 
 - **Phone first.** Big tap targets, one hand, nothing hidden behind hover.
-- **Show, don't explain.** A colour, a glow or a sound says more than a sentence.
-- **Small rewards:** the score bar fills, the result card names the street, district and
-  nearest metro, so every round teaches something.
-- **Tension near the end:** warnings and a red glow when time runs low.
-- Text is short and friendly, in Uzbek first (Latin script, with `o‘` and `g‘`).
+- **Show, don't explain.** A colour, a glow, a shape or a sound says more than a sentence.
+- **Small rewards:** every round names the street, the district and the nearest metro, and shows
+  the district's face, so every round teaches something.
+- **The first game teaches by showing:** a finger swipes over the street, the big key breathes,
+  the map shows where to tap. Never again on that device.
+- **Sounds are made on the spot** and soft: a pop for the pin, rising notes for stars, a short
+  fanfare for a perfect round or a new best, a falling note (not a buzzer) for a far miss.
+- Text is short and friendly, Uzbek first (Latin, with `o‘` and `g‘`).
 - **Decent:** nothing a family in Tashkent would mind seeing ([players.md](players.md)).
 
-## Game feel (the redesign, 2026-10-27)
-
-The owner's test: play it as a 5-year-old would. Anything a child can't read at a glance gets
-a picture, a colour or a motion instead of words. The game UI skills
+The owner's test: play it as a 5-year-old would. Anything a child can't read at a glance gets a
+picture, a colour or a motion instead of words. The game UI skills
 ([game-ui-frontend](skills/game-ui-frontend/SKILL.md) first) carry the details.
-
-- **Everything pressable is a chunky plate** with a darker edge under it that sinks when
-  pressed (`.btn` in `app.css`). Labels are sentence case, never capitals.
-- **A round shows little:** one status pill (round dots, score), the clock only when there is
-  one, a pause button (compass style, sound, leave; ☰ "Menyu" in a room). The hint and "back to start" sit under the
-  thumb; on a phone one big button says what to do ("Xaritada belgilash"), and the map slides
-  up as a sheet with the street still in sight above it.
-- **Each round opens with its number** on a small blue plate ("2-raund · Qayerdasiz?").
-- **The first game teaches by showing:** a finger swipes over the street, then the big
-  button breathes, then the map shows where to tap. Never again on that device.
-- **The reveal is the reward:** the line runs from the guess to the real place, the real place's
-  badge drops with a ring, and only then the verdict pops, up to three stars light (1 000, 2 500,
-  4 000 points), the score counts up with soft ticks, and **the place's own sign swings in**: a
-  blue Tashkent street plate with the district above the name, a white entry sign for a
-  district or town, a green one for a region. A perfect round gets confetti of girih stars in
-  the flag's colours.
-- **The end of a game is the streets collected:** the total counting up, the stars won, and
-  each round's street as a small plate; a tap shows it on the map.
-- **Sounds are made on the spot** (no files) and are soft: a pop for the pin, rising notes for
-  stars, a short fanfare for a perfect round or a new best, a falling note (not a buzzer) for a
-  far miss. One switch in the pause menu mutes them.
 
 ## Before calling a design done
 
 - Looks right on a phone and on a laptop.
 - Looks right in light and in dark.
 - Reads well in all three languages (Russian and English words can be longer).
+- Every place named has its face; nothing on the screen is in another style.

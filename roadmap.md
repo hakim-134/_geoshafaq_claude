@@ -4,7 +4,7 @@ Only what the owner has said. Remove a line when it's done. **The order now is
 [P1111.md](P1111.md)** (its ticks show what is done); the full plan behind it is
 [PLAN.md](PLAN.md).
 
-_Last checked: 2026-11-20 (Tashkent's and Qibray's mahalla borders settled and cleaned for session 8, decision 0023; P1111 session 2: the owner's pick from the look lab built on three screens, GeoShafaq; P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-11-20 (P1111 session 3: the look on every screen, every place's face, banners and road signs gone; Tashkent's and Qibray's mahalla borders settled and cleaned for session 8, decision 0023; P1111 session 2: the owner's pick from the look lab built on three screens, GeoShafaq; P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -48,8 +48,14 @@ _Last checked: 2026-11-20 (Tashkent's and Qibray's mahalla borders settled and c
   home's map zooms in place with "Shu joyni tanlash"; the name is GeoShafaq everywhere players
   read it. Before and after: `~/131/github.com/hakim-134/tmp/ba/261112-1106-new-look/before-after.html`.
   The lab stays at `http://localhost:8133` (`shafaq-lab`) until the owner says the look is done.
-- **Next: the owner plays it**; then P1111 session 3 (the look on every screen, design.md
-  rewritten, place-in-parent everywhere).
+- **The look is on every screen; every place wears its face** (2026-11-20, P1111 session 3,
+  1.1 and 1.2, [decision 0025](decisions/0025-place-faces.md)): the owner's yes to the look was
+  sending session 3. No screen is left in the old style, phone and laptop, light and dark; the
+  road signs and banners are gone (the API's `banner` too); a place is shown by its
+  place-in-parent picture wherever it is named; the Telegram card and the app's icon are in the
+  look; design.md is rewritten. Before and after:
+  `~/131/github.com/hakim-134/tmp/ba/261120-1401-look-everywhere/before-after.html`.
+- **Next: the owner plays it**; then P1111 session 4 (the map picker; games across several places).
 - **The rebuild (v1)** is on `main` in both repos (pushed 2026-10-22): Phase 0 (free items), Phase 1
   (code side) and Phase 2 of the plan (done 2026-10-26, with 2.7: the server is ready for Google
   and keeps every provider inside a daily budget). A solo game plays end to end on a phone and a

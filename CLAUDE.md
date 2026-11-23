@@ -106,11 +106,11 @@ serve these. **In November 2026 nothing new is added:** the finish line is fixed
 - **One map, one behaviour.** A map never leads to another page with another map: a tap zooms
   in, in place, and what is round the map stays where it is.
 
-Look and feel: [design.md](design.md). Its road-sign style is being replaced by a bolder game
-look ([P1111 1.1](P1111.md#-11-the-new-look)): the owner chose it in the look lab, Turquoise
-tile with M PLUS Rounded ([decision 0024](decisions/0024-look-chosen-in-a-lab.md)); it is on the
-home, a round and a round's result since 2026-11-19. Until design.md is rewritten (session 3),
-the new look's rules are decision 0024 and the tokens in `geo-shafaq/src/app.css` ("THE NEW LOOK").
+Look and feel: [design.md](design.md). The owner chose the look in a look lab, Turquoise tile
+with M PLUS Rounded ([decision 0024](decisions/0024-look-chosen-in-a-lab.md)); since 2026-11-20
+it is on every screen, and every place is shown by its face, place-in-parent, never by a sign
+or a banner ([decision 0025](decisions/0025-place-faces.md)). The tokens and the kit are in
+`geo-shafaq/src/app.css`, its header listing every class.
 
 ## How to work here
 

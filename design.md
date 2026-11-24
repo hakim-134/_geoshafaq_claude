@@ -63,17 +63,28 @@ part, you can recognise it easily."* A place is never a word alone and never a s
 
 ## The screens
 
-- **The home** (P1111 1.1, 1.3): "Xayrli kun, Ukki 42", the list of picked places above the
-  map of Uzbekistan as milk tiles (one place: its face and name; several: a row of their faces
-  on a phone, rows of face, name and × at the left on a laptop; a "+" for the ready-made maps).
+- **The four tabs** (P1111 1.4): O‘yin, Do‘stlar, O‘rganish, Profil, an icon over a short
+  label (Profil's icon is the player's face coin), in a bar at the bottom of a phone (with the
+  safe area) and a narrow rail at the left of a laptop; the active one in the kit's gold. While your room is open, Do‘stlar wears a small green dot
+  with the number of people in it. Hidden
+  during a game and in a room once it starts. Nothing fixed at the bottom ever covers a tap:
+  pages end above the bars. The top bar keeps the brand, the language and light or dark.
+- **O‘rganish** until Stage 3: two milk rows, "Adashgan ko‘chalarim" and "Ko‘chalarim".
+  **Profil**: the profile, with history, records, the wallet, the shop and settings under it.
+- **O‘yin, the home** (P1111 1.1, 1.3, 1.4): "Xayrli kun, Ukki 42", the map of Uzbekistan as milk tiles
+  and, under it, the picked places (each its face with its short name and an ×; on a laptop rows
+  at the left; a "+" for the ready-made maps). O‘yin and Do‘stlar are laid out alike on a phone
+  (the same top band, the map and the places' row in the same pixels), so switching tabs never
+  moves the map.
   The map is the picker ([decision 0027](decisions/0027-several-places-one-mixed-map.md)): it
   opens on Uzbekistan with no way up; a tap goes in, in place (a region, Tashkent, then a
   district or town); the square at the top left wears the face of what is on screen and goes
   up one level; inside a place one quiet outline key, "Tanlash", adds it to the list ("✓
-  Tanlangan" in its colour takes it out). Picked places wear their colours at every level. The
-  settings as one quiet line of facts that opens a sheet; the big green "O‘YNASH" plays the
-  list; under it "Do‘stlar bilan o‘ynash" and "Kodim bor". The four tabs replace it in P1111
-  1.4.
+  Tanlangan" in its colour takes it out). Picked places wear their colours at every level: a picked region is filled whole, with the
+  "Tez orada" hatching over its districts that have no streets yet. The
+  settings as one quiet line of facts that opens a sheet; the big green "O‘YNASH", its second
+  line naming what it plays (the place on screen if it isn't picked, else the list). Friends and
+  "Kodim bor" live on the Do‘stlar tab.
 - **A round:** little over the street: small dark capsules with a lip (round, score, the clock
   only when there is one), no blur. A round opens with a slanted plaque, gone in a second and a
   half. Under 0:10 the clock is red and beats and the screen's edges glow red, "like low health
@@ -110,15 +121,21 @@ part, you can recognise it easily."* A place is never a word alone and never a s
 
 ## Rooms
 
-- **The lobby has one job, bringing friends in** (P1028 2.2): one big "DO‘STLARNI CHAQIRISH"
-  (the phone's share sheet; on a laptop it copies and the QR stands beside it), the number plate
-  under it with a QR key, the players as milk faces popping in with a two-note sound (👑 on the
-  host's, a tiny pin of each one's colour, the player's own name gold), a dashed "+" seat that
-  invites too, one milk card for the place and the rules (its face, its name, the facts; the
-  host taps it to change them), and "BOSHLASH" at the bottom, a quiet glass key while the host
-  is alone. Once a friend is in the invite goes quiet and the green key is the only filled one.
-  A friend sees the faces first and "Xona egasi boshlaydi" with the host's face. No explaining
-  sentences.
+- **The lobby is the Do‘stlar tab, round the map** (P1111 2.1): the Do‘stlar tab opens your
+  room (made at the first tap, kept until you leave). Top to bottom: the friends' faces across
+  the top with their count ("👥 3"), popping in with the two-note sound (👑 on the host's; the
+  dashed seat with the person-plus icon invites; a long name wraps at a space, never inside a
+  word); the map as the main thing, the same picker as O‘yin, where the host
+  picks the places and the friends see them appear in their colours (no Tanlash, no ×); the
+  picked places as faces with their short names, under the map as on O‘yin; "DO‘STLARNI CHAQIRISH" (the share sheet only on this tap), the number
+  plate with its QR key, quiet once a friend is in; one line of rules (the host taps it);
+  "Kodim bor" and "Xonadan chiqish" as one quiet row (a friend who joined sees only
+  "Xonadan chiqish"); "BOSHLASH" in a bar above the tab bar, a
+  quiet glass key while the host is alone; a friend sees "Xona egasi boshlaydi". On a laptop
+  the map at the right, the rest in a column at the left. A room on several places shows their
+  faces in their colours with their short names wherever it names its map (in a round, on the
+  second row by the compass; the players' chip with the count and the clock never shrinks),
+  never a joined name cut short.
 - **A room goes on by itself** (P1028 2.2 c): after a reveal a green ring counts ten seconds on
   every phone; the host has ⏸ and a green "HOZIR"; held, the host gets the big key back. A
   room's round has ☰ "Menyu" with "Xonadan chiqish", never a pause: a room's clock never stops.

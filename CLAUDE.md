@@ -121,14 +121,19 @@ or a banner ([decision 0025](decisions/0025-place-faces.md)). The tokens and the
 - Keep it simple while it is still "just an idea". No extra machinery.
 - Try every change the way players use it: on a phone, in light and dark.
 - **P1111 sessions have one lead and many hands** (the owner runs them on Fable): the lead
-  decides, briefs and checks by playing; Codex and Opus agents build; Sonnet agents do the
-  plain work ([P1111 §4](P1111.md#4-how-each-session-works)).
-- **Save Claude tokens; Codex does the bounded work** (the owner, 2026-11-23;
-  [decision 0026](decisions/0026-codex-and-lean-sessions.md)):
-  - **Codex** (OpenAI's plugin, on the owner's ChatGPT Plus) reviews the code of every task
-    before the report, builds well-defined slices from a written brief, and digs through code
-    and logs. Claude leads, designs, plays the game, reviews taste and writes this knowledge
-    base. How: [codex.md](codex.md).
+  decides, briefs and checks by playing; Codex builds; Opus agents only for taste or what
+  Codex didn't crack; Sonnet agents do the plain work ([P1111 §4](P1111.md#4-how-each-session-works)).
+- **Codex is the default subagent; save Claude tokens, then time** (the owner, 2026-11-23/24;
+  decisions [0026](decisions/0026-codex-and-lean-sessions.md), [0028](decisions/0028-codex-default-subagent.md)):
+  - **Codex** (OpenAI's plugin, on the owner's ChatGPT Plus, plentiful) does all the code
+    work a brief can carry: builds, fixes, tests, digging, a review of every task; slices in
+    parallel in the background. Always `gpt-6.2-astra`; effort `medium` if easy, `high` if
+    typical, `xhigh` if a little harder or more. Claude leads, designs, plays the game,
+    reviews taste and writes this knowledge base. How: [codex.md](codex.md).
+  - **Codex's context is `AGENTS.md`** in `geo-shafaq` and `api-geo-shafaq` (its `CLAUDE.md`):
+    a brief carries only the task. When a rule Codex could break changes, change both files.
+  - **Claude's own final review, not Codex's**, just before the report: the whole change
+    against what the owner asked ([codex.md](codex.md#after-codex)).
   - **The steve-jobs review: one full round, then one re-check of its musts**, on the touched
     journeys. More only on the owner's "steve jobs".
   - **Screenshots are read by agents**, not in the lead's session.
@@ -189,7 +194,7 @@ change would make a later rename harder.
 | What the owner buys before launch | [before-launch.md](before-launch.md) |
 | Putting it on the server | [deploy.md](deploy.md) |
 | The taste review ("steve jobs"): play it like a stranger, hand exact fixes | [skills/steve-jobs](skills/steve-jobs/SKILL.md), [decision 0014](decisions/0014-taste-review.md) |
-| What goes to Codex, and how | [codex.md](codex.md) |
+| What goes to Codex, and how; its context (`AGENTS.md` in both code repos) | [codex.md](codex.md) |
 | Before & after pictures of a task (`+w/b&as`, only on the owner's word) | [skills/before-after](skills/before-after/SKILL.md) |
 | In-game UI: HUD over the panorama, map, overlays | [skills/game-ui-frontend](skills/game-ui-frontend/SKILL.md) |
 | HUD clarity; game feel (guess, line, score); aesthetic direction | [game-ui-design](skills/game-ui-design/SKILL.md); [game-designer](skills/game-designer/SKILL.md), [playfulness-fun](skills/playfulness-fun/SKILL.md); [frontend-design](skills/frontend-design/SKILL.md) |

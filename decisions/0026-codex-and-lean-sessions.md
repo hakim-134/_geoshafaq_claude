@@ -1,7 +1,7 @@
 # 0026 — Codex does the bounded work; reviews are capped; the lead's context stays small
 
 - **Date:** 2026-11-23
-- **Status:** accepted
+- **Status:** accepted; point 1 (what goes to Codex, the model) changed by [0028](0028-codex-default-subagent.md) (2026-11-24)
 - **Deciders:** the owner (use Codex, save tokens, keep the knowledge), Claude (where each goes)
 
 ## Context

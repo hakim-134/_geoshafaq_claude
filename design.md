@@ -89,12 +89,30 @@ part, you can recognise it easily."* A place is never a word alone and never a s
   only when there is one), no blur. A round opens with a slanted plaque, gone in a second and a
   half. Under 0:10 the clock is red and beats and the screen's edges glow red, "like low health
   in a game". On a phone one big key says what to do ("Xaritada belgilash") and the map slides
-  up as a sheet with the street still in sight.
+  up as a sheet with the street still in sight. **A tap on the compass turns the view to north**,
+  the short way, keeping the tilt (P1111 2.2); in the fully still mode it is only a picture. The
+  compass's look is the player's own (Profil → Sozlamalar, or the round's menu); a game's or a
+  room's rules say only whether there is one ("Kompas: Bor / Yo‘q"). **Back to start** is a
+  quiet round capsule at the top right, beside pause (the round arrow, no word, no glow; the
+  owner, 2026-11-24): the round's first panorama and its first way; R on a laptop. In a
+  game across several places the guess map opens framed on the picked places, each outlined
+  3 px in its pick colour on a milk edge, no fill.
 - **The reveal is the reward:** the line runs from the guess to the real place, the 🏁 badge
   drops with a ring, the verdict pops, up to three stars light (1 000, 2 500, 4 000), the score
   counts up big in the leaning numbers, and the place's plaque swings in: deep teal with a gold
-  seam, the district in gold capitals over the street, its face at the left. A perfect round
-  gets confetti.
+  seam, the district in gold capitals over the street, its face at the left. A round of
+  4 900 or more gets confetti.
+- **The 5 000 moment** (P1111 2.4): exactly 5 000 (after any hint's cost) gets its own burst
+  the moment the count lands, **on the map's 🏁 badge and inside the map, never over the card**,
+  gone in about 2.5 s, every tap passing through it: a white flash, a gold glow, then stacked
+  with nothing overlapping the round's place lit up as its face, a huge gold "5 000" in the
+  leaning lettering, and the place's name (or "Siz!" in a room); gold 🏁 coins (the badge's gold
+  twin: the only green 🏁 is the real one) and sparkles fly out; a bright rising chime and a
+  buzz on phones. **Someone else's 5 000 is theirs, not yours:** the others in the room see the
+  scorer's face as a gold coin with their name and a small 5 000, the chime only, their own
+  score still the biggest number. It replaces the confetti for that round, plays once (a reload
+  doesn't replay it), and only fades for reduced motion. That round's score stays gold with a
+  small 🏁 in the game's list; the shared squares give it 🏁 (`FiveK.svelte`).
 - **The end of a game is the streets collected**, on the ground under the map: the map's face
   and name with its kind, the headline ("Yangi rekord!", "Birinchi o‘yin!"), the total counting
   up, the stars and the distance, then the streets on one milk panel: the round's number on a
@@ -174,7 +192,10 @@ part, you can recognise it easily."* A place is never a word alone and never a s
   where it fits, else a milk pill with a short line.
 - **Barg is the owner's leaf coin** (`Coin.svelte`), never an emoji; shown when earned and beside
   the name, nowhere at 0, not on the home. **Frames** are a ring on the face's own edge.
-- **Guests' names are words** (P1028 2.4): "Ukki 42", the same in every language.
+- **Guests' names are words** (P1028 2.4): "Ukki 42", the same in every language. **A guest
+  renames any time** in a room (P1111 2.3): "name ✎" under the own face in the lobby, the
+  waiting bar's second line "Ismingiz: … ✎" once they have guessed, the own row (✎) on a result
+  and on the podium; everyone sees the new name at once.
 - **A challenge's link is a friend saying "beat this"** ([decision 0018](decisions/0018-challenge-links.md)):
   the sender's face, "Suvsar 86 sizni chaqirdi", their score big in gold, "Yenga olasizmi?", the
   map's card with its face, one green key; after playing, "Siz 2-o‘rindasiz" and the board. In

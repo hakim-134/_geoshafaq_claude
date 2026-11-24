@@ -4,7 +4,7 @@ Only what the owner has said. Remove a line when it's done. **The order now is
 [P1111.md](P1111.md)** (its ticks show what is done); the full plan behind it is
 [PLAN.md](PLAN.md).
 
-_Last checked: 2026-11-23 (P1111 session 5: the four tabs, the Do‘stlar tab as the room's lobby round the map; P1111 session 4: the map picker, several places in one game, `/places` gone, decision 0027; P1111 session 3: the look on every screen, every place's face, banners and road signs gone; Tashkent's and Qibray's mahalla borders settled and cleaned for session 8, decision 0023; P1111 session 2: the owner's pick from the look lab built on three screens, GeoShafaq; P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
+_Last checked: 2026-11-24 (P1111 session 6: the compass to north, guests rename any time, the 5 000 moment, back to start at the top right; P1111 session 5: the four tabs, the Do‘stlar tab as the room's lobby round the map; P1111 session 4: the map picker, several places in one game, `/places` gone, decision 0027; P1111 session 3: the look on every screen, every place's face, banners and road signs gone; Tashkent's and Qibray's mahalla borders settled and cleaned for session 8, decision 0023; P1111 session 2: the owner's pick from the look lab built on three screens, GeoShafaq; P1111 session 1: the model games played, the data for mahallas, buses and the world checked, this knowledge base brought up to date; PLAN 9.2–9.4, Barg and the shop; PLAN 8.5, streets I miss; P1028 4.3, my map; PLAN 8.3 and 3.5, challenge links; P1028 3.3, the crowd circle; sessions 7 and 8, the place map checked against its prompt; P1028 3.1–3.2, the badge and its panorama; P1028 2.4, the small fixes: Stage 2 done; the place map of Uzbekistan, P1028 4.1–4.2, and guests named "Ukki 42", ahead of their sessions; P1028 sessions 1–4 finished as asked, the taste review's last word "Ship it": the hint's cost over the score, the lobby's one line, new streets on "Yana o‘ynash"; rooms go on by themselves, a hint's cost shown; the home with one Play button; the taste review and the playtest; Phase 5 built: live rooms that survive a deploy; Phase 4 built: places, settings, compasses; Phase 3 built: accounts, profiles, the new home; Phase 2 done; Phase 1 built: the server stack waits only for a server, see [deploy.md](deploy.md#a-v1-the-server-stack))._
 
 ## Now
 
@@ -63,15 +63,21 @@ _Last checked: 2026-11-23 (P1111 session 5: the four tabs, the Do‘stlar tab as
   "O‘YNASH" plays the place on screen if it isn't picked, else the list, and says which on a
   second line. Several places are one mixed map (`POST /v1/maps/mix`): each place in its turn,
   each round scored by its own place's size; rooms and challenges play it as any map.
-  `/places` is gone; its old links open the home's map there. Left: the picked places'
-  outlines on the guess map; a room's and history's look for a mix (a joined name and
+  `/places` is gone; its old links open the home's map there. Left: a room's and history's look for a mix (a joined name and
   Uzbekistan's face for now); more than eight picks.
 - **The four tabs** (2026-11-23, P1111 session 5, tasks 1.4 and 2.1): O‘yin, Do‘stlar,
   O‘rganish, Profil at the bottom of a phone, at the left of a laptop, hidden in a game. The
   Do‘stlar tab is your room's lobby round the same map: the host picks the places, the friends
   see them, invite, "Kodim bor", "Boshlash". The old home's friends buttons are gone.
-- **Next: the owner plays it**; then P1111 session 6 (the compass to north, guests rename any
-  time, the 5 000 moment; the guess map's outlines of the picked places).
+- **The small fixes** (2026-11-24, P1111 session 6, tasks 2.2–2.4; the taste review's last
+  word "Ship it"): a tap on the compass turns the view to north, the tilt kept; rooms' rules say
+  only "Kompas: Bor / Yo‘q"; back to the round's start is at the top right beside pause, quiet
+  (the owner's ask that day); a guest renames in the lobby, after
+  their guess, on a result and on the podium, and the room sees it at once; the 5 000 moment on
+  the map's badge (the scorer's coin on everyone else's phone), its round gold with 🏁 in the
+  list and the shared squares; a mixed game's guess map framed on the picked places, outlined
+  in their colours. To feel on a phone: the 5 000's motion, chime and buzz.
+- **Next: the owner plays it**; then P1111 session 7 (O‘rganish: the quiz engine; Uzbekistan).
 - **The rebuild (v1)** is on `main` in both repos (pushed 2026-10-22): Phase 0 (free items), Phase 1
   (code side) and Phase 2 of the plan (done 2026-10-26, with 2.7: the server is ready for Google
   and keeps every provider inside a daily budget). A solo game plays end to end on a phone and a
